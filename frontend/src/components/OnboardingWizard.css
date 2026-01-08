@@ -3,19 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .wizard-container {
-  background: white;
+  background: rgba(26, 26, 46, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  max-width: 800px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
   width: 100%;
   padding: 3rem;
   animation: slideUp 0.5s ease-out;
+  backdrop-filter: blur(10px);
 }
 
 @keyframes slideUp {
@@ -39,26 +41,42 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.logo-icon {
-  font-size: 3rem;
-}
-
-.logo h1 {
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.logo-text {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  font-family: 'Arial Black', 'Arial Bold', sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin: 0;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
 }
 
 .wizard-subtitle {
-  color: #6c757d;
-  font-size: 1.1rem;
+  color: #b0b0b0;
+  font-size: 1.2rem;
   margin: 0;
+  font-weight: 300;
 }
 
 .wizard-progress {
@@ -80,7 +98,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #e9ecef;
+  background: rgba(255, 255, 255, 0.1);
   color: #6c757d;
   display: flex;
   align-items: center;
@@ -88,34 +106,38 @@
   font-weight: bold;
   font-size: 1.2rem;
   transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .progress-step.active .step-circle {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
   color: white;
   transform: scale(1.1);
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
 .progress-step span {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #808080;
   font-weight: 500;
 }
 
 .progress-step.active span {
-  color: #667eea;
+  color: #00d4ff;
   font-weight: 600;
 }
 
 .progress-line {
   width: 60px;
   height: 3px;
-  background: #e9ecef;
+  background: rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .progress-line.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .wizard-content {
@@ -137,15 +159,16 @@
 
 .wizard-step h2 {
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .step-description {
   text-align: center;
-  color: #6c757d;
-  font-size: 1rem;
+  color: #b0b0b0;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
@@ -163,24 +186,25 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 1.5rem;
-  border: 2px solid #e9ecef;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: all 0.3s ease;
   gap: 1rem;
 }
 
 .language-card:hover {
-  border-color: #667eea;
+  border-color: #00d4ff;
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.1);
 }
 
 .language-card.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  border-color: #00d4ff;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 153, 255, 0.2) 100%);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.4);
 }
 
 .language-flag {
@@ -190,7 +214,7 @@
 .language-name {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 /* More Options Button */
@@ -201,10 +225,10 @@
   gap: 0.5rem;
   width: 100%;
   padding: 1rem;
-  border: 2px dashed #667eea;
+  border: 2px dashed rgba(0, 212, 255, 0.5);
   border-radius: 12px;
   background: transparent;
-  color: #667eea;
+  color: #00d4ff;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -213,8 +237,10 @@
 }
 
 .more-options-btn:hover {
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  background: rgba(0, 212, 255, 0.1);
   border-style: solid;
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
 
 .plus-icon {
@@ -242,9 +268,10 @@
 
 .additional-languages h3 {
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
+  font-weight: 600;
 }
 
 /* Country Selection */
@@ -261,24 +288,25 @@
   align-items: center;
   justify-content: center;
   padding: 3rem 2rem;
-  border: 3px solid #e9ecef;
+  border: 3px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: all 0.3s ease;
   gap: 1.5rem;
 }
 
 .country-card:hover {
-  border-color: #667eea;
+  border-color: #00d4ff;
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
+  background: rgba(0, 212, 255, 0.1);
 }
 
 .country-card.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+  border-color: #00d4ff;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 153, 255, 0.2) 100%);
+  box-shadow: 0 15px 30px rgba(0, 212, 255, 0.5);
 }
 
 .country-flag {
@@ -288,7 +316,7 @@
 .country-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 /* Province Selection */
@@ -308,35 +336,37 @@
   align-items: center;
   justify-content: center;
   padding: 1.5rem 1rem;
-  border: 2px solid #e9ecef;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: all 0.3s ease;
   gap: 0.5rem;
 }
 
 .province-card:hover {
-  border-color: #667eea;
+  border-color: #00d4ff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 8px 15px rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.1);
 }
 
 .province-card.selected {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+  border-color: #00d4ff;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 153, 255, 0.2) 100%);
+  box-shadow: 0 8px 15px rgba(0, 212, 255, 0.4);
 }
 
 .province-name {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
 }
 
 .province-code {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #00d4ff;
   font-weight: 500;
 }
 
@@ -345,10 +375,10 @@
   display: block;
   margin: 2rem auto 0;
   padding: 0.75rem 2rem;
-  border: 2px solid #6c757d;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  background: white;
-  color: #6c757d;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -356,9 +386,10 @@
 }
 
 .back-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
-  background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+  border-color: #00d4ff;
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
 }
 
 /* Responsive Design */
@@ -367,8 +398,8 @@
     padding: 2rem 1.5rem;
   }
 
-  .logo h1 {
-    font-size: 2rem;
+  .logo-text {
+    font-size: 2.5rem;
   }
 
   .wizard-step h2 {

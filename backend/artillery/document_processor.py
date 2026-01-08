@@ -45,8 +45,29 @@ try:
     import pytesseract
     from PIL import Image
     OCR_AVAILABLE = True
-except ImportError:
+    
+    # Configure Tesseract path explicitly for Windows
+    if os.name == 'nt':  # Windows
+        tesseract_path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        if os.path.exists(tesseract_path):
+            pytesseract.pytesseract.tesseract_cmd = tesseract_path
+            logging.info(f"[OCR] Tesseract configured at: {tesseract_path}")
+            # Test if Tesseract actually works
+            try:
+                version = pytesseract.get_tesseract_version()
+                logging.info(f"[OCR] Tesseract version: {version}")
+            except Exception as e:
+                logging.warning(f"[OCR] Tesseract configured but not working: {e}")
+                OCR_AVAILABLE = False
+        else:
+            logging.warning(f"[OCR] Tesseract not found at default path: {tesseract_path}")
+            OCR_AVAILABLE = False
+except ImportError as e:
+    logging.warning(f"[OCR] Failed to import pytesseract: {e}")
     OCR_AVAILABLE = False
+
+# Log OCR status at module load time
+logging.info(f"[OCR] OCR_AVAILABLE = {OCR_AVAILABLE}")
 
 try:
     import easyocr
@@ -487,50 +508,136 @@ class ArtilleryDocumentProcessor:
 
     def process_image(self, file_path: str) -> Dict[str, Any]:
         """
-        Process image file with OCR.
+        Process image file with ENHANCED OCR.
+        
+        Now includes:
+        - Image preprocessing (contrast, sharpening, denoising)
+        - Automatic rotation correction
+        - Pattern recognition (dates, codes, numbers)
+        - Confidence scoring
+        - Structured field extraction
 
         Args:
             file_path: Path to image file
 
         Returns:
-            Dictionary with extracted content
+            Dictionary with extracted content and metadata
         """
         chunks = []
         images = []
+        metadata = {}
 
         try:
-            # Load image for processing
-            if OCR_AVAILABLE:
-                image = Image.open(file_path)
-
-                # Perform OCR
-                text = pytesseract.image_to_string(image)
-
-                if text.strip():
+            # Try enhanced OCR first
+            try:
+                from artillery.enhanced_ocr import get_enhanced_ocr
+                enhanced_ocr = get_enhanced_ocr()
+                
+                logger.info(f"[ARTILLERY] Using enhanced OCR for {Path(file_path).name}")
+                ocr_result = enhanced_ocr.process_image_enhanced(file_path)
+                
+                if ocr_result.get('text'):
+                    # Create main text chunk
+                    content = ocr_result['text'].strip()
+                    
+                    # Add structured fields to the content for better searchability
+                    if ocr_result.get('structured_fields'):
+                        fields = ocr_result['structured_fields']
+                        field_text = "\n\n[DETECTED FIELDS]\n"
+                        if fields.get('dates'):
+                            field_text += f"Dates: {', '.join(fields['dates'])}\n"
+                        if fields.get('codes'):
+                            field_text += f"Codes: {', '.join(fields['codes'])}\n"
+                        if fields.get('numbers'):
+                            field_text += f"Numbers: {', '.join(fields['numbers'][:10])}\n"
+                        content += field_text
+                    
+                    # Add labeled fields
+                    if ocr_result.get('labeled_fields'):
+                        field_text = "\n[LABELED FIELDS]\n"
+                        for label, value in ocr_result['labeled_fields'].items():
+                            field_text += f"{label.replace('_', ' ').title()}: {value}\n"
+                        content += field_text
+                    
                     chunks.append({
                         'type': 'text',
-                        'content': text.strip(),
+                        'content': content,
+                        'page': None,
+                        'ocr_confidence': ocr_result.get('confidence', 0),
+                        'preprocessing': ocr_result.get('preprocessing_used', 'unknown')
+                    })
+                    
+                    # Store metadata
+                    metadata['ocr_confidence'] = ocr_result.get('confidence', 0)
+                    metadata['structured_fields'] = ocr_result.get('structured_fields', {})
+                    metadata['labeled_fields'] = ocr_result.get('labeled_fields', {})
+                    metadata['warnings'] = ocr_result.get('warnings', [])
+                    metadata['suggestions'] = ocr_result.get('suggestions', [])
+                    
+                    logger.info(f"[ARTILLERY] Enhanced OCR: {len(content)} chars, {ocr_result.get('confidence', 0):.1f}% confidence")
+                    
+                else:
+                    # Enhanced OCR failed, add error info
+                    error_msg = f"[Image uploaded: {Path(file_path).name}]\n"
+                    error_msg += f"OCR Status: {ocr_result.get('error', 'No text detected')}\n"
+                    if ocr_result.get('warnings'):
+                        error_msg += "Warnings:\n" + "\n".join(f"  • {w}" for w in ocr_result['warnings']) + "\n"
+                    if ocr_result.get('suggestions'):
+                        error_msg += "Suggestions:\n" + "\n".join(f"  • {s}" for s in ocr_result['suggestions'])
+                    
+                    chunks.append({
+                        'type': 'text',
+                        'content': error_msg,
+                        'page': None
+                    })
+                    
+            except ImportError:
+                # Fall back to basic OCR
+                logger.info(f"[ARTILLERY] Enhanced OCR not available, using basic OCR")
+                if OCR_AVAILABLE:
+                    image = Image.open(file_path)
+                    text = pytesseract.image_to_string(image)
+
+                    if text.strip():
+                        chunks.append({
+                            'type': 'text',
+                            'content': text.strip(),
+                            'page': None
+                        })
+                    else:
+                        chunks.append({
+                            'type': 'text',
+                            'content': f"[Image uploaded: {Path(file_path).name}. No text detected.]",
+                            'page': None
+                        })
+                else:
+                    chunks.append({
+                        'type': 'text',
+                        'content': f"[Image uploaded: {Path(file_path).name}. OCR not available - install Tesseract to extract text]",
                         'page': None
                     })
 
-                # Also include the image data for embedding
-                with open(file_path, 'rb') as f:
-                    image_data = f.read()
+            # Always include the image data for embedding
+            with open(file_path, 'rb') as f:
+                image_data = f.read()
 
-                images.append({
-                    'type': 'image',
-                    'data': image_data,
-                    'ext': Path(file_path).suffix.lower().lstrip('.'),
-                    'page': None,
-                    'image_index': 0
-                })
-
-            else:
-                logger.warning("OCR not available, cannot extract text from image")
+            images.append({
+                'type': 'image',
+                'data': image_data,
+                'ext': Path(file_path).suffix.lower().lstrip('.'),
+                'page': None,
+                'image_index': 0
+            })
 
         except Exception as e:
             logger.error(f"Failed to process image {file_path}: {e}")
-            raise
+            # Don't raise - return what we have
+            # Create minimal chunk so upload doesn't fail completely
+            chunks.append({
+                'type': 'text',
+                'content': f"[Image uploaded: {Path(file_path).name}. Processing failed: {str(e)}]",
+                'page': None
+            })
 
         return {
             'text_chunks': chunks,

@@ -44,6 +44,8 @@ opencv-python>=4.8.0
 python-dotenv>=1.0.0
 python-multipart>=0.0.6
 httpx>=0.24.0  # For free LLM providers (Ollama, Gemini, Hugging Face)
+schedule>=1.2.0  # For daily data updates
+lxml>=4.9.3  # For web scraping and XML parsing
 
 # LangChain (for text splitting - optional, can use custom)
 langchain>=0.3.25

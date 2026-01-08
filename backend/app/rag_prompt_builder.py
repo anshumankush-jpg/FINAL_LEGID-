@@ -112,7 +112,7 @@ Please answer the question based ONLY on the retrieved legal documents above. If
 
     def _build_legal_system_message(self, user_country: str = None, user_jurisdiction: str = None) -> str:
         """
-        Build the system message for legal Q&A.
+        Build the system message for legal Q&A using professional prompt system.
 
         Args:
             user_country: User's country for jurisdiction awareness
@@ -121,40 +121,27 @@ Please answer the question based ONLY on the retrieved legal documents above. If
         Returns:
             System message string
         """
-        jurisdiction_info = ""
-        if user_country or user_jurisdiction:
-            jurisdiction_info = f" The user is located in {user_jurisdiction}, {user_country}." if user_jurisdiction and user_country else f" The user is located in {user_jurisdiction or user_country}."
-
-        return f"""You are a legal information assistant specializing in providing accurate answers based on official legal documents and statutes.
-
-CRITICAL RULES:
-1. Answer questions based ONLY on the provided retrieved legal documents - never use general knowledge or make assumptions about laws.
-
-2. If the provided documents do not contain sufficient information to answer the question, explicitly state: "I don't have information about that in the provided legal documents. Please consult a licensed lawyer or paralegal for advice specific to your situation."
-
-3. When referencing legal rules, statutes, or requirements:
-   - Quote or paraphrase directly from the provided documents
-   - Include specific section numbers, article numbers, or statute references
-   - Clearly indicate the jurisdiction and law being referenced
-   - Explain how the rule applies to the specific question
-
-4. Structure your answers to be legally sound and practical:
-   - Start with the relevant legal rule or statute from the documents
-   - Explain the requirements or prohibitions clearly
-   - Reference specific sections and jurisdictions
-   - Provide concrete information rather than general advice
-
-5. Always include proper citations in your answer using the document identifiers provided (e.g., "According to Section X of the Highway Traffic Act in Ontario...").
-
-6. Be precise with legal terminology and avoid oversimplification that could mislead.
-
-7. If asked about procedures, emphasize following proper legal protocols and deadlines as stated in the documents.
-
-8. End with this disclaimer: "This is general legal information only, not legal advice. For advice about your specific case, consult a licensed lawyer or paralegal in your jurisdiction."
-
-{jurisdiction_info}
-
-Remember: Your answers must be completely grounded in the provided legal documents. Do not add information, interpretations, or advice that isn't directly supported by the retrieved legal sources."""
+        from app.legal_prompts import LegalPromptSystem
+        
+        # Start with professional system prompt
+        system_message = LegalPromptSystem.PROFESSIONAL_SYSTEM_PROMPT
+        
+        # Add document context instructions
+        system_message += "\n\n" + LegalPromptSystem.DOCUMENT_CONTEXT_PROMPT
+        
+        # Add jurisdiction-specific context
+        jurisdiction = user_jurisdiction or user_country
+        if jurisdiction:
+            jurisdiction_lower = jurisdiction.lower()
+            for key, prompt in LegalPromptSystem.JURISDICTION_PROMPTS.items():
+                if key in jurisdiction_lower:
+                    system_message += "\n\n" + prompt
+                    break
+            
+            # Add specific jurisdiction note
+            system_message += f"\n\n**USER JURISDICTION:** The user is located in {jurisdiction}. Prioritize information relevant to this jurisdiction."
+        
+        return system_message
 
     def _build_insufficient_context_messages(self, question: str) -> List[Dict[str, str]]:
         """

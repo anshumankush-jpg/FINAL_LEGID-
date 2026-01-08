@@ -100,12 +100,7 @@ const OnboardingWizard = ({ onComplete }) => {
 
   const handleCountrySelect = (country) => {
     setSelectedCountry(country);
-    if (country === 'CA') {
-      setStep(3); // Go to province selection for Canada
-    } else {
-      // For USA, we might want to ask for state, but for now, complete
-      completeOnboarding(country, null);
-    }
+    setStep(3); // Go to province/state selection for both countries
   };
 
   const handleProvinceSelect = (province) => {
@@ -143,10 +138,9 @@ const OnboardingWizard = ({ onComplete }) => {
       <div className="wizard-container">
         <div className="wizard-header">
           <div className="logo">
-            <span className="logo-icon">⚖️</span>
-            <h1>PLAZA-AI</h1>
+            <h1 className="logo-text">LEGID</h1>
           </div>
-          <p className="wizard-subtitle">Legal Assistant Setup</p>
+          <p className="wizard-subtitle">Your Advanced Legal Intelligence Assistant</p>
         </div>
 
         <div className="wizard-progress">
@@ -249,21 +243,23 @@ const OnboardingWizard = ({ onComplete }) => {
             </div>
           )}
 
-          {/* Step 3: Province Selection (Canada only) */}
-          {step === 3 && selectedCountry === 'CA' && (
+          {/* Step 3: Province/State Selection */}
+          {step === 3 && (
             <div className="wizard-step">
-              <h2>Select Your Province</h2>
-              <p className="step-description">Choose your province for province-specific legal information</p>
+              <h2>Select Your {selectedCountry === 'CA' ? 'Province' : 'State'}</h2>
+              <p className="step-description">
+                Choose your {selectedCountry === 'CA' ? 'province' : 'state'} for jurisdiction-specific legal information
+              </p>
               
               <div className="province-grid">
-                {canadianProvinces.map((province) => (
+                {(selectedCountry === 'CA' ? canadianProvinces : usStates).map((region) => (
                   <button
-                    key={province.code}
-                    className={`province-card ${selectedProvince === province.code ? 'selected' : ''}`}
-                    onClick={() => handleProvinceSelect(province.code)}
+                    key={region.code}
+                    className={`province-card ${selectedProvince === region.code ? 'selected' : ''}`}
+                    onClick={() => handleProvinceSelect(region.code)}
                   >
-                    <span className="province-name">{province.name}</span>
-                    <span className="province-code">{province.code}</span>
+                    <span className="province-name">{region.name}</span>
+                    <span className="province-code">{region.code}</span>
                   </button>
                 ))}
               </div>
