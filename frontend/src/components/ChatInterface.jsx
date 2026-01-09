@@ -181,6 +181,16 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
     const translations = {
       'en': {
         welcome: 'Welcome to LEGID - Your Legal Intelligence Assistant!',
+        greeting: 'Thank you for reaching out. I\'m here to assist you with your',
+        matter: 'matter.',
+        howCanHelp: 'How may I assist you today? Please provide a detailed description of your legal situation, including:',
+        keyPoints: [
+          'The nature of your legal issue or question',
+          'Relevant dates, locations, and parties involved',
+          'Any documents or evidence you have',
+          'What outcome or information you\'re seeking'
+        ],
+        disclaimer: 'I\'ll provide you with relevant legal information based on official sources and statutes. Please note that this is general legal information, not legal advice.',
         selectedArea: 'Selected Legal Area',
         jurisdiction: 'Jurisdiction',
         whatCovers: 'What This Covers',
@@ -195,6 +205,16 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
       },
       'hi': {
         welcome: 'LEGID कानूनी सहायक में आपका स्वागत है!',
+        greeting: 'संपर्क करने के लिए धन्यवाद। मैं आपके',
+        matter: 'मामले में आपकी सहायता के लिए यहां हूं।',
+        howCanHelp: 'आज मैं आपकी कैसे सहायता कर सकता हूं? कृपया अपनी कानूनी स्थिति का विस्तृत विवरण प्रदान करें, जिसमें शामिल हो:',
+        keyPoints: [
+          'आपके कानूनी मुद्दे या प्रश्न की प्रकृति',
+          'प्रासंगिक तिथियां, स्थान और संबंधित पक्ष',
+          'आपके पास कोई दस्तावेज या साक्ष्य',
+          'आप क्या परिणाम या जानकारी चाहते हैं'
+        ],
+        disclaimer: 'मैं आपको आधिकारिक स्रोतों और क़ानूनों के आधार पर प्रासंगिक कानूनी जानकारी प्रदान करूंगा। कृपया ध्यान दें कि यह सामान्य कानूनी जानकारी है, कानूनी सलाह नहीं।',
         selectedArea: 'चयनित कानूनी क्षेत्र',
         jurisdiction: 'न्यायालय क्षेत्र',
         whatCovers: 'यह क्या कवर करता है',
@@ -209,6 +229,16 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
       },
       'fr': {
         welcome: 'Bienvenue dans l\'assistant juridique LEGID!',
+        greeting: 'Merci de nous avoir contactés. Je suis là pour vous aider avec votre',
+        matter: 'affaire.',
+        howCanHelp: 'Comment puis-je vous aider aujourd\'hui? Veuillez fournir une description détaillée de votre situation juridique, incluant:',
+        keyPoints: [
+          'La nature de votre problème ou question juridique',
+          'Les dates, lieux et parties concernées pertinents',
+          'Tous documents ou preuves que vous avez',
+          'Le résultat ou l\'information que vous recherchez'
+        ],
+        disclaimer: 'Je vous fournirai des informations juridiques pertinentes basées sur des sources et des lois officielles. Veuillez noter qu\'il s\'agit d\'informations juridiques générales, et non de conseils juridiques.',
         selectedArea: 'Domaine juridique sélectionné',
         jurisdiction: 'Juridiction',
         whatCovers: 'Ce que cela couvre',
@@ -223,6 +253,16 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
       },
       'es': {
         welcome: '¡Bienvenido al asistente legal LEGID!',
+        greeting: 'Gracias por contactarnos. Estoy aquí para ayudarle con su',
+        matter: 'asunto.',
+        howCanHelp: '¿Cómo puedo ayudarle hoy? Por favor proporcione una descripción detallada de su situación legal, incluyendo:',
+        keyPoints: [
+          'La naturaleza de su problema o pregunta legal',
+          'Fechas, lugares y partes involucradas relevantes',
+          'Cualquier documento o evidencia que tenga',
+          'Qué resultado o información está buscando'
+        ],
+        disclaimer: 'Le proporcionaré información legal relevante basada en fuentes y estatutos oficiales. Tenga en cuenta que esta es información legal general, no asesoramiento legal.',
         selectedArea: 'Área legal seleccionada',
         jurisdiction: 'Jurisdicción',
         whatCovers: 'Qué cubre esto',
@@ -237,6 +277,16 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
       },
       'pa': {
         welcome: 'LEGID ਕਾਨੂੰਨੀ ਸਹਾਇਕ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!',
+        greeting: 'ਸੰਪਰਕ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ। ਮੈਂ ਤੁਹਾਡੇ',
+        matter: 'ਮਾਮਲੇ ਵਿੱਚ ਤੁਹਾਡੀ ਸਹਾਇਤਾ ਕਰਨ ਲਈ ਇੱਥੇ ਹਾਂ।',
+        howCanHelp: 'ਅੱਜ ਮੈਂ ਤੁਹਾਡੀ ਕਿਵੇਂ ਸਹਾਇਤਾ ਕਰ ਸਕਦਾ ਹਾਂ? ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਕਾਨੂੰਨੀ ਸਥਿਤੀ ਦਾ ਵਿਸਤ੍ਰਿਤ ਵਰਣਨ ਪ੍ਰਦਾਨ ਕਰੋ, ਜਿਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੈ:',
+        keyPoints: [
+          'ਤੁਹਾਡੇ ਕਾਨੂੰਨੀ ਮੁੱਦੇ ਜਾਂ ਸਵਾਲ ਦੀ ਪ੍ਰਕਿਰਤੀ',
+          'ਸੰਬੰਧਿਤ ਤਾਰੀਖਾਂ, ਸਥਾਨ ਅਤੇ ਸ਼ਾਮਲ ਧਿਰਾਂ',
+          'ਤੁਹਾਡੇ ਕੋਲ ਕੋਈ ਦਸਤਾਵੇਜ਼ ਜਾਂ ਸਬੂਤ',
+          'ਤੁਸੀਂ ਕਿਹੜਾ ਨਤੀਜਾ ਜਾਂ ਜਾਣਕਾਰੀ ਚਾਹੁੰਦੇ ਹੋ'
+        ],
+        disclaimer: 'ਮੈਂ ਤੁਹਾਨੂੰ ਅਧਿਕਾਰਤ ਸਰੋਤਾਂ ਅਤੇ ਕਾਨੂੰਨਾਂ ਦੇ ਆਧਾਰ ਤੇ ਸੰਬੰਧਿਤ ਕਾਨੂੰਨੀ ਜਾਣਕਾਰੀ ਪ੍ਰਦਾਨ ਕਰਾਂਗਾ। ਕਿਰਪਾ ਕਰਕੇ ਨੋਟ ਕਰੋ ਕਿ ਇਹ ਆਮ ਕਾਨੂੰਨੀ ਜਾਣਕਾਰੀ ਹੈ, ਕਾਨੂੰਨੀ ਸਲਾਹ ਨਹੀਂ।',
         selectedArea: 'ਚੁਣਿਆ ਕਾਨੂੰਨੀ ਖੇਤਰ',
         jurisdiction: 'ਅਧਿਕਾਰ ਖੇਤਰ',
         whatCovers: 'ਇਹ ਕੀ ਕਵਰ ਕਰਦਾ ਹੈ',
@@ -251,6 +301,16 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
       },
       'zh': {
         welcome: '欢迎使用 LEGID 法律助手！',
+        greeting: '感谢您的联系。我在这里帮助您处理您的',
+        matter: '事务。',
+        howCanHelp: '今天我能如何帮助您？请提供您法律情况的详细描述，包括：',
+        keyPoints: [
+          '您的法律问题或疑问的性质',
+          '相关日期、地点和涉及的各方',
+          '您拥有的任何文件或证据',
+          '您寻求的结果或信息'
+        ],
+        disclaimer: '我将根据官方来源和法规为您提供相关的法律信息。请注意，这是一般法律信息，而非法律建议。',
         selectedArea: '选定的法律领域',
         jurisdiction: '管辖权',
         whatCovers: '涵盖范围',
@@ -270,9 +330,6 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
   const showWelcomeMessage = async () => {
     const lawType = lawTypeSelection.lawType;
     const jurisdiction = lawTypeSelection.jurisdiction;
-    const description = lawTypeSelection.description || '';
-    const scope = lawTypeSelection.scope || '';
-    const questions = getLawTypeGuidedQuestions(lawType);
     const province = preferences?.province || null;
     
     // Fetch government resources dynamically based on province
@@ -281,40 +338,17 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
     const selectedLang = preferences?.language?.code || 'en';
     const t = getTranslatedWelcomeText(selectedLang);
     
+    // Professional welcome message with greeting
     let message = `${t.welcome}\n\n`;
-    message += `📚 ${t.selectedArea}: ${lawType}\n`;
-    message += `📝 ${description}\n\n`;
-    message += `📍 ${t.jurisdiction}: ${jurisdiction === 'general' ? 'Canada & USA' : jurisdiction}\n\n`;
-    message += `⚖️ ${t.whatCovers}:\n`;
-    message += `${t.canOnlyHelp} ${lawType} ${t.questions} `;
+    message += `${t.greeting} ${lawType} ${t.matter}\n\n`;
+    message += `${t.howCanHelp}\n\n`;
     
-    // Add specific examples based on law type
-    const examplesMap = {
-      'Constitutional Law': 'Charter rights, constitutional challenges, freedom of speech/religion, equality rights',
-      'Criminal Law': 'Criminal charges, arrests, trials, defenses, bail, sentencing (theft, assault, fraud, drug offenses)',
-      'Traffic Law': 'Traffic tickets, speeding, careless driving, distracted driving, license suspensions, demerit points',
-      'Business Litigation': 'Business lawsuits, commercial disputes, breach of contract, shareholder conflicts, partnership disputes',
-      'Business Law': 'Business formation, incorporation, contracts, mergers & acquisitions, franchising, intellectual property, compliance',
-      'Family Law': 'Divorce, separation, child custody/support, spousal support, property division, prenuptial agreements',
-      'Employment Law': 'Wrongful dismissal, workplace harassment, discrimination, employment contracts, labor standards',
-      'Immigration Law': 'Visas, work permits, citizenship, refugee claims, permanent residence, immigration appeals',
-      'Real Estate Law': 'Property transactions, buying/selling, landlord-tenant disputes, mortgages, zoning',
-      'Civil Law': 'Civil lawsuits, contracts, personal injury, property disputes, negligence, damages',
-      'Administrative Law': 'Government decisions, administrative tribunals, immigration rulings, tax appeals, licensing',
-      'Tax Law': 'Income tax, corporate tax, GST/HST, tax audits, CRA/IRS disputes, tax planning',
-      'Wills, Estates, and Trusts': 'Wills, estate planning, probate, powers of attorney, estate administration',
-      'Health Law': 'Medical malpractice, patient rights, healthcare compliance, consent to treatment'
-    };
-    
-    message += `${t.thisIncludes} ${examplesMap[lawType] || 'Questions specific to this area of law'}.\n\n`;
-    message += `❌ ${t.questionsOutside} ${lawType} ${t.willBeRedirected}\n\n`;
-    
-    message += `📋 ${t.toHelpBest}\n\n`;
-    questions.forEach((q, idx) => {
-      message += `   ${idx + 1}. ${q}\n`;
+    // Add key points
+    t.keyPoints.forEach((point, idx) => {
+      message += `   ${idx + 1}. ${point}\n`;
     });
     
-    message += `\n💬 ${t.pleaseDescribe} ${lawType} ${t.situation}`;
+    message += `\n${t.disclaimer}`;
     
     // Add language note if not English
     if (selectedLang !== 'en') {
@@ -713,7 +747,29 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
     utterance.onerror = (event) => {
       console.error('TTS error:', event);
       setIsSpeaking(false);
-      addSystemMessage('❌ Speech error occurred', true);
+      
+      // Provide helpful error message based on error type
+      let errorMsg = '❌ Speech error: ';
+      if (event.error === 'not-allowed') {
+        errorMsg += 'Microphone permission denied. Please allow microphone access in browser settings.';
+      } else if (event.error === 'network') {
+        errorMsg += 'Network error. Please check your internet connection.';
+      } else if (event.error === 'synthesis-failed') {
+        errorMsg += 'Voice synthesis failed. Try clicking the speaker icon again.';
+      } else if (event.error === 'audio-busy') {
+        errorMsg += 'Audio is busy. Please wait and try again.';
+      } else {
+        errorMsg += 'Unable to speak. Try refreshing the page or use a different browser.';
+      }
+      
+      addSystemMessage(errorMsg, true);
+      
+      // Try to recover by canceling any pending speech
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {
+        console.error('Failed to cancel speech:', e);
+      }
     };
 
     window.speechSynthesis.speak(utterance);
@@ -1449,6 +1505,14 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
           preferences={preferences}
           lawTypeSelection={lawTypeSelection}
           onTranscript={handleVoiceTranscript}
+          onAutoReadToggle={(enabled) => {
+            setAutoRead(enabled);
+            if (enabled) {
+              addSystemMessage('🔊 Auto-read enabled - Bot will read all responses aloud', true);
+            } else {
+              addSystemMessage('🔇 Auto-read disabled', true);
+            }
+          }}
         />
       )}
 

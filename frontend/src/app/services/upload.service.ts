@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UploadService {
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = 'http://localhost:8001/api';
 
   constructor(private http: HttpClient) {}
 

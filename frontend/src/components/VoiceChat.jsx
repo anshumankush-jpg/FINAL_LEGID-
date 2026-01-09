@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './VoiceChat.css';
 
-const VoiceChat = ({ preferences, lawTypeSelection, onTranscript }) => {
+const VoiceChat = ({ preferences, lawTypeSelection, onTranscript, onAutoReadToggle }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [audioLevel, setAudioLevel] = useState(0);
   const [error, setError] = useState('');
+  const [autoReadEnabled, setAutoReadEnabled] = useState(false);
   
   const recognitionRef = useRef(null);
   const audioContextRef = useRef(null);
@@ -34,6 +35,17 @@ const VoiceChat = ({ preferences, lawTypeSelection, onTranscript }) => {
     try {
       setError('');
       setTranscript('');
+      
+      // Enable auto-read when user clicks "Tap to Talk"
+      if (!autoReadEnabled) {
+        setAutoReadEnabled(true);
+        // Notify parent component to enable auto-read
+        if (onAutoReadToggle) {
+          onAutoReadToggle(true);
+        }
+        // Show notification
+        console.log('🔊 Auto-read enabled - Bot will read all responses aloud');
+      }
       
       // Check browser support
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -221,6 +233,24 @@ This uses your browser's FREE speech recognition - no API costs!`;
     setIsSpeaking(false);
   };
 
+  // Toggle auto-read mode
+  const toggleAutoRead = () => {
+    const newState = !autoReadEnabled;
+    setAutoReadEnabled(newState);
+    
+    // Notify parent component
+    if (onAutoReadToggle) {
+      onAutoReadToggle(newState);
+    }
+    
+    // Stop speaking if disabling
+    if (!newState && isSpeaking) {
+      stopSpeaking();
+    }
+    
+    console.log(newState ? '🔊 Auto-read enabled' : '🔇 Auto-read disabled');
+  };
+
   // Expose speak function to parent
   useEffect(() => {
     window.voiceChatSpeak = speakText;
@@ -239,6 +269,27 @@ This uses your browser's FREE speech recognition - no API costs!`;
       
       <div className="voice-info">
         🎤 <strong>FREE Voice Chat</strong> - Uses your browser's built-in speech recognition. No API costs!
+        {autoReadEnabled && (
+          <div className="auto-read-badge">
+            🔊 Auto-read is ON - Bot will read all responses aloud
+          </div>
+        )}
+      </div>
+      
+      {/* Auto-Read Toggle Button */}
+      <div className="auto-read-controls">
+        <button 
+          className={`auto-read-toggle ${autoReadEnabled ? 'active' : ''}`}
+          onClick={toggleAutoRead}
+          title={autoReadEnabled ? 'Turn off auto-read' : 'Turn on auto-read'}
+        >
+          {autoReadEnabled ? '🔊 Auto-Read: ON' : '🔇 Auto-Read: OFF'}
+        </button>
+        <span className="auto-read-hint">
+          {autoReadEnabled 
+            ? 'Bot will read all responses aloud automatically' 
+            : 'Click "Tap to Talk" to enable auto-read'}
+        </span>
       </div>
       
       <div className="voice-controls">
@@ -248,12 +299,16 @@ This uses your browser's FREE speech recognition - no API costs!`;
             onClick={startRecording}
             title="Start voice chat"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-              <line x1="12" y1="19" x2="12" y2="23"></line>
-              <line x1="8" y1="23" x2="16" y2="23"></line>
-            </svg>
+            <div className="mic-icon-container">
+              <svg className="mic-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+              <div className="mic-ripple"></div>
+              <div className="mic-ripple mic-ripple-delay"></div>
+            </div>
             <span>Tap to Talk</span>
           </button>
         )}
@@ -265,8 +320,24 @@ This uses your browser's FREE speech recognition - no API costs!`;
             title="Stop recording"
           >
             <div className="recording-indicator">
-              <div className="pulse-ring" style={{ transform: `scale(${1 + audioLevel / 100})` }}></div>
-              <div className="recording-dot"></div>
+              <div className="mic-icon-container active">
+                <svg className="mic-icon recording" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+                <div className="pulse-ring" style={{ transform: `scale(${1 + audioLevel / 100})` }}></div>
+              </div>
+              <div className="sound-wave-container">
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 0.8)}%` }}></div>
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 1.0)}%` }}></div>
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 0.6)}%` }}></div>
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 0.9)}%` }}></div>
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 0.7)}%` }}></div>
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 1.0)}%` }}></div>
+                <div className="sound-wave-bar" style={{ height: `${Math.max(20, audioLevel * 0.5)}%` }}></div>
+              </div>
             </div>
             <span>Recording... (Tap to stop)</span>
           </button>
@@ -286,9 +357,18 @@ This uses your browser's FREE speech recognition - no API costs!`;
             title="Stop speaking"
           >
             <div className="speaking-indicator">
-              <div className="sound-wave"></div>
-              <div className="sound-wave"></div>
-              <div className="sound-wave"></div>
+              <svg className="speaker-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path className="sound-wave-1" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                <path className="sound-wave-2" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <div className="sound-wave-container speaking">
+                <div className="sound-wave-bar"></div>
+                <div className="sound-wave-bar"></div>
+                <div className="sound-wave-bar"></div>
+                <div className="sound-wave-bar"></div>
+                <div className="sound-wave-bar"></div>
+              </div>
             </div>
             <span>AI Speaking... (Tap to stop)</span>
           </button>

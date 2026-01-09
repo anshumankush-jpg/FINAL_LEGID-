@@ -7,7 +7,7 @@ import { UserPreferences } from './user-context.service';
   providedIn: 'root'
 })
 export class UserPreferencesService {
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = 'http://localhost:8001/api';
 
   constructor(private http: HttpClient) {}
 

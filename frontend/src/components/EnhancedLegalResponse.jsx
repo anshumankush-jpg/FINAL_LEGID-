@@ -41,7 +41,38 @@ const AnimatedSection = ({ children, delay = 0 }) => {
   );
 };
 
+// Enhanced typing animation component with word-by-word animation
+const TypewriterText = ({ text, speed = 30 }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const textLength = text.length;
+
+    const interval = setInterval(() => {
+      if (currentIndex < textLength) {
+        setDisplayedText(text.substring(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        setIsComplete(true);
+        clearInterval(interval);
+      }
+    }, speed);
+
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return (
+    <span className={isComplete ? '' : 'typing-text'}>
+      {displayedText}
+    </span>
+  );
+};
+
 const EnhancedLegalResponse = ({ response }) => {
+  const [showTyping, setShowTyping] = useState(true);
+
   // Function to convert URLs to clickable links
   const linkifyText = (text) => {
     if (!text) return text;
@@ -195,12 +226,16 @@ const EnhancedLegalResponse = ({ response }) => {
         </AnimatedSection>
       )}
 
-      {/* Fallback for unstructured responses */}
+      {/* Fallback for unstructured responses with typing animation */}
       {sections.offense.length === 0 && sections.solution.length === 0 && sections.reference.length === 0 && (
-        <div className="fallback-response">
+        <div className="fallback-response animated-response-box">
           {answerText && answerText.trim() ? (
             <div className="message-text">
-              {linkifyText(answerText)}
+              {showTyping ? (
+                <TypewriterText text={answerText} speed={15} />
+              ) : (
+                linkifyText(answerText)
+              )}
             </div>
           ) : (
             <p className="no-response">No response received. Please try again.</p>

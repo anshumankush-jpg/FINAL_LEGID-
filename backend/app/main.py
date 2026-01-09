@@ -54,13 +54,15 @@ def get_artillery_vector_store(dimension: int = 384, description: str = "artille
 
 # Legacy imports (if they exist)
 try:
-    from app.api.routes import ingest, query, matters, analytics, documents, legal_chat, rtld
+    # Import only what we actually need - the modules exist but don't export those names
+    # from app.api.routes import ingest, query, matters, analytics, documents, legal_chat, rtld
     from app.models.schemas import HealthResponse
     from app.vector_store import get_vector_store
     from app.core.openai_client_unified import chat_completion
     from app.core.config import settings
     LEGACY_SYSTEMS_AVAILABLE = True
-except ImportError:
+except ImportError as e:
+    logger.warning(f"Legacy systems import failed: {e}")
     LEGACY_SYSTEMS_AVAILABLE = False
     chat_completion = None
     settings = None
@@ -87,16 +89,16 @@ if os.name == 'nt':  # Windows
         try:
             import pytesseract
             pytesseract.pytesseract.tesseract_cmd = tesseract_path
-            logger.info(f"✅ Tesseract OCR configured at: {tesseract_path}")
+            logger.info(f"[OK] Tesseract OCR configured at: {tesseract_path}")
             # Test it
             version = pytesseract.get_tesseract_version()
-            logger.info(f"✅ Tesseract version: {version}")
+            logger.info(f"[OK] Tesseract version: {version}")
         except Exception as e:
-            logger.error(f"❌ Failed to configure Tesseract: {e}")
+            logger.error(f"[ERROR] Failed to configure Tesseract: {e}")
     else:
-        logger.warning(f"⚠️ Tesseract not found at: {tesseract_path}")
+        logger.warning(f"[WARNING] Tesseract not found at: {tesseract_path}")
 else:
-    logger.info("ℹ️ Non-Windows system - Tesseract should be in PATH")
+    logger.info("[INFO] Non-Windows system - Tesseract should be in PATH")
 
 # Create FastAPI app
 app = FastAPI(
@@ -146,16 +148,16 @@ def get_embedding_service():
         try:
             # Try Sentence Transformers first (free, local)
             _embedding_service = get_artillery_embedding_service()
-            logger.info("✅ Using Sentence Transformers (local, free)")
+            logger.info("[OK] Using Sentence Transformers (local, free)")
         except Exception as e:
-            logger.warning(f"⚠️ Sentence Transformers failed: {e}")
-            logger.info("🔄 Falling back to OpenAI embeddings...")
+            logger.warning(f"[WARNING] Sentence Transformers failed: {e}")
+            logger.info("[INFO] Falling back to OpenAI embeddings...")
             try:
                 from app.core.openai_embedding_fallback import get_openai_embedding_service
                 _embedding_service = get_openai_embedding_service()
-                logger.info("✅ Using OpenAI embeddings (fallback)")
+                logger.info("[OK] Using OpenAI embeddings (fallback)")
             except Exception as e2:
-                logger.error(f"❌ OpenAI embedding fallback also failed: {e2}")
+                logger.error(f"[ERROR] OpenAI embedding fallback also failed: {e2}")
                 raise Exception(f"Both embedding services failed. Sentence Transformers: {e}, OpenAI: {e2}")
     return _embedding_service
 
@@ -417,7 +419,7 @@ async def artillery_upload_document(
         }
 
     except Exception as e:
-        logger.error(f"❌ Upload failed: {e}")
+        logger.error(f"[ERROR] Upload failed: {e}")
         raise HTTPException(status_code=500, detail=f"Processing failed: {str(e)}")
 
 
@@ -842,7 +844,7 @@ async def delete_document(doc_id: str, user_id: str = "default_user"):
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"❌ Document deletion failed: {e}")
+        logger.error(f"[ERROR] Document deletion failed: {e}")
         raise HTTPException(status_code=500, detail=f"Document deletion failed: {str(e)}")
 
 
