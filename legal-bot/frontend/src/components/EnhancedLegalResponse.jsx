@@ -6,10 +6,10 @@ import ImageCard from './ImageCard';
 // TIMING CONFIGURATION (Configurable)
 // ============================================
 const TIMING = {
-  TOKEN_DELAY: 15,           // ms between tokens/words
-  PARAGRAPH_PAUSE: 250,      // ms pause after paragraph
-  SECTION_PAUSE: 400,        // ms pause after heading
-  BULLET_PAUSE: 100,         // ms pause after bullet point
+  TOKEN_DELAY: 20,           // ms between tokens/words (increased for visibility)
+  PARAGRAPH_PAUSE: 300,      // ms pause after paragraph
+  SECTION_PAUSE: 500,        // ms pause after heading
+  BULLET_PAUSE: 150,         // ms pause after bullet point
   FINAL_PAUSE: 200,          // ms before completion
   THINKING_MIN_DURATION: 800 // minimum thinking animation duration
 };
@@ -247,8 +247,9 @@ const StreamingText = ({
 
     const animate = () => {
       if (indexRef.current < text.length) {
-        // Add multiple characters at once for smoother animation
-        const charsToAdd = Math.min(2, text.length - indexRef.current);
+        // Add characters one at a time for visible typewriter effect
+        // Add 1-2 characters based on context for smooth but visible animation
+        const charsToAdd = Math.min(1, text.length - indexRef.current);
         indexRef.current += charsToAdd;
         setDisplayedText(text.substring(0, indexRef.current));
         
@@ -270,15 +271,24 @@ const StreamingText = ({
     };
   }, [text, isAnimating, skipAnimation, onComplete, getDelay]);
 
-  // Render with cursor
+  // Render with cursor - show text as it streams
   return (
     <div className="streaming-text-container">
       {isComplete ? (
         parseMarkdown(displayedText)
       ) : (
         <div className="streaming-text">
-          <span className="streaming-content">{displayedText}</span>
-          <BlinkingCursor visible={!isComplete} />
+          {displayedText ? (
+            <>
+              {/* Show raw text during streaming for smooth animation */}
+              <span className="streaming-content" style={{ whiteSpace: 'pre-wrap' }}>
+                {displayedText}
+              </span>
+              <BlinkingCursor visible={!isComplete} />
+            </>
+          ) : (
+            <BlinkingCursor visible={!isComplete} />
+          )}
         </div>
       )}
     </div>
@@ -303,7 +313,12 @@ const EnhancedLegalResponse = ({ response, isNewMessage = true }) => {
                           answerText.toLowerCase().includes('diagram:');
   
   // Check if this is a welcome message or should skip animation
-  const shouldSkipAnimation = response?.isWelcome || !isNewMessage || !answerText;
+  // ALWAYS animate new messages (isNewMessage=true) - this is the default behavior
+  // Only skip for welcome messages or if explicitly disabled
+  const shouldSkipAnimation = response?.isWelcome || (response?.skipAnimation === true) || !answerText;
+  
+  // Force animation for new messages
+  const willAnimate = isNewMessage && !shouldSkipAnimation;
 
   useEffect(() => {
     if (shouldSkipAnimation) {
@@ -312,22 +327,28 @@ const EnhancedLegalResponse = ({ response, isNewMessage = true }) => {
       return;
     }
 
-    // Start with thinking phase
-    setPhase('thinking');
-    setShowThinking(true);
+    // Start with thinking phase for new messages
+    if (willAnimate) {
+      setPhase('thinking');
+      setShowThinking(true);
 
-    // Minimum thinking duration for smooth UX
-    thinkingTimerRef.current = setTimeout(() => {
+      // Minimum thinking duration for smooth UX
+      thinkingTimerRef.current = setTimeout(() => {
+        setShowThinking(false);
+        setPhase('streaming');
+      }, TIMING.THINKING_MIN_DURATION);
+    } else {
+      // For non-animated messages, go straight to complete
+      setPhase('complete');
       setShowThinking(false);
-      setPhase('streaming');
-    }, TIMING.THINKING_MIN_DURATION);
+    }
 
     return () => {
       if (thinkingTimerRef.current) {
         clearTimeout(thinkingTimerRef.current);
       }
     };
-  }, [answerText, shouldSkipAnimation]);
+  }, [answerText, shouldSkipAnimation, willAnimate]);
 
   const handleStreamComplete = useCallback(() => {
     setPhase('complete');
@@ -342,7 +363,7 @@ const EnhancedLegalResponse = ({ response, isNewMessage = true }) => {
       )}
 
       {/* Streaming/Complete content */}
-      {(phase === 'streaming' || phase === 'complete') && !shouldSkipAnimation && (
+      {(phase === 'streaming' || phase === 'complete') && willAnimate && (
         <div className="response-content">
           {answerText ? (
             <StreamingText

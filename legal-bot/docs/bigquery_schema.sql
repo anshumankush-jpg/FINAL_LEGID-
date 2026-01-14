@@ -1,457 +1,416 @@
--- LegalAI BigQuery Schema
--- ChatGPT-like conversation persistence + managed identity
+-- ============================================
+-- LEGALAI BIGQUERY SCHEMA - PROFILE & ACCOUNT SYSTEM
+-- ============================================
+-- Dataset: legalai
+-- Tables: identity_users, user_profiles, user_consent, access_requests
+-- Plus existing: conversations, messages, attachments
 
--- =============================================================================
--- DATASET CREATION
--- =============================================================================
+-- ============================================
+-- CREATE DATASET
+-- ============================================
 
 CREATE SCHEMA IF NOT EXISTS `legalai`
-OPTIONS(
-  location="us-central1",
-  description="LegalAI production database - conversations, identity, analytics"
+OPTIONS (
+  location = 'US',
+  description = 'LegalAI user data and analytics'
 );
 
--- =============================================================================
--- IDENTITY & AUTH TABLES
--- =============================================================================
+-- ============================================
+-- IDENTITY_USERS TABLE
+-- ============================================
+-- Maps internal user_id to OAuth identities
+-- Stores role, lawyer status, provisioned access control
 
--- Identity Users: Canonical user mapping (external auth → internal user_id)
--- CRITICAL: This is the ALLOWLIST - only users in this table can access the app
 CREATE TABLE IF NOT EXISTS `legalai.identity_users` (
-  user_id STRING NOT NULL,              -- Internal UUID (managed identity)
-  auth_provider STRING NOT NULL,         -- 'google' | 'microsoft' | 'email'
-  auth_uid STRING NOT NULL,              -- Provider's UID (e.g., 'google:12345')
-  email STRING NOT NULL,
-  role STRING NOT NULL,                  -- 'customer' | 'lawyer' | 'admin'
-  lawyer_status STRING,                  -- 'not_applicable' | 'pending' | 'approved' | 'rejected'
-  full_name STRING,
-  is_allowed BOOL NOT NULL DEFAULT TRUE, -- ALLOWLIST FLAG: must be TRUE to login
-  profile_completed BOOL NOT NULL DEFAULT FALSE, -- Profile setup status
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  last_login_at TIMESTAMP,
-  env STRING NOT NULL,                   -- 'dev' | 'prod'
-  metadata JSON,                         -- Additional user metadata
-  PRIMARY KEY (user_id) NOT ENFORCED
-)
-OPTIONS(
-  description="User identity mapping - ALLOWLIST for app access"
-);
-
--- Indexes for fast lookups
-CREATE UNIQUE INDEX IF NOT EXISTS idx_auth_uid_provider 
-ON `legalai.identity_users`(auth_uid, auth_provider, env);
-
-CREATE INDEX IF NOT EXISTS idx_email 
-ON `legalai.identity_users`(email, env);
-
-CREATE INDEX IF NOT EXISTS idx_role 
-ON `legalai.identity_users`(role, env);
-
-CREATE INDEX IF NOT EXISTS idx_is_allowed 
-ON `legalai.identity_users`(is_allowed, env);
-
--- User Profiles: Mandatory profile information (address + personal details)
-CREATE TABLE IF NOT EXISTS `legalai.user_profiles` (
-  user_id STRING NOT NULL,              -- Links to identity_users
-  unique_address_id STRING NOT NULL,     -- System-generated UUID for address
-  
-  -- Personal Information
-  legal_name STRING NOT NULL,
-  display_name STRING NOT NULL,
-  email STRING NOT NULL,                 -- Denormalized from identity_users
-  phone STRING,
-  
-  -- Address Information (REQUIRED)
-  address_line1 STRING NOT NULL,
-  address_line2 STRING,
-  city STRING NOT NULL,
-  province_state STRING NOT NULL,        -- Province (CA) or State (US)
-  country STRING NOT NULL,               -- 'Canada' | 'USA'
-  postal_zip STRING NOT NULL,
-  
-  -- Profile Photo
-  profile_photo_url STRING,              -- GCS URL
-  
-  -- Metadata
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  env STRING NOT NULL,
-  
-  PRIMARY KEY (user_id) NOT ENFORCED,
-  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED
-)
-OPTIONS(
-  description="User profile information - mandatory for app access"
-);
-
-CREATE UNIQUE INDEX IF NOT EXISTS idx_profile_user 
-ON `legalai.user_profiles`(user_id, env);
-
-CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_address 
-ON `legalai.user_profiles`(unique_address_id);
-
--- =============================================================================
--- CHATGPT-LIKE CONVERSATION TABLES
--- =============================================================================
-
--- Conversations: Top-level chat sessions
-CREATE TABLE IF NOT EXISTS `legalai.conversations` (
-  conversation_id STRING NOT NULL,
-  user_id STRING NOT NULL,               -- ← USER SCOPING
-  title STRING NOT NULL,                 -- Auto-generated or user-edited
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  is_archived BOOL NOT NULL DEFAULT FALSE,
-  is_pinned BOOL NOT NULL DEFAULT FALSE,
-  law_category STRING,                   -- e.g., 'Traffic Law', 'Criminal Law'
-  jurisdiction STRING,                   -- e.g., 'ON', 'CA'
-  env STRING NOT NULL,
-  metadata JSON,                         -- Additional conversation metadata
-  PRIMARY KEY (conversation_id) NOT ENFORCED,
-  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED
-)
-PARTITION BY DATE(created_at)
-OPTIONS(
-  description="User conversations (ChatGPT-like chat sessions)",
-  partition_expiration_days=NULL  -- Keep forever
-);
-
-CREATE INDEX IF NOT EXISTS idx_conv_user_id 
-ON `legalai.conversations`(user_id, env);
-
-CREATE INDEX IF NOT EXISTS idx_conv_updated 
-ON `legalai.conversations`(user_id, updated_at DESC);
-
--- Messages: Individual messages within conversations
-CREATE TABLE IF NOT EXISTS `legalai.messages` (
-  message_id STRING NOT NULL,
-  conversation_id STRING NOT NULL,
-  user_id STRING NOT NULL,               -- ← USER SCOPING (denormalized for security)
-  role STRING NOT NULL,                  -- 'user' | 'assistant' | 'system' | 'tool'
-  content STRING NOT NULL,               -- Message text
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  env STRING NOT NULL,
-  metadata JSON,                         -- Model, tokens, citations, etc.
-  PRIMARY KEY (message_id) NOT ENFORCED,
-  FOREIGN KEY (conversation_id) REFERENCES `legalai.conversations`(conversation_id) NOT ENFORCED,
-  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED
-)
-PARTITION BY DATE(created_at)
-OPTIONS(
-  description="Chat messages within conversations",
-  partition_expiration_days=NULL  -- Keep forever
-);
-
-CREATE INDEX IF NOT EXISTS idx_msg_conversation 
-ON `legalai.messages`(conversation_id, created_at);
-
-CREATE INDEX IF NOT EXISTS idx_msg_user 
-ON `legalai.messages`(user_id, env);
-
--- Full-text search index (if using BigQuery Search)
--- Note: For production, consider using Elasticsearch/Meilisearch for better search
-CREATE SEARCH INDEX IF NOT EXISTS idx_msg_search
-ON `legalai.messages`(content)
-OPTIONS(analyzer='STANDARD');
-
--- =============================================================================
--- ATTACHMENTS & FILES
--- =============================================================================
-
--- Attachments: Files/images uploaded by users
-CREATE TABLE IF NOT EXISTS `legalai.attachments` (
-  attachment_id STRING NOT NULL,
-  user_id STRING NOT NULL,               -- ← USER SCOPING
-  conversation_id STRING,                -- Nullable (can be standalone)
-  file_name STRING NOT NULL,
-  file_type STRING NOT NULL,             -- MIME type
-  file_size_bytes INT64 NOT NULL,
-  gcs_url STRING NOT NULL,               -- gs://bucket/path
-  gcs_bucket STRING NOT NULL,
-  gcs_path STRING NOT NULL,
-  sha256 STRING NOT NULL,                -- File integrity check
-  ocr_text STRING,                       -- Extracted text (if PDF/image)
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  env STRING NOT NULL,
-  metadata JSON,
-  PRIMARY KEY (attachment_id) NOT ENFORCED,
-  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED,
-  FOREIGN KEY (conversation_id) REFERENCES `legalai.conversations`(conversation_id) NOT ENFORCED
-)
-PARTITION BY DATE(created_at)
-OPTIONS(
-  description="User file uploads (images, PDFs, documents)",
-  partition_expiration_days=NULL
-);
-
-CREATE INDEX IF NOT EXISTS idx_attach_user 
-ON `legalai.attachments`(user_id, env);
-
-CREATE INDEX IF NOT EXISTS idx_attach_conversation 
-ON `legalai.attachments`(conversation_id);
-
--- Full-text search on OCR text
-CREATE SEARCH INDEX IF NOT EXISTS idx_attach_ocr_search
-ON `legalai.attachments`(ocr_text)
-OPTIONS(analyzer='STANDARD');
-
--- =============================================================================
--- LAWYER VERIFICATION TABLES
--- =============================================================================
-
--- Lawyer Applications: Verification submissions
-CREATE TABLE IF NOT EXISTS `legalai.lawyer_applications` (
-  application_id STRING NOT NULL,
   user_id STRING NOT NULL,
-  full_name STRING NOT NULL,
+  auth_provider STRING NOT NULL, -- 'google', 'microsoft', 'email'
+  auth_uid STRING NOT NULL, -- Provider's user ID
   email STRING NOT NULL,
-  
-  -- Jurisdiction
-  country STRING NOT NULL,               -- 'Canada' | 'USA'
-  jurisdiction STRING NOT NULL,          -- Province/State code (e.g., 'ON', 'CA')
-  
-  -- Credentials
-  bar_number STRING NOT NULL,
-  regulator_name STRING NOT NULL,        -- e.g., "Law Society of Ontario"
-  practice_areas ARRAY<STRING>,
-  years_of_experience INT64,
-  
-  -- Firm Information
-  firm_name STRING,
-  firm_website STRING,
-  
-  -- Documents (GCS URLs)
-  bar_license_url STRING NOT NULL,
-  government_id_url STRING,
-  additional_credentials_url STRING,
-  
-  -- Status
-  status STRING NOT NULL DEFAULT 'pending',  -- 'pending' | 'approved' | 'rejected'
-  reviewer_id STRING,
-  reviewer_notes STRING,
-  submitted_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  role STRING NOT NULL, -- 'client', 'lawyer', 'employee', 'employee_admin'
+  lawyer_status STRING DEFAULT 'not_applicable', -- 'not_applicable', 'pending', 'approved', 'rejected'
+  is_provisioned BOOL DEFAULT FALSE, -- LOGIN-ONLY access control
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  last_login_at TIMESTAMP,
+  env STRING DEFAULT 'prod', -- 'dev', 'prod' for environment isolation
+
+  -- Primary key and constraints
+  PRIMARY KEY (user_id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_auth_identity (auth_provider, auth_uid),
+  INDEX idx_email (email),
+  INDEX idx_role (role),
+  INDEX idx_lawyer_status (lawyer_status),
+  INDEX idx_provisioned (is_provisioned),
+  INDEX idx_created_at (created_at),
+  INDEX idx_last_login (last_login_at)
+)
+OPTIONS (
+  description = 'User identity mapping with OAuth providers and access control'
+);
+
+-- ============================================
+-- USER_PROFILES TABLE
+-- ============================================
+-- Extended user profile information
+
+CREATE TABLE IF NOT EXISTS `legalai.user_profiles` (
+  user_id STRING NOT NULL,
+  display_name STRING,
+  username STRING, -- Unique username/handle
+  avatar_url STRING, -- GCS URL to avatar image
+  phone STRING,
+  address_line_1 STRING,
+  address_line_2 STRING,
+  city STRING,
+  province_state STRING,
+  postal_zip STRING,
+  country STRING,
+  preferences_json STRING, -- JSON string: theme, font_size, response_style, auto_read, language, legal_tone
+  lawyer_status STRING DEFAULT 'not_applicable',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+
+  -- Primary key and constraints
+  PRIMARY KEY (user_id) NOT ENFORCED,
+
+  -- Foreign key reference
+  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_username (username),
+  INDEX idx_display_name (display_name),
+  INDEX idx_updated_at (updated_at)
+)
+OPTIONS (
+  description = 'Extended user profile information and preferences'
+);
+
+-- ============================================
+-- USER_CONSENT TABLE
+-- ============================================
+-- Cookie and privacy consent preferences
+
+CREATE TABLE IF NOT EXISTS `legalai.user_consent` (
+  user_id STRING NOT NULL,
+  necessary BOOL DEFAULT TRUE NOT NULL, -- Always true, required cookies
+  analytics BOOL DEFAULT FALSE, -- Analytics cookies
+  marketing BOOL DEFAULT FALSE, -- Marketing cookies
+  functional BOOL DEFAULT TRUE, -- Functional cookies
+  consented_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+
+  -- IP and user agent for audit
+  consent_ip STRING,
+  consent_user_agent STRING,
+
+  -- Primary key and constraints
+  PRIMARY KEY (user_id) NOT ENFORCED,
+
+  -- Foreign key reference
+  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_updated_at (updated_at)
+)
+OPTIONS (
+  description = 'User cookie and privacy consent preferences'
+);
+
+-- ============================================
+-- ACCESS_REQUESTS TABLE
+-- ============================================
+-- Access requests from non-provisioned users
+
+CREATE TABLE IF NOT EXISTS `legalai.access_requests` (
+  id STRING NOT NULL,
+  email STRING NOT NULL,
+  name STRING,
+  requested_role STRING DEFAULT 'client',
+  reason STRING,
+  organization STRING,
+  phone STRING,
+  status STRING DEFAULT 'pending', -- 'pending', 'approved', 'rejected'
+  reviewed_by_user_id STRING,
   reviewed_at TIMESTAMP,
-  
-  -- Metadata
-  env STRING NOT NULL,
-  metadata JSON,
-  
-  PRIMARY KEY (application_id) NOT ENFORCED,
-  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED
+  reviewer_notes STRING,
+  request_ip STRING,
+  request_user_agent STRING,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+
+  -- Primary key
+  PRIMARY KEY (id) NOT ENFORCED,
+
+  -- Foreign key references
+  FOREIGN KEY (reviewed_by_user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_email_status (email, status),
+  INDEX idx_status (status),
+  INDEX idx_created_at (created_at),
+  INDEX idx_reviewed_by (reviewed_by_user_id)
 )
-OPTIONS(
-  description="Lawyer verification applications"
+OPTIONS (
+  description = 'Access requests from users not yet provisioned'
 );
 
-CREATE INDEX IF NOT EXISTS idx_lawyer_app_user 
-ON `legalai.lawyer_applications`(user_id);
+-- ============================================
+-- CONVERSATIONS TABLE (EXISTING - UPDATED)
+-- ============================================
+-- User-scoped chat conversations
 
-CREATE INDEX IF NOT EXISTS idx_lawyer_app_status 
-ON `legalai.lawyer_applications`(status, env);
+CREATE TABLE IF NOT EXISTS `legalai.conversations` (
+  id STRING NOT NULL,
+  user_id STRING NOT NULL,
+  title STRING,
+  law_type STRING,
+  jurisdiction_country STRING,
+  jurisdiction_region STRING,
+  is_archived BOOL DEFAULT FALSE,
+  is_pinned BOOL DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  last_message_at TIMESTAMP,
 
--- =============================================================================
--- ANALYTICS & AUDIT TABLES
--- =============================================================================
+  -- Primary key
+  PRIMARY KEY (id) NOT ENFORCED,
 
--- Activity Events: User action tracking
-CREATE TABLE IF NOT EXISTS `legalai.activity_events` (
-  event_id STRING NOT NULL,
-  user_id STRING,                        -- Nullable for anonymous events
-  event_type STRING NOT NULL,            -- 'login', 'new_chat', 'send_message', 'upload_file', etc.
-  event_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  ip_address STRING,
-  user_agent STRING,
-  env STRING NOT NULL,
-  payload JSON,                          -- Event-specific data
-  PRIMARY KEY (event_id) NOT ENFORCED
+  -- Foreign key reference
+  FOREIGN KEY (user_id) REFERENCES `legalai.identity_users`(user_id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_user_conversations (user_id, updated_at),
+  INDEX idx_user_created (user_id, created_at),
+  INDEX idx_law_type (law_type),
+  INDEX idx_archived (is_archived),
+  INDEX idx_pinned (is_pinned)
 )
-PARTITION BY DATE(event_timestamp)
-OPTIONS(
-  description="User activity and audit log",
-  partition_expiration_days=90  -- Keep 90 days
+OPTIONS (
+  description = 'User-scoped chat conversations'
 );
 
-CREATE INDEX IF NOT EXISTS idx_events_user 
-ON `legalai.activity_events`(user_id, event_timestamp DESC);
+-- ============================================
+-- MESSAGES TABLE (EXISTING - UPDATED)
+-- ============================================
+-- Chat messages within conversations
 
-CREATE INDEX IF NOT EXISTS idx_events_type 
-ON `legalai.activity_events`(event_type, env);
+CREATE TABLE IF NOT EXISTS `legalai.messages` (
+  id STRING NOT NULL,
+  conversation_id STRING NOT NULL,
+  role STRING NOT NULL, -- 'user', 'assistant', 'system'
+  content STRING NOT NULL,
+  has_attachments BOOL DEFAULT FALSE,
+  attachments_json STRING, -- JSON array of attachment metadata
+  feedback STRING, -- 'helpful', 'not_helpful'
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
 
--- Login Events: Specific login tracking
-CREATE TABLE IF NOT EXISTS `legalai.login_events` (
-  event_id STRING NOT NULL,
-  user_id STRING,
-  auth_provider STRING NOT NULL,
-  login_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
-  ip_address STRING,
-  user_agent STRING,
-  env STRING NOT NULL,
-  success BOOL NOT NULL,
-  failure_reason STRING,
-  PRIMARY KEY (event_id) NOT ENFORCED
+  -- Primary key
+  PRIMARY KEY (id) NOT ENFORCED,
+
+  -- Foreign key references
+  FOREIGN KEY (conversation_id) REFERENCES `legalai.conversations`(id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_conversation_messages (conversation_id, created_at),
+  INDEX idx_role (role),
+  INDEX idx_feedback (feedback)
 )
-PARTITION BY DATE(login_at)
-OPTIONS(
-  description="Login event tracking",
-  partition_expiration_days=90
+OPTIONS (
+  description = 'Chat messages within conversations'
 );
 
--- =============================================================================
--- UPSERT PROCEDURES (MERGE STATEMENTS)
--- =============================================================================
+-- ============================================
+-- ATTACHMENTS TABLE (EXISTING - UPDATED)
+-- ============================================
+-- Files attached to conversations
 
--- Upsert User Identity
--- Usage: Execute this with query parameters
-/*
-MERGE `legalai.identity_users` T
+CREATE TABLE IF NOT EXISTS `legalai.attachments` (
+  id STRING NOT NULL,
+  conversation_id STRING NOT NULL,
+  filename STRING NOT NULL,
+  file_type STRING,
+  file_size INT64,
+  storage_path STRING NOT NULL, -- GCS path
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  meta_data STRING, -- JSON metadata
+
+  -- Primary key
+  PRIMARY KEY (id) NOT ENFORCED,
+
+  -- Foreign key reference
+  FOREIGN KEY (conversation_id) REFERENCES `legalai.conversations`(id) NOT ENFORCED,
+
+  -- Indexes
+  INDEX idx_conversation_attachments (conversation_id),
+  INDEX idx_file_type (file_type)
+)
+OPTIONS (
+  description = 'Files attached to conversations'
+);
+
+-- ============================================
+-- MERGE UPSERT STATEMENTS
+-- ============================================
+-- Use these for idempotent inserts/updates
+
+-- IDENTITY_USERS upsert
+-- Used when user signs in with OAuth
+MERGE `legalai.identity_users` AS target
 USING (
-  SELECT 
-    @user_id AS user_id,
-    @auth_provider AS auth_provider,
-    @auth_uid AS auth_uid,
-    @email AS email,
-    @role AS role,
-    @lawyer_status AS lawyer_status,
-    @full_name AS full_name,
-    CURRENT_TIMESTAMP() AS last_login_at,
-    @env AS env,
-    @metadata AS metadata
-) S
-ON T.auth_uid = S.auth_uid 
-   AND T.auth_provider = S.auth_provider 
-   AND T.env = S.env
+  SELECT
+    @user_id as user_id,
+    @auth_provider as auth_provider,
+    @auth_uid as auth_uid,
+    @email as email,
+    @role as role,
+    @lawyer_status as lawyer_status,
+    @is_provisioned as is_provisioned,
+    @env as env
+) AS source
+ON target.user_id = source.user_id
 WHEN MATCHED THEN
   UPDATE SET
-    last_login_at = S.last_login_at,
-    email = S.email,
-    full_name = S.full_name,
-    metadata = S.metadata
+    last_login_at = CURRENT_TIMESTAMP(),
+    email = source.email, -- Allow email updates
+    role = source.role,
+    lawyer_status = source.lawyer_status,
+    is_provisioned = source.is_provisioned,
+    env = source.env
 WHEN NOT MATCHED THEN
-  INSERT (
-    user_id, auth_provider, auth_uid, email, role, 
-    lawyer_status, full_name, created_at, last_login_at, env, metadata
-  )
-  VALUES (
-    S.user_id, S.auth_provider, S.auth_uid, S.email, S.role,
-    S.lawyer_status, S.full_name, CURRENT_TIMESTAMP(), S.last_login_at, S.env, S.metadata
-  );
-*/
+  INSERT (user_id, auth_provider, auth_uid, email, role, lawyer_status, is_provisioned, env)
+  VALUES (source.user_id, source.auth_provider, source.auth_uid, source.email, source.role, source.lawyer_status, source.is_provisioned, source.env);
 
--- =============================================================================
--- EXAMPLE QUERIES
--- =============================================================================
+-- USER_PROFILES upsert
+-- Used when creating/updating user profile
+MERGE `legalai.user_profiles` AS target
+USING (
+  SELECT
+    @user_id as user_id,
+    @display_name as display_name,
+    @username as username,
+    @avatar_url as avatar_url,
+    @phone as phone,
+    @address_line_1 as address_line_1,
+    @address_line_2 as address_line_2,
+    @city as city,
+    @province_state as province_state,
+    @postal_zip as postal_zip,
+    @country as country,
+    @preferences_json as preferences_json,
+    @lawyer_status as lawyer_status
+) AS source
+ON target.user_id = source.user_id
+WHEN MATCHED THEN
+  UPDATE SET
+    display_name = COALESCE(source.display_name, target.display_name),
+    username = COALESCE(source.username, target.username),
+    avatar_url = COALESCE(source.avatar_url, target.avatar_url),
+    phone = COALESCE(source.phone, target.phone),
+    address_line_1 = COALESCE(source.address_line_1, target.address_line_1),
+    address_line_2 = COALESCE(source.address_line_2, target.address_line_2),
+    city = COALESCE(source.city, target.city),
+    province_state = COALESCE(source.province_state, target.province_state),
+    postal_zip = COALESCE(source.postal_zip, target.postal_zip),
+    country = COALESCE(source.country, target.country),
+    preferences_json = COALESCE(source.preferences_json, target.preferences_json),
+    lawyer_status = COALESCE(source.lawyer_status, target.lawyer_status),
+    updated_at = CURRENT_TIMESTAMP()
+WHEN NOT MATCHED THEN
+  INSERT (user_id, display_name, username, avatar_url, phone, address_line_1, address_line_2, city, province_state, postal_zip, country, preferences_json, lawyer_status)
+  VALUES (source.user_id, source.display_name, source.username, source.avatar_url, source.phone, source.address_line_1, source.address_line_2, source.city, source.province_state, source.postal_zip, source.country, source.preferences_json, source.lawyer_status);
 
--- Get user's conversations (sidebar)
-/*
-SELECT 
-  conversation_id,
-  title,
-  updated_at,
-  is_pinned,
-  is_archived
-FROM `legalai.conversations`
-WHERE user_id = @user_id 
-  AND env = @env
-  AND is_archived = FALSE
-ORDER BY is_pinned DESC, updated_at DESC
-LIMIT 100;
-*/
+-- USER_CONSENT upsert
+-- Used when updating consent preferences
+MERGE `legalai.user_consent` AS target
+USING (
+  SELECT
+    @user_id as user_id,
+    @necessary as necessary,
+    @analytics as analytics,
+    @marketing as marketing,
+    @functional as functional,
+    @consent_ip as consent_ip,
+    @consent_user_agent as consent_user_agent
+) AS source
+ON target.user_id = source.user_id
+WHEN MATCHED THEN
+  UPDATE SET
+    necessary = COALESCE(source.necessary, target.necessary),
+    analytics = COALESCE(source.analytics, target.analytics),
+    marketing = COALESCE(source.marketing, target.marketing),
+    functional = COALESCE(source.functional, target.functional),
+    consent_ip = COALESCE(source.consent_ip, target.consent_ip),
+    consent_user_agent = COALESCE(source.consent_user_agent, target.consent_user_agent),
+    updated_at = CURRENT_TIMESTAMP()
+WHEN NOT MATCHED THEN
+  INSERT (user_id, necessary, analytics, marketing, functional, consent_ip, consent_user_agent)
+  VALUES (source.user_id, source.necessary, source.analytics, source.marketing, source.functional, source.consent_ip, source.consent_user_agent);
 
--- Get conversation messages
-/*
-SELECT 
-  message_id,
-  role,
-  content,
-  created_at,
-  metadata
-FROM `legalai.messages`
-WHERE conversation_id = @conversation_id
-  AND user_id = @user_id  -- Security check
-  AND env = @env
-ORDER BY created_at ASC;
-*/
+-- ACCESS_REQUESTS upsert
+-- Used when creating access requests
+MERGE `legalai.access_requests` AS target
+USING (
+  SELECT
+    @id as id,
+    @email as email,
+    @name as name,
+    @requested_role as requested_role,
+    @reason as reason,
+    @organization as organization,
+    @phone as phone,
+    @request_ip as request_ip,
+    @request_user_agent as request_user_agent
+) AS source
+ON target.id = source.id
+WHEN MATCHED THEN
+  UPDATE SET
+    status = 'updated', -- Mark as updated if resubmitted
+    updated_at = CURRENT_TIMESTAMP()
+WHEN NOT MATCHED THEN
+  INSERT (id, email, name, requested_role, reason, organization, phone, request_ip, request_user_agent)
+  VALUES (source.id, source.email, source.name, source.requested_role, source.reason, source.organization, source.phone, source.request_ip, source.request_user_agent);
 
--- Search user's messages
-/*
-SELECT 
-  m.message_id,
-  m.conversation_id,
-  m.content,
-  c.title,
-  m.created_at,
-  SCORE(m.content, @search_query) AS relevance_score
-FROM `legalai.messages` m
-JOIN `legalai.conversations` c 
-  ON m.conversation_id = c.conversation_id
-WHERE m.user_id = @user_id
-  AND m.env = @env
-  AND SEARCH(m.content, @search_query)
-ORDER BY relevance_score DESC, m.created_at DESC
-LIMIT 50;
-*/
+-- ============================================
+-- USEFUL QUERIES
+-- ============================================
 
--- Get user's attachments
-/*
-SELECT 
-  attachment_id,
-  conversation_id,
-  file_name,
-  file_type,
-  gcs_url,
-  created_at
-FROM `legalai.attachments`
-WHERE user_id = @user_id
-  AND env = @env
-ORDER BY created_at DESC
-LIMIT 100;
-*/
+-- Get user by OAuth identity
+-- SELECT * FROM `legalai.identity_users`
+-- WHERE auth_provider = 'google' AND auth_uid = 'google_user_id';
 
--- Admin: Get pending lawyer applications
-/*
-SELECT 
-  a.application_id,
-  a.user_id,
-  a.full_name,
-  a.email,
-  a.country,
-  a.jurisdiction,
-  a.bar_number,
-  a.regulator_name,
-  a.submitted_at,
-  u.email AS user_email
-FROM `legalai.lawyer_applications` a
-JOIN `legalai.identity_users` u ON a.user_id = u.user_id
-WHERE a.status = 'pending'
-  AND a.env = @env
-ORDER BY a.submitted_at ASC;
-*/
+-- Get user profile with consent
+-- SELECT u.*, p.*, c.*
+-- FROM `legalai.identity_users` u
+-- LEFT JOIN `legalai.user_profiles` p ON u.user_id = p.user_id
+-- LEFT JOIN `legalai.user_consent` c ON u.user_id = c.user_id
+-- WHERE u.user_id = 'user_id';
 
--- =============================================================================
--- SECURITY NOTES
--- =============================================================================
+-- Get pending access requests
+-- SELECT * FROM `legalai.access_requests`
+-- WHERE status = 'pending'
+-- ORDER BY created_at DESC;
 
-/*
-CRITICAL SECURITY RULES:
+-- Get user conversations with message counts
+-- SELECT
+--   c.*,
+--   COUNT(m.id) as message_count
+-- FROM `legalai.conversations` c
+-- LEFT JOIN `legalai.messages` m ON c.id = m.conversation_id
+-- WHERE c.user_id = 'user_id'
+-- GROUP BY c.id, c.user_id, c.title, c.law_type, c.jurisdiction_country,
+--          c.jurisdiction_region, c.is_archived, c.is_pinned, c.created_at,
+--          c.updated_at, c.last_message_at
+-- ORDER BY c.updated_at DESC;
 
-1. USER SCOPING:
-   - ALL queries MUST include: WHERE user_id = @user_id AND env = @env
-   - Never trust user_id from client - always from verified JWT claims
-   
-2. MULTI-TENANT ISOLATION:
-   - user_id is denormalized in messages/attachments for security
-   - Even if conversation_id is leaked, user_id check prevents access
-   
-3. ENVIRONMENT ISOLATION:
-   - Dev and prod data are separate (env column)
-   - Prevents dev bugs from affecting prod data
-   
-4. AUDIT TRAIL:
-   - All sensitive actions logged to activity_events
-   - Partitioned by date for efficient querying
-   
-5. DATA RETENTION:
-   - Conversations/messages: kept forever (user data)
-   - Events: 90 days (compliance/debugging)
-   - Adjust partition_expiration_days as needed
-*/
+-- ============================================
+-- SETUP INSTRUCTIONS
+-- ============================================
+
+-- 1. Create the dataset in BigQuery
+-- 2. Run this entire SQL file to create all tables
+-- 3. Set up Google Cloud Storage bucket for avatars:
+--    gsutil mb -p your-project gs://legalai-avatars
+--    gsutil iam ch gs://legalai-avatars objectViewer:object public
+-- 4. Configure service account with BigQuery and GCS access
+-- 5. Set environment variables in your deployment

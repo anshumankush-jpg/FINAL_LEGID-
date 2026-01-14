@@ -142,6 +142,22 @@ try:
 except Exception as e:
     logger.warning(f"Email router not available: {e}")
 
+try:
+    # Import profile router (profile, preferences, consent, conversations)
+    from app.api.routes import profile
+    app.include_router(profile.router)
+    logger.info("[OK] Profile router included")
+except Exception as e:
+    logger.warning(f"Profile router not available: {e}")
+
+try:
+    # Import voice router (STT, TTS, voice management)
+    from app.api.routes import voice
+    app.include_router(voice.router)
+    logger.info("[OK] Voice router included")
+except Exception as e:
+    logger.warning(f"Voice router not available: {e}")
+
 # Include legacy routers (if available) - DISABLED to avoid conflicts with artillery endpoints
 # The artillery endpoints are defined directly in this file and should be used instead
 if False and LEGACY_SYSTEMS_AVAILABLE:

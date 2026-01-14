@@ -363,3 +363,87 @@ def get_auth_service() -> AuthService:
     if _auth_service is None:
         _auth_service = AuthService()
     return _auth_service
+
+
+# FastAPI Dependency for getting current user from JWT token
+from fastapi import Depends, Header
+from app.database import get_db
+
+
+async def get_current_user(
+    authorization: Optional[str] = Header(None),
+    db: Session = Depends(get_db)
+) -> User:
+    """
+    FastAPI dependency to get the current authenticated user from JWT token.
+    
+    Args:
+        authorization: Bearer token from Authorization header
+        db: Database session
+        
+    Returns:
+        Current User object
+        
+    Raises:
+        HTTPException: If token is invalid or user not found
+    """
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Not authenticated",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
+    token = authorization.replace("Bearer ", "")
+    
+    try:
+        payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
+        user_id: str = payload.get("sub")
+        
+        if user_id is None:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid authentication credentials",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+            
+    except JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
+    user = db.query(User).filter(User.id == user_id).first()
+    
+    if user is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="User not found",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
+    if not user.is_active:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="User account is inactive"
+        )
+    
+    return user
+
+
+def create_token(user: User) -> Dict[str, Any]:
+    """
+    Create access and refresh tokens for a user.
+    
+    Args:
+        user: User object
+        
+    Returns:
+        Dictionary with access_token and token_type
+    """
+    access_token = AuthService.generate_access_token(user)
+    return {
+        "access_token": access_token,
+        "token_type": "bearer"
+    }

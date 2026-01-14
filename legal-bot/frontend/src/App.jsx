@@ -7,6 +7,16 @@ import RoleSelection from './components/RoleSelection'
 import AuthPage from './components/AuthPage'
 import OAuthCallback from './components/OAuthCallback'
 import AccessDenied from './components/AccessDenied'
+import SettingsPage from './components/SettingsPage'
+import PersonalizationPage from './components/PersonalizationPage'
+import CookieConsentBanner from './components/CookieConsentBanner'
+import { 
+  HelpCenterPage, 
+  ReleaseNotesPage, 
+  TermsPage, 
+  PrivacyPage, 
+  KeyboardShortcutsPage 
+} from './components/HelpPages'
 
 function App() {
   const [preferences, setPreferences] = useState(null);
@@ -17,6 +27,8 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [isOAuthCallback, setIsOAuthCallback] = useState(false);
+  const [currentPage, setCurrentPage] = useState('chat'); // chat, settings, personalization, help-center, etc.
+  const [showCookieBanner, setShowCookieBanner] = useState(false);
 
   useEffect(() => {
     // Check if this is an OAuth callback
@@ -30,6 +42,15 @@ function App() {
     if (path === '/access-denied') {
       return; // Don't redirect, show access denied
     }
+
+    // Handle URL-based routing
+    if (path === '/settings') setCurrentPage('settings');
+    else if (path === '/personalization') setCurrentPage('personalization');
+    else if (path === '/help') setCurrentPage('help-center');
+    else if (path === '/terms') setCurrentPage('terms');
+    else if (path === '/privacy') setCurrentPage('privacy');
+    else if (path === '/keyboard-shortcuts') setCurrentPage('keyboard-shortcuts');
+    else if (path === '/release-notes') setCurrentPage('release-notes');
 
     // Check if user is already authenticated
     const savedUser = localStorage.getItem('user');
@@ -48,6 +69,12 @@ function App() {
         console.error('Error loading user:', error);
         clearAuthState();
       }
+    }
+
+    // Check cookie consent
+    const cookieConsent = localStorage.getItem('cookie_consent');
+    if (!cookieConsent) {
+      setShowCookieBanner(true);
     }
   }, []);
 
@@ -108,6 +135,7 @@ function App() {
     setLawTypeSelection(null);
     setShowOnboarding(false);
     setShowLawSelector(false);
+    setCurrentPage('chat');
   };
 
   const handleOnboardingComplete = (prefs) => {
@@ -146,6 +174,38 @@ function App() {
     setShowLawSelector(false);
   };
 
+  // Navigation handler for account menu
+  const handleNavigate = (page) => {
+    setCurrentPage(page);
+    // Update URL without reload
+    const pathMap = {
+      'chat': '/',
+      'settings': '/settings',
+      'personalization': '/personalization',
+      'help-center': '/help',
+      'release-notes': '/release-notes',
+      'terms': '/terms',
+      'privacy': '/privacy',
+      'keyboard-shortcuts': '/keyboard-shortcuts'
+    };
+    window.history.pushState({}, '', pathMap[page] || '/');
+  };
+
+  const handleBackToChat = () => {
+    setCurrentPage('chat');
+    window.history.pushState({}, '', '/');
+  };
+
+  const handleProfileUpdate = (updatedUser) => {
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
+
+  const handleCookieConsent = (consent) => {
+    setShowCookieBanner(false);
+    console.log('Cookie consent:', consent);
+  };
+
   // Handle access denied
   if (window.location.pathname === '/access-denied') {
     return <AccessDenied />;
@@ -170,7 +230,14 @@ function App() {
 
   // Step 1: Show role selection if no role selected
   if (!selectedRole) {
-    return <RoleSelection onRoleSelect={handleRoleSelect} />;
+    return (
+      <>
+        <RoleSelection onRoleSelect={handleRoleSelect} />
+        {showCookieBanner && (
+          <CookieConsentBanner user={null} onAccept={handleCookieConsent} />
+        )}
+      </>
+    );
   }
 
   // Step 2: Show auth page if not authenticated
@@ -209,35 +276,92 @@ function App() {
           ← Back to Role Selection
         </button>
         <AuthPage role={selectedRole} onAuthSuccess={handleAuthSuccess} />
+        {showCookieBanner && (
+          <CookieConsentBanner user={null} onAccept={handleCookieConsent} />
+        )}
       </div>
     );
   }
 
   // Step 3: Show onboarding wizard
   if (showOnboarding || !preferences) {
-    return <OnboardingWizard onComplete={handleOnboardingComplete} userRole={selectedRole} />;
+    return (
+      <>
+        <OnboardingWizard onComplete={handleOnboardingComplete} userRole={selectedRole} />
+        {showCookieBanner && (
+          <CookieConsentBanner user={user} onAccept={handleCookieConsent} />
+        )}
+      </>
+    );
   }
 
   // Step 4: Show law type selector
   if (showLawSelector || !lawTypeSelection) {
-    return <LawTypeSelector 
-      preferences={preferences} 
-      onComplete={handleLawTypeComplete}
-      onBack={handleBackToSettings}
-      userRole={selectedRole}
-    />;
+    return (
+      <>
+        <LawTypeSelector 
+          preferences={preferences} 
+          onComplete={handleLawTypeComplete}
+          onBack={handleBackToSettings}
+          userRole={selectedRole}
+        />
+        {showCookieBanner && (
+          <CookieConsentBanner user={user} onAccept={handleCookieConsent} />
+        )}
+      </>
+    );
   }
 
-  // Step 5: Show chat interface
+  // Step 5: Render current page
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case 'settings':
+        return (
+          <SettingsPage 
+            user={user} 
+            onBack={handleBackToChat}
+            onProfileUpdate={handleProfileUpdate}
+          />
+        );
+      case 'personalization':
+        return (
+          <PersonalizationPage 
+            user={user} 
+            onBack={handleBackToChat}
+          />
+        );
+      case 'help-center':
+        return <HelpCenterPage onBack={handleBackToChat} />;
+      case 'release-notes':
+        return <ReleaseNotesPage onBack={handleBackToChat} />;
+      case 'terms':
+        return <TermsPage onBack={handleBackToChat} />;
+      case 'privacy':
+        return <PrivacyPage onBack={handleBackToChat} />;
+      case 'keyboard-shortcuts':
+        return <KeyboardShortcutsPage onBack={handleBackToChat} />;
+      default:
+        return (
+          <ChatInterface 
+            preferences={preferences}
+            lawTypeSelection={lawTypeSelection}
+            onResetPreferences={handleResetPreferences}
+            onChangeLawType={handleChangeLawType}
+            user={user}
+            onLogout={handleLogout}
+            onNavigate={handleNavigate}
+          />
+        );
+    }
+  };
+
   return (
-    <ChatInterface 
-      preferences={preferences}
-      lawTypeSelection={lawTypeSelection}
-      onResetPreferences={handleResetPreferences}
-      onChangeLawType={handleChangeLawType}
-      user={user}
-      onLogout={handleLogout}
-    />
+    <>
+      {renderCurrentPage()}
+      {showCookieBanner && (
+        <CookieConsentBanner user={user} onAccept={handleCookieConsent} />
+      )}
+    </>
   );
 }
 

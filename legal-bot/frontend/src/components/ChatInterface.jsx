@@ -14,7 +14,7 @@ import Sidebar from './Sidebar';
 
 const API_URL = 'http://localhost:8000';
 
-const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onChangeLawType, user, onLogout }) => {
+const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onChangeLawType, user, onLogout, onNavigate }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -1113,7 +1113,7 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
         };
         setMessages(prev => [...prev, imageMessage]);
         // No system message - keep it clean like ChatGPT
-      } else {
+        } else {
         // For non-image files, just add the file to the conversation
         const docMessage = {
           id: Date.now(),
@@ -1456,10 +1456,12 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
         onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
         lawTypeSelection={lawTypeSelection}
         user={user}
+        onLogout={onLogout}
+        onNavigate={onNavigate}
       />
 
       {/* Main Chat Area */}
-      <div className="chat-interface">
+    <div className="chat-interface">
         {/* Mobile sidebar toggle */}
         <button 
           className="mobile-menu-btn"
@@ -1472,8 +1474,8 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
           </svg>
         </button>
 
-        {/* Header */}
-        <div className="chat-header">
+      {/* Header */}
+      <div className="chat-header">
         <div className="header-left">
           {/* Top Row: Logo and New Chat */}
           <div className="header-top-row">
@@ -1488,38 +1490,38 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
           </div>
           
           {/* Info Row: Language, Country, Province as plain text */}
-          {preferences && (
+           {preferences && (
             <div className="header-info-row">
               <span 
                 className="info-label" 
-                onClick={() => onResetPreferences && onResetPreferences()}
-                title="Click to change language"
-              >
-                Language: {getLanguageName(preferences.language?.code || 'en')}
+                 onClick={() => onResetPreferences && onResetPreferences()}
+                 title="Click to change language"
+               >
+                 Language: {getLanguageName(preferences.language?.code || 'en')}
               </span>
               <span 
                 className="info-label"
-                onClick={() => onResetPreferences && onResetPreferences()}
-                title="Click to change country"
-              >
-                {preferences.country === 'CA' ? 'Canada' : 'United States'}
+                 onClick={() => onResetPreferences && onResetPreferences()}
+                 title="Click to change country"
+               >
+                 {preferences.country === 'CA' ? 'Canada' : 'United States'}
               </span>
-              {preferences.province && (
+               {preferences.province && (
                 <span 
                   className="info-label"
-                  onClick={() => onResetPreferences && onResetPreferences()}
+                   onClick={() => onResetPreferences && onResetPreferences()}
                   title="Click to change province/state"
-                >
-                  {preferences.province}
+                 >
+                   {preferences.province}
                 </span>
-              )}
+               )}
               {lawTypeSelection && (
                 <span 
                   className="info-label law-type-highlight" 
-                  title={`${lawTypeSelection.description || lawTypeSelection.lawType} - Click to change`}
-                  onClick={() => onChangeLawType && onChangeLawType()}
-                >
-                  {lawTypeSelection.lawType}
+                    title={`${lawTypeSelection.description || lawTypeSelection.lawType} - Click to change`}
+                    onClick={() => onChangeLawType && onChangeLawType()}
+                  >
+                    {lawTypeSelection.lawType}
                 </span>
               )}
             </div>
@@ -1528,59 +1530,59 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
           {/* Actions Row: Buttons for tools */}
           {lawTypeSelection && (
             <div className="header-actions-row">
-              <button 
+                  <button 
                 className="action-pill" 
-                onClick={() => setShowRecentUpdates(true)} 
-                title="View recent legal updates"
-              >
-                📰 Recent Updates
-              </button>
-              <button 
+                    onClick={() => setShowRecentUpdates(true)} 
+                    title="View recent legal updates"
+                  >
+                    📰 Recent Updates
+                  </button>
+                  <button 
                 className="action-pill" 
-                onClick={() => setShowCaseLookup(true)} 
-                title="Search legal cases"
-              >
-                🔍 Case Lookup
-              </button>
-              <button 
+                    onClick={() => setShowCaseLookup(true)} 
+                    title="Search legal cases"
+                  >
+                    🔍 Case Lookup
+                  </button>
+                  <button 
                 className="action-pill" 
-                onClick={() => setShowAmendmentGenerator(true)} 
-                title="Generate legal amendments"
-              >
-                📝 Amendments
-              </button>
+                    onClick={() => setShowAmendmentGenerator(true)} 
+                    title="Generate legal amendments"
+                  >
+                    📝 Amendments
+                  </button>
             </div>
           )}
           
           {/* Secondary Actions Row */}
           {lawTypeSelection && (
             <div className="header-actions-row secondary">
-              <button 
+                  <button 
                 className="action-pill secondary-pill" 
-                onClick={() => setShowDocumentGenerator(true)} 
-                title="Generate legal documents"
-              >
-                📄 Documents
-              </button>
-              <button 
+                    onClick={() => setShowDocumentGenerator(true)} 
+                    title="Generate legal documents"
+                  >
+                    📄 Documents
+                  </button>
+                  <button 
                 className="action-pill secondary-pill" 
-                onClick={() => setShowChatHistory(true)} 
-                title="Search chat history"
-              >
-                💬 History
-              </button>
-              {onChangeLawType && (
+                    onClick={() => setShowChatHistory(true)} 
+                    title="Search chat history"
+                  >
+                    💬 History
+                  </button>
+               {onChangeLawType && (
                 <button className="action-pill secondary-pill" onClick={onChangeLawType} title="Change law type">
-                  🔄 Change Law Type
-                </button>
-              )}
-              {onResetPreferences && (
+                   🔄 Change Law Type
+                 </button>
+               )}
+               {onResetPreferences && (
                 <button className="action-pill secondary-pill" onClick={onResetPreferences} title="Change all settings">
-                  ⚙️ Settings
-                </button>
-              )}
-            </div>
-          )}
+                   ⚙️ Settings
+                 </button>
+               )}
+             </div>
+           )}
           
           {/* Summary buttons - only show when there's conversation */}
           {messages.length > 2 && (
@@ -2148,8 +2150,8 @@ const ChatInterface = ({ preferences, lawTypeSelection, onResetPreferences, onCh
          />
        )}
       </div>
-    </div>
-  );
+     </div>
+   );
 };
 
 export default ChatInterface;

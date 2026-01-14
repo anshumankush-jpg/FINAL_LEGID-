@@ -97,3 +97,116 @@ class HealthResponse(BaseModel):
     index_size: int
     index_dimension: int
 
+
+# ============================================
+# PROFILE MANAGEMENT SCHEMAS
+# ============================================
+
+class UserProfileSchema(BaseModel):
+    """User profile response schema."""
+    user_id: str
+    display_name: Optional[str] = None
+    username: Optional[str] = None
+    avatar_url: Optional[str] = None
+    phone: Optional[str] = None
+    address_line_1: Optional[str] = None
+    address_line_2: Optional[str] = None
+    city: Optional[str] = None
+    province_state: Optional[str] = None
+    postal_zip: Optional[str] = None
+    country: Optional[str] = None
+    preferences_json: Optional[Dict[str, Any]] = None
+    updated_at: str
+
+    class Config:
+        from_attributes = True
+
+
+class UserProfileUpdate(BaseModel):
+    """User profile update request schema."""
+    display_name: Optional[str] = None
+    username: Optional[str] = None
+    avatar_url: Optional[str] = None
+    phone: Optional[str] = None
+    address_line_1: Optional[str] = None
+    address_line_2: Optional[str] = None
+    city: Optional[str] = None
+    province_state: Optional[str] = None
+    postal_zip: Optional[str] = None
+    country: Optional[str] = None
+    preferences_json: Optional[Dict[str, Any]] = None
+
+
+class UserConsentSchema(BaseModel):
+    """User consent response schema."""
+    user_id: str
+    necessary: bool
+    analytics: bool
+    marketing: bool
+    updated_at: str
+
+    class Config:
+        from_attributes = True
+
+
+class UserConsentUpdate(BaseModel):
+    """User consent update request schema."""
+    necessary: Optional[bool] = None
+    analytics: Optional[bool] = None
+    marketing: Optional[bool] = None
+
+
+class SignedUrlResponse(BaseModel):
+    """Response for signed URL generation."""
+    signed_url: str
+    file_path: str
+    public_url: Optional[str] = None
+
+
+class AccessRequestCreate(BaseModel):
+    """Access request creation schema."""
+    name: Optional[str] = None
+    requested_role: str = Field(..., description="Requested role: client, lawyer, employee, employee_admin")
+    reason: Optional[str] = None
+    organization: Optional[str] = None
+
+
+class AccessRequestResponse(BaseModel):
+    """Access request response schema."""
+    id: str
+    email: str
+    name: Optional[str] = None
+    requested_role: str
+    reason: Optional[str] = None
+    organization: Optional[str] = None
+    status: str
+    created_at: str
+    reviewed_at: Optional[str] = None
+    reviewer_notes: Optional[str] = None
+
+    class Config:
+        from_attributes = True
+
+
+class SessionResponse(BaseModel):
+    """Session creation response."""
+    user_id: str
+    email: str
+    name: Optional[str] = None
+    role: str
+    lawyer_status: str
+    is_provisioned: bool
+    env: str
+
+
+class MeResponse(BaseModel):
+    """Current user response."""
+    user_id: str
+    email: str
+    name: Optional[str] = None
+    role: str
+    lawyer_status: str
+    is_provisioned: bool
+    env: str
+    profile: Optional[UserProfileSchema] = None
+    consent: Optional[UserConsentSchema] = None

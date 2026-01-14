@@ -1,0 +1,352 @@
+/* Help Pages Styles */
+.help-page {
+  min-height: 100vh;
+  background: var(--bg-primary, #212121);
+  color: var(--text-primary, #ececec);
+  padding: 24px;
+}
+
+/* Header */
+.help-page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle, #2f2f2f);
+}
+
+.help-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--border-default, #424242);
+  border-radius: 8px;
+  color: var(--text-secondary, #b4b4b4);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.help-back-btn:hover {
+  background: var(--bg-hover, rgba(255, 255, 255, 0.05));
+  color: var(--text-primary, #ececec);
+  border-color: var(--border-strong, #565656);
+}
+
+.help-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Content */
+.help-content {
+  max-width: 800px;
+}
+
+/* Sections */
+.help-section {
+  margin-bottom: 40px;
+}
+
+.help-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text-primary, #ececec);
+}
+
+/* Help Cards */
+.help-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.help-card {
+  background: var(--surface-1, #2f2f2f);
+  border: 1px solid var(--border-subtle, #2f2f2f);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.help-card:hover {
+  border-color: var(--border-default, #424242);
+  transform: translateY(-2px);
+}
+
+.help-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(16, 163, 127, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary, #10a37f);
+  margin-bottom: 12px;
+}
+
+.help-card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+
+.help-card p {
+  font-size: 13px;
+  color: var(--text-muted, #8e8e8e);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq-item {
+  background: var(--surface-1, #2f2f2f);
+  border: 1px solid var(--border-subtle, #2f2f2f);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary, #ececec);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 18px;
+  color: var(--text-muted, #8e8e8e);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '-';
+}
+
+.faq-item p {
+  padding: 0 16px 16px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary, #b4b4b4);
+  line-height: 1.6;
+}
+
+/* Contact */
+.contact-info {
+  font-size: 14px;
+  color: var(--text-secondary, #b4b4b4);
+}
+
+.contact-info a {
+  color: var(--accent-primary, #10a37f);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Release Notes */
+.release-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.release-item {
+  background: var(--surface-1, #2f2f2f);
+  border: 1px solid var(--border-subtle, #2f2f2f);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.release-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-primary, #212121);
+  border-bottom: 1px solid var(--border-subtle, #2f2f2f);
+}
+
+.release-version {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent-primary, #10a37f);
+}
+
+.release-date {
+  font-size: 13px;
+  color: var(--text-muted, #8e8e8e);
+}
+
+.release-body {
+  padding: 20px;
+}
+
+.release-body h4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted, #8e8e8e);
+  margin: 0 0 10px;
+}
+
+.release-body h4:not(:first-child) {
+  margin-top: 20px;
+}
+
+.release-body ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.release-body li {
+  font-size: 14px;
+  color: var(--text-secondary, #b4b4b4);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* Legal Content */
+.legal-content {
+  line-height: 1.7;
+}
+
+.legal-content .last-updated {
+  font-size: 13px;
+  color: var(--text-muted, #8e8e8e);
+  margin-bottom: 32px;
+}
+
+.legal-content section {
+  margin-bottom: 32px;
+}
+
+.legal-content h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--text-primary, #ececec);
+}
+
+.legal-content p {
+  font-size: 14px;
+  color: var(--text-secondary, #b4b4b4);
+  margin: 0 0 12px;
+}
+
+.legal-content ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.legal-content li {
+  font-size: 14px;
+  color: var(--text-secondary, #b4b4b4);
+  margin-bottom: 6px;
+}
+
+.legal-content a {
+  color: var(--accent-primary, #10a37f);
+  text-decoration: none;
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+/* Keyboard Shortcuts */
+.shortcuts-section {
+  margin-bottom: 32px;
+}
+
+.shortcuts-section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text-primary, #ececec);
+}
+
+.shortcuts-list {
+  background: var(--surface-1, #2f2f2f);
+  border: 1px solid var(--border-subtle, #2f2f2f);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.shortcut-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-subtle, #2f2f2f);
+}
+
+.shortcut-item:last-child {
+  border-bottom: none;
+}
+
+.shortcut-keys {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.shortcut-keys kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  background: var(--bg-primary, #212121);
+  border: 1px solid var(--border-default, #424242);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary, #ececec);
+}
+
+.shortcut-desc {
+  font-size: 14px;
+  color: var(--text-secondary, #b4b4b4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .help-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .shortcut-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

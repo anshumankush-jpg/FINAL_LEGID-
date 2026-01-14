@@ -38,6 +38,7 @@ class User(Base):
     
     is_active = Column(Boolean, default=True, nullable=False)
     is_verified = Column(Boolean, default=False, nullable=False)
+    is_provisioned = Column(Boolean, default=False, nullable=False)  # LOGIN-ONLY access control
     
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
@@ -51,11 +52,15 @@ class User(Base):
     refresh_tokens = relationship("RefreshToken", back_populates="user", cascade="all, delete-orphan")
     password_resets = relationship("PasswordReset", back_populates="user", cascade="all, delete-orphan")
     audit_logs = relationship("AuditLog", back_populates="user", cascade="all, delete-orphan")
-    employee_assignments = relationship("EmployeeAssignment", 
+    employee_assignments = relationship("EmployeeAssignment",
                                        foreign_keys="[EmployeeAssignment.employee_user_id]",
                                        back_populates="employee")
     matters = relationship("MatterDB", back_populates="user")
     email_connections = relationship("EmailConnection", back_populates="user", cascade="all, delete-orphan")
+    profile = relationship("UserProfile", back_populates="user", uselist=False, cascade="all, delete-orphan")
+    consent = relationship("UserConsent", back_populates="user", uselist=False, cascade="all, delete-orphan")
+    access_requests = relationship("AccessRequest", back_populates="reviewer", cascade="all, delete-orphan")
+    conversations = relationship("Conversation", back_populates="user", cascade="all, delete-orphan")
     
     def __repr__(self):
         return f"<User {self.email} ({self.role})>"
@@ -446,3 +451,236 @@ class LawyerProfile(Base):
     
     def __repr__(self):
         return f"<LawyerProfile for user {self.user_id}>"
+
+
+class UserProfile(Base):
+    """Extended user profile with address and preferences."""
+    __tablename__ = "user_profiles"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String(36), ForeignKey("users.id"), unique=True, nullable=False)
+    
+    # Display info
+    display_name = Column(String(255), nullable=True)
+    username = Column(String(100), unique=True, nullable=True, index=True)
+    avatar_url = Column(String(1000), nullable=True)
+    phone = Column(String(50), nullable=True)
+    
+    # Address fields
+    address_line_1 = Column(String(500), nullable=True)
+    address_line_2 = Column(String(500), nullable=True)
+    city = Column(String(255), nullable=True)
+    province_state = Column(String(100), nullable=True)
+    postal_zip = Column(String(20), nullable=True)
+    country = Column(String(100), nullable=True)
+    
+    # Preferences (theme, font size, response style)
+    preferences_json = Column(JSON, default=dict)
+    
+    # Lawyer-specific status
+    lawyer_status = Column(String(50), default="not_applicable")  # not_applicable, pending, approved, rejected
+    
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+    
+    # Relationship
+    user = relationship("User", back_populates="profile")
+    
+    def __repr__(self):
+        return f"<UserProfile {self.display_name} ({self.user_id})>"
+
+
+class UserConsent(Base):
+    """User cookie/privacy consent preferences."""
+    __tablename__ = "user_consents"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String(36), ForeignKey("users.id"), unique=True, nullable=False)
+    
+    # Consent categories
+    necessary = Column(Boolean, default=True, nullable=False)  # Always true, required
+    analytics = Column(Boolean, default=False, nullable=False)
+    marketing = Column(Boolean, default=False, nullable=False)
+    functional = Column(Boolean, default=True, nullable=False)
+    
+    # When consent was given/updated
+    consented_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+    
+    # IP and user agent for audit
+    consent_ip = Column(String(45), nullable=True)
+    consent_user_agent = Column(String(500), nullable=True)
+    
+    # Relationship
+    user = relationship("User", back_populates="consent")
+    
+    def __repr__(self):
+        return f"<UserConsent user:{self.user_id}>"
+
+
+class AccessRequest(Base):
+    """Access requests from users not yet provisioned."""
+    __tablename__ = "access_requests"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    email = Column(String(255), nullable=False, index=True)
+    name = Column(String(255), nullable=True)
+    requested_role = Column(SQLEnum(UserRole), default=UserRole.CLIENT)
+
+    # Request details
+    reason = Column(Text, nullable=True)
+    organization = Column(String(255), nullable=True)
+    phone = Column(String(50), nullable=True)
+
+    # Status tracking
+    status = Column(String(50), default="pending")  # pending, approved, rejected
+    reviewed_by_user_id = Column(String(36), ForeignKey("users.id"), nullable=True)
+    reviewed_at = Column(DateTime, nullable=True)
+    reviewer_notes = Column(Text, nullable=True)
+
+    # Metadata
+    request_ip = Column(String(45), nullable=True)
+    request_user_agent = Column(String(500), nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+
+    # Relationships
+    reviewer = relationship("User", foreign_keys=[reviewed_by_user_id], back_populates="access_requests")
+
+    # Indexes
+    __table_args__ = (
+        Index('idx_access_requests_email_status', 'email', 'status'),
+        Index('idx_access_requests_created', 'created_at'),
+    )
+
+    def __repr__(self):
+        return f"<AccessRequest {self.email} ({self.status})>"
+
+
+class Conversation(Base):
+    """Standalone conversations (not tied to matters)."""
+    __tablename__ = "conversations"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String(36), ForeignKey("users.id"), nullable=False, index=True)
+    
+    title = Column(String(500), nullable=True)  # Auto-generated from first message
+    
+    # Chat context
+    law_type = Column(String(100), nullable=True)
+    jurisdiction_country = Column(String(100), nullable=True)
+    jurisdiction_region = Column(String(100), nullable=True)
+    
+    is_archived = Column(Boolean, default=False)
+    is_pinned = Column(Boolean, default=False)
+    
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+    last_message_at = Column(DateTime, nullable=True)
+    
+    # Relationships
+    user = relationship("User", back_populates="conversations")
+    chat_messages = relationship("ChatMessage", back_populates="conversation", cascade="all, delete-orphan")
+    
+    # Indexes
+    __table_args__ = (
+        Index('idx_conv_user_updated', 'user_id', 'updated_at'),
+    )
+    
+    def __repr__(self):
+        return f"<Conversation {self.title or 'Untitled'} ({self.user_id})>"
+
+
+class ChatMessage(Base):
+    """Messages in standalone conversations."""
+    __tablename__ = "chat_messages"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    conversation_id = Column(String(36), ForeignKey("conversations.id"), nullable=False)
+    
+    role = Column(String(20), nullable=False)  # user, assistant, system
+    content = Column(Text, nullable=False)
+    
+    # Attachments info
+    has_attachments = Column(Boolean, default=False)
+    attachments_json = Column(JSON, default=list)  # [{filename, url, type, size}]
+    
+    # Feedback
+    feedback = Column(String(20), nullable=True)  # thumbs_up, thumbs_down
+    
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    
+    # Relationships
+    conversation = relationship("Conversation", back_populates="chat_messages")
+    
+    # Indexes
+    __table_args__ = (
+        Index('idx_chat_msg_conv_created', 'conversation_id', 'created_at'),
+    )
+    
+    def __repr__(self):
+        return f"<ChatMessage {self.role} in {self.conversation_id}>"
+
+
+class AccessRequest(Base):
+    """Access requests for non-provisioned users."""
+    __tablename__ = "access_requests"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    
+    email = Column(String(255), nullable=False, index=True)
+    name = Column(String(255), nullable=True)
+    requested_role = Column(String(50), default="client")  # client, lawyer
+    
+    # Request details
+    reason = Column(Text, nullable=True)
+    organization = Column(String(500), nullable=True)
+    
+    # Status
+    status = Column(String(50), default="pending")  # pending, approved, rejected
+    reviewer_notes = Column(Text, nullable=True)
+    reviewed_by_user_id = Column(String(36), ForeignKey("users.id"), nullable=True)
+    reviewed_at = Column(DateTime, nullable=True)
+    
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    
+    # Indexes
+    __table_args__ = (
+        Index('idx_access_req_email_status', 'email', 'status'),
+    )
+    
+    def __repr__(self):
+        return f"<AccessRequest {self.email} ({self.status})>"
+
+
+class AccountSession(Base):
+    """Multi-account session tracking for account switching."""
+    __tablename__ = "account_sessions"
+
+    id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    
+    # Device/browser identifier (hashed)
+    device_id = Column(String(255), nullable=False, index=True)
+    user_id = Column(String(36), ForeignKey("users.id"), nullable=False)
+    
+    # Session info
+    is_active = Column(Boolean, default=True)
+    last_used_at = Column(DateTime, default=datetime.utcnow)
+    
+    created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
+    expires_at = Column(DateTime, nullable=True)
+    
+    # Device info for display
+    device_name = Column(String(255), nullable=True)
+    
+    # Relationships
+    user = relationship("User", backref="account_sessions")
+    
+    # Indexes
+    __table_args__ = (
+        Index('idx_acc_session_device_user', 'device_id', 'user_id'),
+    )
+    
+    def __repr__(self):
+        return f"<AccountSession {self.device_id[:8]}... user:{self.user_id}>"

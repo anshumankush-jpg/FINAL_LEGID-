@@ -2,9 +2,13 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@ang
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ChatService, ChatMessage } from '../../services/chat.service';
+import { VoiceService } from '../../services/voice.service';
+import { VoiceButtonComponent } from '../voice-button/voice-button.component';
+import { ProfileService } from '../../services/profile.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -15,7 +19,8 @@ import { environment } from '../../../environments/environment';
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    VoiceButtonComponent
   ],
   template: `
     <div class="chat-wrapper">
@@ -75,6 +80,14 @@ import { environment } from '../../../environments/environment';
                 <button class="action-btn" (click)="copyMessage(message)" title="Copy">
                   <mat-icon>content_copy</mat-icon>
                 </button>
+                <button
+                  class="action-btn"
+                  (click)="playTTS(message)"
+                  [disabled]="message.isPlayingTTS"
+                  [title]="message.isPlayingTTS ? 'Playing...' : 'Listen to response'"
+                >
+                  <mat-icon>{{ message.isPlayingTTS ? 'volume_up' : 'volume_down' }}</mat-icon>
+                </button>
                 <button class="action-btn" (click)="submitFeedback(true, message)" title="Helpful">
                   <mat-icon>thumb_up</mat-icon>
                 </button>
@@ -133,6 +146,11 @@ import { environment } from '../../../environments/environment';
             >
               <mat-icon>add</mat-icon>
             </button>
+            <app-voice-button
+              (transcribedText)="onVoiceTranscribed($event)"
+              (transcriptionError)="onVoiceError($event)"
+              class="voice-btn"
+            ></app-voice-button>
             <button
               class="send-btn"
               (click)="sendMessage()"
@@ -486,6 +504,11 @@ import { environment } from '../../../environments/environment';
       height: 20px;
     }
 
+    .voice-btn {
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
     .send-btn {
       width: 36px;
       height: 36px;
@@ -554,12 +577,20 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   currentOffenceNumber: string = '';
   isLoading: boolean = false;
   isUploading: boolean = false;
+  autoReadEnabled: boolean = false;
 
-  constructor(private chatService: ChatService) {}
+  constructor(
+    private chatService: ChatService,
+    private voiceService: VoiceService,
+    private profileService: ProfileService,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     // Check backend connection on init
     this.checkBackendConnection();
+    // Load personalization settings for auto-read
+    this.loadPersonalizationSettings();
   }
 
   ngAfterViewChecked(): void {
@@ -640,9 +671,19 @@ export class ChatComponent implements OnInit, AfterViewChecked {
           content: response.answer || 'I received your question but got an empty response.',
           sources: response.sources,
           timestamp: new Date(),
-          showSources: false
+          showSources: false,
+          isPlayingTTS: false
         };
         this.messages.push(assistantMessage);
+
+        // Auto-play TTS if enabled in personalization
+        this.loadPersonalizationSettings();
+        if (this.autoReadEnabled && assistantMessage.content) {
+          setTimeout(() => {
+            this.playTTS(assistantMessage);
+          }, 500); // Small delay to ensure message is rendered
+        }
+
         this.isLoading = false;
       },
       error: (error) => {
@@ -788,5 +829,82 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     if (fileInput) {
       fileInput.value = '';
     }
+  }
+
+  // Voice input handling methods
+  onVoiceTranscribed(text: string) {
+    if (text && text.trim()) {
+      // Set the transcribed text in the input field
+      this.currentQuestion = text.trim();
+
+      // Focus the input field
+      setTimeout(() => {
+        if (this.messageInput) {
+          this.messageInput.nativeElement.focus();
+          // Position cursor at the end
+          this.messageInput.nativeElement.setSelectionRange(text.length, text.length);
+        }
+      }, 100);
+
+      // Auto-send after a brief delay if the text looks complete
+      if (text.endsWith('.') || text.endsWith('?') || text.endsWith('!')) {
+        setTimeout(() => {
+          if (!this.isLoading && this.currentQuestion.trim()) {
+            this.sendMessage();
+          }
+        }, 1500);
+      }
+    }
+  }
+
+  onVoiceError(error: string) {
+    this.snackBar.open(`Voice Error: ${error}`, 'Dismiss', {
+      duration: 5000,
+      panelClass: ['error-snackbar']
+    });
+  }
+
+  async playTTS(message: ChatMessage) {
+    if (!message.content || message.isPlayingTTS) return;
+
+    message.isPlayingTTS = true;
+
+    try {
+      const audioBlob = await this.voiceService.tts(message.content).toPromise();
+      if (audioBlob) {
+        await this.voiceService.playAudio(audioBlob);
+      }
+    } catch (error) {
+      console.error('TTS playback error:', error);
+      this.snackBar.open('Failed to play audio. Please try again.', 'Dismiss', {
+        duration: 3000
+      });
+    } finally {
+      message.isPlayingTTS = false;
+    }
+  }
+
+  // Load personalization settings to check auto-read preference
+  private loadPersonalizationSettings() {
+    // Load from ProfileService
+    this.profileService.getProfile().subscribe({
+      next: (profile) => {
+        const prefs = profile?.preferences_json;
+        this.autoReadEnabled = prefs?.auto_read_responses || prefs?.auto_read || false;
+      },
+      error: (error) => {
+        console.error('Error loading personalization settings:', error);
+        // Fallback to localStorage if API fails
+        try {
+          const prefs = localStorage.getItem('plaza_ai_preferences');
+          if (prefs) {
+            const parsedPrefs = JSON.parse(prefs);
+            this.autoReadEnabled = parsedPrefs?.auto_read_responses || parsedPrefs?.auto_read || false;
+          }
+        } catch (e) {
+          // Ignore localStorage errors
+        }
+      }
+    });
   }
 }

@@ -150,6 +150,14 @@ try:
 except Exception as e:
     logger.warning(f"Email router not available: {e}")
 
+try:
+    # Import voice router (STT, TTS, voice management)
+    from app.api.routes import voice
+    app.include_router(voice.router)
+    logger.info("[OK] Voice router included")
+except Exception as e:
+    logger.warning(f"Voice router not available: {e}")
+
 # Include legacy routers (if available) - DISABLED to avoid conflicts with artillery endpoints
 # The artillery endpoints are defined directly in this file and should be used instead
 if False and LEGACY_SYSTEMS_AVAILABLE:
@@ -1430,82 +1438,34 @@ async def check_api_access(
         raise HTTPException(status_code=500, detail=f"Access check failed: {str(e)}")
 
 
-# Voice Chat Endpoints - OpenAI TTS and Whisper
+# Voice Chat Endpoints - Now handled by voice router
+# Legacy endpoints kept for backward compatibility but prefer /api/voice/stt and /api/voice/tts
 @app.post("/api/voice/transcribe")
-async def transcribe_audio(file: UploadFile = File(...)):
-    """Transcribe audio using OpenAI Whisper API."""
+async def transcribe_audio_legacy(file: UploadFile = File(...)):
+    """Legacy endpoint - use /api/voice/stt instead."""
     try:
-        if not settings or not settings.OPENAI_API_KEY:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
-        # Read audio file
-        audio_data = await file.read()
-        
-        # Create OpenAI client - only pass api_key (proxies is not supported)
-        client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
-        
-        # Transcribe using Whisper
-        transcript = client.audio.transcriptions.create(
-            model="whisper-1",
-            file=("audio.webm", audio_data, "audio/webm"),
-            response_format="text"
-        )
-        
-        logger.info(f"[VOICE] Transcribed: {transcript[:100]}...")
-        return {"text": transcript}
-        
+        # Redirect to new voice router
+        from app.api.routes.voice import speech_to_text
+        return await speech_to_text(file)
     except Exception as e:
-        logger.error(f"Transcription error: {e}", exc_info=True)
+        logger.error(f"Legacy transcription error: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Transcription failed: {str(e)}")
 
 
 @app.post("/api/voice/speak")
-async def text_to_speech(request: VoiceChatRequest):
-    """Convert text to speech using OpenAI TTS API."""
+async def text_to_speech_legacy(request: VoiceChatRequest):
+    """Legacy endpoint - use /api/voice/tts instead."""
     try:
-        if not settings or not settings.OPENAI_API_KEY:
-            raise HTTPException(status_code=500, detail="OpenAI API key not configured")
-        
-        # Map language to OpenAI voice
-        voice_map = {
-            'en': 'alloy',    # English - neutral, balanced
-            'hi': 'nova',     # Hindi - warm, friendly
-            'fr': 'shimmer',  # French - elegant
-            'es': 'fable',    # Spanish - expressive
-            'pa': 'onyx',     # Punjabi - deep, authoritative
-            'zh': 'echo'      # Chinese - clear, articulate
-        }
-        
-        selected_voice = voice_map.get(request.language, 'alloy')
-        if request.voice:
-            selected_voice = request.voice
-        
-        logger.info(f"[VOICE] TTS request - Language: {request.language}, Voice: {selected_voice}, Text length: {len(request.text)}")
-        
-        # Create OpenAI client - only pass api_key (proxies is not supported)
-        client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
-        
-        # Generate speech
-        response = client.audio.speech.create(
-            model="tts-1",  # or tts-1-hd for higher quality
-            voice=selected_voice,
-            input=request.text[:4096],  # OpenAI TTS limit
-            response_format="mp3"
+        # Redirect to new voice router
+        from app.api.routes.voice import TTSRequest, text_to_speech
+        tts_request = TTSRequest(
+            text=request.text,
+            voice=request.voice or "en-CA-Neural2-D",
+            language=request.language or "en-CA"
         )
-        
-        # Stream the audio back
-        audio_bytes = BytesIO(response.content)
-        
-        return StreamingResponse(
-            audio_bytes,
-            media_type="audio/mpeg",
-            headers={
-                "Content-Disposition": "inline; filename=speech.mp3"
-            }
-        )
-        
+        return await text_to_speech(tts_request)
     except Exception as e:
-        logger.error(f"TTS error: {e}", exc_info=True)
+        logger.error(f"Legacy TTS error: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"TTS failed: {str(e)}")
 
 
