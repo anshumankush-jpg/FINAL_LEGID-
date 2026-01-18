@@ -9,7 +9,7 @@ openai>=1.3.0
 
 # Sentence Transformers (for local embeddings)
 sentence-transformers>=2.2.0
-torch>=2.0.0  # Required by sentence-transformers
+# torch is installed separately as CPU-only in Dockerfile
 
 # Azure AI Search
 azure-search-documents>=11.5.2

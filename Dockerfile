@@ -41,8 +41,14 @@ RUN apt-get update && apt-get install -y \
 COPY backend/requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
+
+# CPU-only PyTorch (prevents huge CUDA/NVIDIA wheels - saves ~2GB)
+RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu \
+    torch torchvision torchaudio
+
+# Install remaining dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy backend application code
 COPY backend/app/ ./app/
