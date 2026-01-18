@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Message } from '../../services/chat-store.service';
+import { Message } from '../../services/chat.service';
 
 @Component({
   selector: 'app-message-bubble',

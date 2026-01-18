@@ -40,7 +40,39 @@
         {{ errorMessage }}
       </div>
 
-      <button type="submit" class="btn-primary" [disabled]="!loginForm.valid || isLoading">
+      <div class="forgot-password-link">
+        <a (click)="toggleForgotPassword()" class="link">Forgot password?</a>
+      </div>
+
+      <!-- Forgot Password Section -->
+      <div *ngIf="showForgotPassword" class="forgot-password-section">
+        <div class="form-group">
+          <label for="reset-email">Enter your email address</label>
+          <input
+            id="reset-email"
+            type="email"
+            [(ngModel)]="forgotPasswordEmail"
+            [ngModelOptions]="{standalone: true}"
+            placeholder="your@email.com"
+            class="form-input"
+          />
+        </div>
+        <div class="success-message" *ngIf="forgotPasswordMessage && !forgotPasswordMessage.includes('error')">
+          {{ forgotPasswordMessage }}
+        </div>
+        <div class="error-message" *ngIf="forgotPasswordMessage && forgotPasswordMessage.includes('error')">
+          {{ forgotPasswordMessage }}
+        </div>
+        <button type="button" class="btn-secondary" (click)="sendPasswordReset()" [disabled]="isLoading">
+          <span *ngIf="!isLoading">Send Reset Link</span>
+          <span *ngIf="isLoading">Sending...</span>
+        </button>
+        <button type="button" class="btn-text" (click)="toggleForgotPassword()">
+          Back to Login
+        </button>
+      </div>
+
+      <button type="submit" class="btn-primary" [disabled]="!loginForm.valid || isLoading || showForgotPassword">
         <span *ngIf="!isLoading">Sign In</span>
         <span *ngIf="isLoading">Signing in...</span>
       </button>

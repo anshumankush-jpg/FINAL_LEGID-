@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ChatStoreService, Conversation } from '../../services/chat-store.service';
+import { ChatService, Conversation, Message } from '../../services/chat.service';
 import { MessageListComponent } from '../../components/chat/message-list.component';
 import { ComposerComponent } from '../../components/chat/composer.component';
 
@@ -15,13 +15,14 @@ import { ComposerComponent } from '../../components/chat/composer.component';
 })
 export class ChatPageComponent implements OnInit, OnDestroy {
   conversation: Conversation | null = null;
+  messages: Message[] = [];
   isTyping = false;
   private subscriptions: Subscription[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private chatStore: ChatStoreService
+    private chatService: ChatService
   ) {}
 
   ngOnInit(): void {
@@ -29,8 +30,8 @@ export class ChatPageComponent implements OnInit, OnDestroy {
     const routeSub = this.route.params.subscribe(params => {
       const conversationId = params['id'];
       if (conversationId) {
-        this.chatStore.setActiveConversation(conversationId);
-        this.loadConversation();
+        this.chatService.setActiveConversation(conversationId);
+        this.loadConversation(conversationId);
       } else {
         // No conversation ID - check if there's an active conversation or create one
         this.ensureActiveConversation();
@@ -38,17 +39,19 @@ export class ChatPageComponent implements OnInit, OnDestroy {
     });
     this.subscriptions.push(routeSub);
 
-    // Subscribe to conversation changes
-    const convSub = this.chatStore.conversations$.subscribe(() => {
-      this.loadConversation();
+    // Subscribe to messages changes
+    const msgSub = this.chatService.messages$.subscribe(messages => {
+      this.messages = messages;
     });
-    this.subscriptions.push(convSub);
+    this.subscriptions.push(msgSub);
 
-    // Subscribe to typing indicator
-    const typingSub = this.chatStore.isTyping$.subscribe(typing => {
-      this.isTyping = typing;
+    // Subscribe to active conversation changes
+    const activeSub = this.chatService.activeConversation$.subscribe(convId => {
+      if (convId) {
+        this.loadConversationById(convId);
+      }
     });
-    this.subscriptions.push(typingSub);
+    this.subscriptions.push(activeSub);
   }
 
   ngOnDestroy(): void {
@@ -56,33 +59,37 @@ export class ChatPageComponent implements OnInit, OnDestroy {
   }
 
   private ensureActiveConversation(): void {
-    // Check if there's already an active conversation
-    let activeConv = this.chatStore.getActiveConversation();
+    // Get current active conversation ID
+    const activeId = this.chatService.getActiveConversationId();
     
-    if (!activeConv) {
-      // Check if there are any existing conversations
-      const conversations = this.chatStore.getConversations();
-      if (conversations.length > 0) {
-        // Use the first (most recent) conversation
-        this.chatStore.setActiveConversation(conversations[0].id);
-        activeConv = conversations[0];
-      } else {
-        // No conversations exist - create a new one
-        const newId = this.chatStore.createConversation();
-        activeConv = this.chatStore.getActiveConversation();
-      }
+    if (activeId) {
+      this.loadConversationById(activeId);
+    } else {
+      // Create a new conversation
+      this.chatService.createConversation().subscribe({
+        next: (conv) => {
+          this.conversation = conv;
+          this.router.navigate(['/app/chat', conv.conversation_id]);
+        },
+        error: (err) => {
+          console.error('Failed to create conversation:', err);
+        }
+      });
     }
-    
-    this.conversation = activeConv;
   }
 
-  private loadConversation(): void {
-    this.conversation = this.chatStore.getActiveConversation();
+  private loadConversation(conversationId: string): void {
+    this.loadConversationById(conversationId);
+  }
+
+  private loadConversationById(conversationId: string): void {
+    // Find conversation from the conversations list
+    this.chatService.conversations$.subscribe(conversations => {
+      this.conversation = conversations.find(c => c.conversation_id === conversationId) || null;
+    }).unsubscribe();
     
-    // If no conversation loaded, ensure one exists
-    if (!this.conversation) {
-      this.ensureActiveConversation();
-    }
+    // Load messages for this conversation
+    this.chatService.loadMessages(conversationId);
   }
 
   async handleSendMessage(content: string): Promise<void> {
@@ -92,17 +99,40 @@ export class ChatPageComponent implements OnInit, OnDestroy {
     // If no conversation, create one first
     if (!this.conversation) {
       console.log('🆕 No conversation, creating new one...');
-      const newId = this.chatStore.createConversation();
-      this.conversation = this.chatStore.getActiveConversation();
-      console.log('✅ New conversation created:', this.conversation);
-    }
-    
-    if (this.conversation) {
-      console.log('📤 Sending message to conversation:', this.conversation.id);
-      await this.chatStore.sendMessage(this.conversation.id, content);
-      console.log('✅ Message sent!');
+      this.chatService.createConversation().subscribe({
+        next: (conv) => {
+          this.conversation = conv;
+          this.sendMessage(content);
+        },
+        error: (err) => {
+          console.error('Failed to create conversation:', err);
+        }
+      });
     } else {
-      console.error('❌ No conversation available!');
+      this.sendMessage(content);
     }
+  }
+
+  private sendMessage(content: string): void {
+    if (!this.conversation) {
+      console.error('❌ No conversation available!');
+      return;
+    }
+
+    this.isTyping = true;
+
+    this.chatService.sendMessage({
+      message: content,
+      conversation_id: this.conversation.conversation_id
+    }).subscribe({
+      next: (response) => {
+        console.log('✅ Message sent!', response);
+        this.isTyping = false;
+      },
+      error: (err) => {
+        console.error('❌ Failed to send message:', err);
+        this.isTyping = false;
+      }
+    });
   }
 }

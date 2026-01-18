@@ -1,6 +1,6 @@
 """
 Messages management endpoints for LEGID
-Handles message CRUD and chat streaming
+Handles message CRUD and chat streaming with persistent file storage
 """
 import logging
 import uuid
@@ -10,6 +10,7 @@ from fastapi import APIRouter, HTTPException, Depends, Query
 from pydantic import BaseModel
 
 from app.api.routes.auth_v2 import get_current_user
+from app.services.persistent_storage import get_persistent_storage
 
 logger = logging.getLogger(__name__)
 
@@ -33,8 +34,9 @@ class MessageResponse(BaseModel):
     metadata: Optional[dict] = None
     created_at: str
 
-# Mock database
-MOCK_MESSAGES = {}
+# Use persistent storage
+def get_storage():
+    return get_persistent_storage()
 
 @router.get("", response_model=List[MessageResponse])
 async def list_messages(
@@ -45,15 +47,15 @@ async def list_messages(
     """Get messages for a conversation"""
     try:
         user_id = current_user['user_id']
+        storage = get_storage()
         
-        # Filter messages for this conversation
-        messages = [
-            msg for msg in MOCK_MESSAGES.values()
-            if msg['conversation_id'] == conversationId and msg['user_id'] == user_id
-        ]
+        # Get messages for this conversation from persistent storage
+        messages = storage.get_conversation_messages(conversationId, user_id)
+        
+        logger.info(f"Found {len(messages)} messages for conversation {conversationId}")
 
         # Sort by created_at asc
-        messages.sort(key=lambda x: x['created_at'])
+        messages.sort(key=lambda x: x['created_at'] if isinstance(x['created_at'], datetime) else datetime.fromisoformat(x['created_at']))
 
         # Limit
         messages = messages[:limit]
@@ -67,7 +69,7 @@ async def list_messages(
                 content=msg['content'],
                 attachments=msg.get('attachments'),
                 metadata=msg.get('metadata'),
-                created_at=msg['created_at'].isoformat()
+                created_at=msg['created_at'].isoformat() if isinstance(msg['created_at'], datetime) else msg['created_at']
             )
             for msg in messages
         ]
@@ -84,6 +86,7 @@ async def create_message(
     """Create a new message"""
     try:
         user_id = current_user['user_id']
+        storage = get_storage()
         
         message = {
             "message_id": str(uuid.uuid4()),
@@ -96,8 +99,9 @@ async def create_message(
             "created_at": datetime.now()
         }
 
-        # Store in mock database
-        MOCK_MESSAGES[message['message_id']] = message
+        # Store in persistent storage (also updates conversation preview)
+        storage.save_message(message)
+        logger.info(f"Created message {message['message_id']} in conversation {request.conversation_id}")
 
         return MessageResponse(
             message_id=message['message_id'],
@@ -107,7 +111,7 @@ async def create_message(
             content=message['content'],
             attachments=message.get('attachments'),
             metadata=message.get('metadata'),
-            created_at=message['created_at'].isoformat()
+            created_at=message['created_at'].isoformat() if isinstance(message['created_at'], datetime) else message['created_at']
         )
 
     except Exception as e:
@@ -121,7 +125,8 @@ async def delete_message(
 ):
     """Delete a message"""
     try:
-        msg = MOCK_MESSAGES.get(message_id)
+        storage = get_storage()
+        msg = storage.get_message(message_id)
         
         if not msg:
             raise HTTPException(status_code=404, detail="Message not found")
@@ -131,7 +136,8 @@ async def delete_message(
             raise HTTPException(status_code=403, detail="Access denied")
 
         # Delete message
-        del MOCK_MESSAGES[message_id]
+        storage.delete_message(message_id)
+        logger.info(f"Deleted message {message_id}")
 
         return {"success": True, "message": "Message deleted"}
 

@@ -100,6 +100,24 @@ async def register(request: RegisterRequest):
         
         logger.info(f"User registered: {email}")
         
+        # Send welcome email via Gmail API
+        try:
+            from app.services.gmail_email_service import get_gmail_service
+            gmail_service = get_gmail_service()
+            email_sent = gmail_service.send_welcome_email(
+                to_email=email,
+                user_name=user.get("name")
+            )
+            
+            if email_sent:
+                logger.info(f"[SUCCESS] Welcome email sent to {email} via Gmail API")
+            else:
+                logger.info(f"[INFO] Welcome email not sent - Gmail API not configured (emails shown in logs)")
+        except Exception as e:
+            logger.error(f"[ERROR] Welcome email error: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+        
         return AuthResponse(
             access_token=access_token,
             user={
@@ -191,3 +209,135 @@ async def get_current_user(token: str):
 async def logout():
     """Logout endpoint (stateless JWT - just returns success)"""
     return {"message": "Logged out successfully"}
+
+
+# Password reset tokens (in-memory, for production use Redis or database)
+_reset_tokens: Dict[str, dict] = {}
+
+
+@router.post("/forgot-password")
+async def forgot_password(request: dict):
+    """Request password reset email"""
+    try:
+        email = request.get("email", "").lower()
+        
+        # Check if user exists
+        user = _users_db.get(email)
+        
+        if not user:
+            # Don't reveal if email exists or not (security best practice)
+            return {"message": "If the email exists, a password reset link has been sent"}
+        
+        # Generate reset token
+        reset_token = secrets.token_urlsafe(32)
+        
+        # Store reset token with expiration (15 minutes)
+        _reset_tokens[reset_token] = {
+            "email": email,
+            "expires_at": datetime.utcnow() + timedelta(minutes=15)
+        }
+        
+        # Generate reset link
+        frontend_url = os.getenv("FRONTEND_URL", "http://localhost:4200")
+        reset_link = f"{frontend_url}/reset-password?token={reset_token}"
+        
+        logger.info(f"Password reset requested for {email}")
+        
+        # Send email using Gmail API
+        email_sent = False
+        try:
+            from app.services.gmail_email_service import get_gmail_service
+            gmail_service = get_gmail_service()
+            email_sent = gmail_service.send_password_reset_email(
+                to_email=email,
+                reset_link=reset_link,
+                user_name=user.get("name")
+            )
+            
+            if email_sent:
+                logger.info(f"[SUCCESS] Password reset email sent to {email}")
+            else:
+                logger.warning(f"[WARN] Email not sent (Gmail API issue), but reset link is available")
+        except Exception as e:
+            logger.warning(f"[WARN] Email service error: {e}")
+        
+        # Log the reset link (always, for testing)
+        logger.info("=" * 80)
+        logger.info(f"PASSWORD RESET LINK FOR: {email}")
+        logger.info(f"Link: {reset_link}")
+        logger.info(f"Email Sent: {'Yes' if email_sent else 'No (check logs above)'}")
+        logger.info("=" * 80)
+        
+        # Always return success message (don't reveal if email exists)
+        return {
+            "message": "If the email exists, a password reset link has been sent" + (" (check your email)" if email_sent else " (check console/logs for link)"),
+            "reset_link": reset_link if os.getenv("DEBUG", "true").lower() == "true" else None,
+            "email_sent": email_sent
+        }
+        
+    except Exception as e:
+        logger.error(f"Forgot password error: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Password reset request failed"
+        )
+
+
+@router.post("/reset-password")
+async def reset_password(request: dict):
+    """Reset password using token"""
+    try:
+        token = request.get("token")
+        new_password = request.get("new_password")
+        
+        if not token or not new_password:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Token and new password are required"
+            )
+        
+        # Validate token
+        reset_data = _reset_tokens.get(token)
+        
+        if not reset_data:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid or expired reset token"
+            )
+        
+        # Check if token expired
+        if datetime.utcnow() > reset_data["expires_at"]:
+            del _reset_tokens[token]
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Reset token has expired"
+            )
+        
+        # Get user
+        email = reset_data["email"]
+        user = _users_db.get(email)
+        
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="User not found"
+            )
+        
+        # Update password
+        user["password_hash"] = hash_password(new_password)
+        
+        # Delete used token
+        del _reset_tokens[token]
+        
+        logger.info(f"Password reset successful for {email}")
+        
+        return {"message": "Password reset successful"}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Reset password error: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Password reset failed"
+        )

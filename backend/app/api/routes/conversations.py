@@ -1,6 +1,6 @@
 """
 Conversation management endpoints for LEGID
-Handles CRUD operations for user conversations
+Handles CRUD operations for user conversations with persistent file storage
 """
 import logging
 import uuid
@@ -10,6 +10,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 
 from app.api.routes.auth_v2 import get_current_user
+from app.services.persistent_storage import get_persistent_storage
 
 logger = logging.getLogger(__name__)
 
@@ -31,8 +32,9 @@ class ConversationResponse(BaseModel):
     message_count: int = 0
     preview: Optional[str] = None
 
-# Mock database (replace with BigQuery/Firestore)
-MOCK_CONVERSATIONS = {}
+# Use persistent storage instead of in-memory dict
+def get_storage():
+    return get_persistent_storage()
 
 @router.post("", response_model=ConversationResponse)
 async def create_conversation(
@@ -42,6 +44,7 @@ async def create_conversation(
     """Create a new conversation"""
     try:
         user_id = current_user['user_id']
+        storage = get_storage()
         
         conversation = {
             "conversation_id": str(uuid.uuid4()),
@@ -53,15 +56,16 @@ async def create_conversation(
             "preview": None
         }
 
-        # Store in mock database
-        MOCK_CONVERSATIONS[conversation['conversation_id']] = conversation
+        # Store in persistent storage
+        storage.save_conversation(conversation)
+        logger.info(f"Created conversation {conversation['conversation_id']} for user {user_id}")
 
         return ConversationResponse(
             conversation_id=conversation['conversation_id'],
             user_id=conversation['user_id'],
             title=conversation['title'],
-            created_at=conversation['created_at'].isoformat(),
-            updated_at=conversation['updated_at'].isoformat(),
+            created_at=conversation['created_at'].isoformat() if isinstance(conversation['created_at'], datetime) else conversation['created_at'],
+            updated_at=conversation['updated_at'].isoformat() if isinstance(conversation['updated_at'], datetime) else conversation['updated_at'],
             message_count=conversation['message_count'],
             preview=conversation['preview']
         )
@@ -79,15 +83,18 @@ async def list_conversations(
     """List user's conversations"""
     try:
         user_id = current_user['user_id']
+        storage = get_storage()
         
-        # Filter conversations for this user
-        user_conversations = [
-            conv for conv in MOCK_CONVERSATIONS.values()
-            if conv['user_id'] == user_id
-        ]
+        # Get conversations for this user from persistent storage
+        user_conversations = storage.get_user_conversations(user_id)
+        
+        logger.info(f"Found {len(user_conversations)} conversations for user {user_id}")
 
         # Sort by updated_at desc
-        user_conversations.sort(key=lambda x: x['updated_at'], reverse=True)
+        user_conversations.sort(
+            key=lambda x: x['updated_at'] if isinstance(x['updated_at'], datetime) else datetime.fromisoformat(x['updated_at']), 
+            reverse=True
+        )
 
         # Apply pagination
         paginated = user_conversations[offset:offset + limit]
@@ -97,10 +104,10 @@ async def list_conversations(
                 conversation_id=conv['conversation_id'],
                 user_id=conv['user_id'],
                 title=conv['title'],
-                created_at=conv['created_at'].isoformat(),
-                updated_at=conv['updated_at'].isoformat(),
-                message_count=conv['message_count'],
-                preview=conv['preview']
+                created_at=conv['created_at'].isoformat() if isinstance(conv['created_at'], datetime) else conv['created_at'],
+                updated_at=conv['updated_at'].isoformat() if isinstance(conv['updated_at'], datetime) else conv['updated_at'],
+                message_count=conv.get('message_count', 0),
+                preview=conv.get('preview')
             )
             for conv in paginated
         ]
@@ -116,7 +123,8 @@ async def get_conversation(
 ):
     """Get a specific conversation"""
     try:
-        conv = MOCK_CONVERSATIONS.get(conversation_id)
+        storage = get_storage()
+        conv = storage.get_conversation(conversation_id)
         
         if not conv:
             raise HTTPException(status_code=404, detail="Conversation not found")
@@ -129,10 +137,10 @@ async def get_conversation(
             conversation_id=conv['conversation_id'],
             user_id=conv['user_id'],
             title=conv['title'],
-            created_at=conv['created_at'].isoformat(),
-            updated_at=conv['updated_at'].isoformat(),
-            message_count=conv['message_count'],
-            preview=conv['preview']
+            created_at=conv['created_at'].isoformat() if isinstance(conv['created_at'], datetime) else conv['created_at'],
+            updated_at=conv['updated_at'].isoformat() if isinstance(conv['updated_at'], datetime) else conv['updated_at'],
+            message_count=conv.get('message_count', 0),
+            preview=conv.get('preview')
         )
 
     except HTTPException:
@@ -149,7 +157,8 @@ async def update_conversation(
 ):
     """Update conversation (e.g., rename)"""
     try:
-        conv = MOCK_CONVERSATIONS.get(conversation_id)
+        storage = get_storage()
+        conv = storage.get_conversation(conversation_id)
         
         if not conv:
             raise HTTPException(status_code=404, detail="Conversation not found")
@@ -163,15 +172,18 @@ async def update_conversation(
             conv['title'] = request.title
         
         conv['updated_at'] = datetime.now()
+        
+        # Save changes
+        storage.save_conversation(conv)
 
         return ConversationResponse(
             conversation_id=conv['conversation_id'],
             user_id=conv['user_id'],
             title=conv['title'],
-            created_at=conv['created_at'].isoformat(),
-            updated_at=conv['updated_at'].isoformat(),
-            message_count=conv['message_count'],
-            preview=conv['preview']
+            created_at=conv['created_at'].isoformat() if isinstance(conv['created_at'], datetime) else conv['created_at'],
+            updated_at=conv['updated_at'].isoformat() if isinstance(conv['updated_at'], datetime) else conv['updated_at'],
+            message_count=conv.get('message_count', 0),
+            preview=conv.get('preview')
         )
 
     except HTTPException:
@@ -187,7 +199,8 @@ async def delete_conversation(
 ):
     """Delete a conversation"""
     try:
-        conv = MOCK_CONVERSATIONS.get(conversation_id)
+        storage = get_storage()
+        conv = storage.get_conversation(conversation_id)
         
         if not conv:
             raise HTTPException(status_code=404, detail="Conversation not found")
@@ -196,8 +209,9 @@ async def delete_conversation(
         if conv['user_id'] != current_user['user_id']:
             raise HTTPException(status_code=403, detail="Access denied")
 
-        # Delete conversation
-        del MOCK_CONVERSATIONS[conversation_id]
+        # Delete conversation (also deletes associated messages)
+        storage.delete_conversation(conversation_id)
+        logger.info(f"Deleted conversation {conversation_id}")
 
         return {"success": True, "message": "Conversation deleted"}
 
@@ -216,23 +230,16 @@ async def search_conversations(
     """Search conversations by title or content"""
     try:
         user_id = current_user['user_id']
+        storage = get_storage()
         
-        # Filter conversations for this user
-        user_conversations = [
-            conv for conv in MOCK_CONVERSATIONS.values()
-            if conv['user_id'] == user_id
-        ]
-
-        # Search by title or preview
-        query_lower = query.lower()
-        results = [
-            conv for conv in user_conversations
-            if query_lower in conv['title'].lower() or
-               (conv.get('preview') and query_lower in conv['preview'].lower())
-        ]
+        # Search conversations
+        results = storage.search_conversations(user_id, query)
 
         # Sort by relevance (for now, just by updated_at)
-        results.sort(key=lambda x: x['updated_at'], reverse=True)
+        results.sort(
+            key=lambda x: x['updated_at'] if isinstance(x['updated_at'], datetime) else datetime.fromisoformat(x['updated_at']),
+            reverse=True
+        )
 
         # Limit results
         results = results[:limit]
@@ -242,10 +249,10 @@ async def search_conversations(
                 conversation_id=conv['conversation_id'],
                 user_id=conv['user_id'],
                 title=conv['title'],
-                created_at=conv['created_at'].isoformat(),
-                updated_at=conv['updated_at'].isoformat(),
-                message_count=conv['message_count'],
-                preview=conv['preview']
+                created_at=conv['created_at'].isoformat() if isinstance(conv['created_at'], datetime) else conv['created_at'],
+                updated_at=conv['updated_at'].isoformat() if isinstance(conv['updated_at'], datetime) else conv['updated_at'],
+                message_count=conv.get('message_count', 0),
+                preview=conv.get('preview')
             )
             for conv in results
         ]

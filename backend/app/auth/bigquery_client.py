@@ -36,7 +36,7 @@ class BigQueryIdentityClient:
             return
         
         try:
-            credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+            credentials_path = os.getenv('GOOGLE_APPLICATION_CREDENTIALS', './gcp-backend-service-account.json')
             
             if credentials_path and os.path.exists(credentials_path):
                 credentials = service_account.Credentials.from_service_account_file(
@@ -46,15 +46,40 @@ class BigQueryIdentityClient:
                     credentials=credentials,
                     project=self.project_id
                 )
-                logger.info(f"BigQuery initialized with credentials for project: {self.project_id}")
+                logger.info(f"✅ BigQuery initialized with credentials for project: {self.project_id}")
+                logger.info(f"   Using service account: {credentials.service_account_email}")
+                
+                # Ensure dataset exists
+                self._ensure_dataset_exists()
+                
             else:
-                # Skip BigQuery if no credentials file - don't try cloud metadata (slow timeout)
-                # For local development, BigQuery is optional
+                # Skip BigQuery if no credentials file
                 logger.info("BigQuery credentials not found - BigQuery features disabled (this is OK for local dev)")
                 self.client = None
         except Exception as e:
             logger.error(f"Failed to initialize BigQuery: {e}")
             self.client = None
+    
+    def _ensure_dataset_exists(self):
+        """Ensure the BigQuery dataset exists."""
+        if not self.client:
+            return
+        
+        try:
+            dataset_id = f"{self.project_id}.{self.dataset_id}"
+            dataset = bigquery.Dataset(dataset_id)
+            dataset.location = "US"
+            
+            # Try to get dataset
+            try:
+                self.client.get_dataset(dataset_id)
+                logger.info(f"✅ BigQuery dataset '{self.dataset_id}' exists")
+            except Exception:
+                # Create dataset if it doesn't exist
+                dataset = self.client.create_dataset(dataset, timeout=30)
+                logger.info(f"✅ Created BigQuery dataset: {self.dataset_id}")
+        except Exception as e:
+            logger.warning(f"Could not ensure dataset exists: {e}")
     
     async def upsert_identity_user(
         self,

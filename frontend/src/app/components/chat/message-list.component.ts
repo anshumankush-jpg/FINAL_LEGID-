@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, AfterViewChecked, ViewChild, ElementRef, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Message } from '../../services/chat-store.service';
+import { Message } from '../../services/chat.service';
 import { MessageBubbleComponent } from './message-bubble.component';
 import { TypingIndicatorComponent } from './typing-indicator.component';
 
@@ -385,7 +385,7 @@ export class MessageListComponent implements AfterViewChecked, OnChanges {
   }
 
   trackMessage(index: number, message: Message): string {
-    return message.id;
+    return message.message_id;
   }
 
   private scrollToBottom(): void {

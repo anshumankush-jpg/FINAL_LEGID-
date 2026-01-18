@@ -1,20 +1,59 @@
-__pycache__
-*.pyc
-*.pyo
-*.pyd
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
 .Python
 env/
 venv/
+ENV/
 .venv
-.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
 *.log
-data/
-*.db
-*.sqlite
-.pytest_cache
+logs/
+backend_detailed.log
+
+# Data (exclude large files, but include structure)
+data/*.bin
+data/*.pkl
+data/docs/*
+!data/docs/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Testing
+.pytest_cache/
 .coverage
 htmlcov/
+tests/
+test_*.py
+
+# Documentation
+*.md
+docs/
+
+# Git
+.git/
+.gitignore
+
+# Environment
+.env
+.env.local
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
 dist/
 build/
 *.egg-info/
-

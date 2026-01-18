@@ -672,6 +672,44 @@ async def artillery_chat(request: ChatRequest):
             except Exception as e:
                 logger.warning(f"[ARTILLERY_CHAT] Court lookup integration failed: {e}")
         
+        # 🔍 STEP 1.6: Get relevant case law citations
+        case_citations_context = ""
+        case_law_citations = []
+        try:
+            from app.services.case_citation_service import get_case_citation_service
+            
+            case_service = get_case_citation_service()
+            law_category = request.law_category if hasattr(request, 'law_category') and request.law_category else "general"
+            jurisdiction = request.jurisdiction if hasattr(request, 'jurisdiction') and request.jurisdiction else "canada"
+            
+            # Get case citations context for the prompt
+            case_citations_context = case_service.get_citations_context(
+                legal_area=law_category,
+                jurisdiction=jurisdiction,
+                user_question=message
+            )
+            
+            # Also get structured case citations to return in response
+            relevant_case_law = case_service.get_relevant_cases(
+                legal_area=law_category,
+                jurisdiction=jurisdiction,
+                limit=2
+            )
+            
+            for case in relevant_case_law:
+                case_law_citations.append({
+                    'type': 'case_law',
+                    'text': case['summary'][:200] + '...',
+                    'source': f"{case['case_name']} ({case['citation']})",
+                    'page': f"{case['court']}, {case['year']}",
+                    'score': 1.0
+                })
+            
+            if case_citations_context:
+                logger.info(f"[ARTILLERY_CHAT] Added {len(relevant_case_law)} case law citations")
+        except Exception as e:
+            logger.warning(f"[ARTILLERY_CHAT] Case citation service failed: {e}")
+        
         # 🤖 STEP 2: Build professional legal prompt using new system
         from app.legal_prompts import LegalPromptSystem
         
@@ -686,6 +724,10 @@ async def artillery_chat(request: ChatRequest):
                 conversation_history=request.conversation_history if hasattr(request, 'conversation_history') else None,
                 response_style='concise'  # Default to concise, fast responses
             )
+            
+            # Inject case citations into system prompt
+            if case_citations_context and messages:
+                messages[0]['content'] += case_citations_context
         else:
             # Fallback to old system
             messages = LegalPromptSystem.build_artillery_prompt(
@@ -697,6 +739,10 @@ async def artillery_chat(request: ChatRequest):
                 language=request.language if hasattr(request, 'language') else 'en',
                 conversation_history=request.conversation_history if hasattr(request, 'conversation_history') else None
             )
+            
+            # Inject case citations into system prompt
+            if case_citations_context and messages:
+                messages[0]['content'] += case_citations_context
         
         # Use OpenAI
         answer = None
@@ -729,10 +775,45 @@ async def artillery_chat(request: ChatRequest):
         if court_lookup_info:
             answer = answer + court_lookup_info
         
-        logger.info(f"[ARTILLERY_CHAT] Returning response with answer length: {len(answer)}, citations: {len(citations)}")
+        # 📚 STEP 3: Add relevant case law citations
+        try:
+            from app.services.case_citation_service import get_case_citation_service
+            
+            case_service = get_case_citation_service()
+            jurisdiction = request.jurisdiction if hasattr(request, 'jurisdiction') else "Canada"
+            
+            # Find relevant cases based on the user's question
+            relevant_cases = case_service.find_relevant_cases(
+                query=message,
+                jurisdiction=jurisdiction,
+                limit=2
+            )
+            
+            if relevant_cases:
+                case_citations_block = case_service.generate_case_reference_block(relevant_cases, message)
+                answer = answer + "\n" + case_citations_block
+                logger.info(f"[ARTILLERY_CHAT] Added {len(relevant_cases)} case law citations")
+                
+                # Add case law citations to the citations list
+                for case in relevant_cases:
+                    citations.append({
+                        'text': case.get('summary', '')[:200],
+                        'source': f"{case.get('name', 'Unknown')} ({case.get('citation', 'N/A')})",
+                        'page': 'Case Law',
+                        'score': case.get('relevance_score', 0.0),
+                        'type': 'case_law'
+                    })
+        except Exception as case_e:
+            logger.warning(f"[ARTILLERY_CHAT] Case citation service error: {case_e}")
+            # Continue without case citations
+        
+        # Combine document citations with case law citations
+        all_citations = citations + case_law_citations
+        
+        logger.info(f"[ARTILLERY_CHAT] Returning response with answer length: {len(answer)}, citations: {len(all_citations)} (docs: {len(citations)}, case_law: {len(case_law_citations)})")
         return ChatResponse(
             answer=answer[:5000],
-            citations=citations,  # Now includes uploaded document citations!
+            citations=all_citations,  # Now includes uploaded document citations AND case law!
             chunks_used=len(relevant_chunks),
             confidence=0.85 if relevant_chunks else 0.5
         )

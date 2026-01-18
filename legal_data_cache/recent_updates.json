@@ -11,7 +11,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.574019"
+      "fetched_at": "2026-01-17T18:35:23.203127"
     },
     {
       "id": "2473dc2c83049341",
@@ -24,7 +24,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.143285"
+      "fetched_at": "2026-01-17T18:35:22.440068"
     },
     {
       "id": "3abfbe2fd94e3f3d",
@@ -37,20 +37,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.574019"
-    },
-    {
-      "id": "e6f866a9e0739afa",
-      "title": "Supreme Court case involving Indigenous offender and victim could have repercussions in the North",
-      "description": "Supreme Court case involving Indigenous offender and victim could have repercussions in the North  CBC",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNU01oRjhIclFmdk9mUTNsSkU1b1ZrUVMxak9DRHcxTVhxdEhlWWIxTDl5S3pjdkpxM1BFN0VBZENNOU1TTU80MWh6bExLc2JJeDVWUXBmRVZnTU5wS29BendEaXg1cEJLOGZrOXBVOVJ2bG9xRGRmcVdGcXVjdXVVUA?oc=5",
-      "date": "2025-12-20",
-      "source": "CBC",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Criminal Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.574019"
+      "fetched_at": "2026-01-17T18:35:23.203127"
     },
     {
       "id": "c9d26891f4ebc719",
@@ -63,7 +50,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.143285"
+      "fetched_at": "2026-01-17T18:35:22.440068"
     },
     {
       "id": "2e479056a56ef4c4",
@@ -76,7 +63,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.574019"
+      "fetched_at": "2026-01-17T18:35:23.203127"
     },
     {
       "id": "d5ac0a8635facd03",
@@ -89,7 +76,20 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.144299"
+      "fetched_at": "2026-01-17T18:35:22.441069"
+    },
+    {
+      "id": "46dc89fc65a34315",
+      "title": "Klippert Case, 1967 National Historic Event",
+      "description": "Klippert Case, 1967 National Historic Event  Parks Canada",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQVWZoY0ROSmRYeEFacldDNFZYM3JKbm1BREE5MDlWaTJIWmFWd1E3UFJjZll0RUwzUWt4S2Z0eUVwcUJjaTR1Q1JoVDNOX256Vk1WS2xLekFQcG41emhsWXZUMVRSbDc1cnhxMFZvdkVMU3pwUDJkOEQtSGFtZmRvYkJBbVoxR3BZ?oc=5",
+      "date": "2025-10-22",
+      "source": "Parks Canada",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Criminal Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:23.203127"
     },
     {
       "id": "4122c7a01091429b",
@@ -102,7 +102,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.143285"
+      "fetched_at": "2026-01-17T18:35:22.440068"
     },
     {
       "id": "0b9583e55b377557",
@@ -115,7 +115,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.574019"
+      "fetched_at": "2026-01-17T18:35:23.203127"
     },
     {
       "id": "252acac6c7409fb4",
@@ -128,7 +128,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.144299"
+      "fetched_at": "2026-01-17T18:35:22.440068"
     },
     {
       "id": "a6af24cadb1c5682",
@@ -141,7 +141,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.144299"
+      "fetched_at": "2026-01-17T18:35:22.440068"
     },
     {
       "id": "e64036f338230c14",
@@ -154,7 +154,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.144299"
+      "fetched_at": "2026-01-17T18:35:22.441069"
     },
     {
       "id": "a93bbbc9341cb55b",
@@ -167,7 +167,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.144299"
+      "fetched_at": "2026-01-17T18:35:22.441069"
     },
     {
       "id": "d0f7c793195f3991",
@@ -180,7 +180,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.574019"
+      "fetched_at": "2026-01-17T18:35:23.203127"
     }
   ],
   "Traffic Law|Canada": [
@@ -195,7 +195,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.427472"
+      "fetched_at": "2026-01-17T18:35:19.671462"
     },
     {
       "id": "d54d19e431e313a3",
@@ -208,7 +208,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.521618"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "c609a5033e7d31e0",
@@ -221,7 +221,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.520616"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "cb081e501ba2f11e",
@@ -234,7 +234,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.427472"
+      "fetched_at": "2026-01-17T18:35:19.671462"
     },
     {
       "id": "add004c9f8945c53",
@@ -247,7 +247,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.520616"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "d0e4d812c560e0e6",
@@ -260,7 +260,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.520616"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "e17e4aae6f831abd",
@@ -273,7 +273,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.520616"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "fe45c01a351e2bf3",
@@ -286,7 +286,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.521618"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "d8c5a9ae6cbdd3bc",
@@ -299,7 +299,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.520616"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "a1b38a1b2632aa8c",
@@ -312,7 +312,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.427472"
+      "fetched_at": "2026-01-17T18:35:19.672462"
     },
     {
       "id": "e612ad272c82e1c9",
@@ -325,7 +325,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.521618"
+      "fetched_at": "2026-01-17T18:35:23.095965"
     },
     {
       "id": "4ca9013def022eb2",
@@ -338,7 +338,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.427472"
+      "fetched_at": "2026-01-17T18:35:19.672462"
     },
     {
       "id": "98948ad6cfb93f19",
@@ -351,27 +351,40 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.427472"
+      "fetched_at": "2026-01-17T18:35:19.672462"
     },
     {
-      "id": "d6379ba03740baf7",
-      "title": "Punishment for drunk-driving Vancouver cop too lenient, adjudicator finds",
-      "description": "Punishment for drunk-driving Vancouver cop too lenient, adjudicator finds  CTV News",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcTFIMDJEU3YyWEdQQ0M2czNyQmZqWHNTZXpGNzNsWnptNDBmR0toQ3JyMkc0bWJvRU5NS0EyYmZNZTBKWVdFM1V1TGhjVVVFUjNhNFZjWnktV0hRdnJMSGxfVTVOTVFVYU80MHdJd3hwRXVLUElqVmN3dGxzSmp1S2h0WWIzVTBQSXdOdVU0LXlqLXY4VHAxTVpSaURBNHRvSDBEZUdManJOdGlkVEg3X1R5dG4?oc=5",
-      "date": "2025-03-27",
-      "source": "CTV News",
+      "id": "b6f846c95a3eb773",
+      "title": "Quebec coroner calls for tougher drunk driving penalties in line with rest of country",
+      "description": "Quebec coroner calls for tougher drunk driving penalties in line with rest of country  CityNews Montreal",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVdsOXphZFMyOG9JSzlvRzc0Y3dyaDY3VzRsZk9pSC1SekJSeE9fbVpVX1p2LXBscFhFLVRfaWEtNUpoaC1Ud2l0R3UzT2VpSVRIU1l2NzdWWjlNUURTZnNyeWFkbnV4bEV5UVJqd2poLUZ2MlA4QkVMV3FwcFFWSXlHSExsZw?oc=5",
+      "date": "2025-04-22",
+      "source": "CityNews Montreal",
       "jurisdiction": "Canada",
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.428483"
+      "fetched_at": "2026-01-17T18:35:19.672462"
     }
   ],
   "Immigration Law|Canada": [
     {
-      "id": "03eeed768fe81e78",
-      "title": "BREAKING: Federal government launches temporary measure for Ukrainians to maintain legal status in Canada",
-      "description": "BREAKING: Federal government launches temporary measure for Ukrainians to maintain legal status in Canada  CIC News",
+      "id": "5ef8ac04d0e82128",
+      "title": "Canada extends access to temporary residence for those who have applied for the Ukrainian family reunification pathway",
+      "description": "Canada extends access to temporary residence for those who have applied for the Ukrainian family reunification pathway  canada.ca",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbElDT0liUVFBMUdrS3huclpDc2JITUl3SjA3Zlh0RERuVWVSX1FCM3lRYW5kelQzS0FpRDZlbWRyS0hWMW1ieDJNcW0yVm1BMDdLY0RxQTlTbU9ocGtJNWhac011MjNISE12c1lURWtJWnE3bDBqNlRVZjBKSDl3MHBndXlXMHVURGRYNHBmUHNxc1JEeFV5SzdBcmhfWU93R1RnazlodlFTTXZWd3h0cE1ILTZtUjE3d2R1N3lFRE16ZlczdHRHbjl4XzhIcjhmd05YNnlWSGo1ZTl6QW1sbm95WQ?oc=5",
+      "date": "2026-01-16",
+      "source": "canada.ca",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Immigration Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:19.960288"
+    },
+    {
+      "id": "ebf53d8d3da0f5ac",
+      "title": "Federal government launches temporary measure for Ukrainians to maintain legal status in Canada",
+      "description": "Federal government launches temporary measure for Ukrainians to maintain legal status in Canada  CIC News",
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPRjJCaDFGYXNnLTNUb0VSYW9xUklJWDZBOUhScHRjZWVWeHN4dl8zTWlTaFNtWDdqVG9UeGVNTHVDOHNpcDZJWENuaER5Tk9LQ0wxOFNua3pFNFBjWWJlT2F2THZGUDZDdk1udTdiYmNjYmtQQ19iNGI1bDktNll5cWlya1JBYVhEX0FyS0hJMDR1dkpXUHBfVThDTEJvXzUzSnBsbXoxdVI4R0NMcUdoUjZJTkV3UTFrUkx3aTFSTXBDMkFwUWg5YUN1Ym5CS2xfY04zRGtOMNIB3AFBVV95cUxNcFRTelpxMGcxd2Y2SHFLUkdDWnJUQXdQM0piQ2JITHlJM0FZQWsyc1R1Sm1sWEhtN1czVjN1RDk1amtaZHczRlg1ZGpDelVoeThEdU9MbjFYM2ZtOHlSaTBkaU5hRWh1dE9rOFE0S0dHWlgxdWJhSUZNaVN2a3d2TG9VQVZhZEtIRUpnRDVxeXRyQUh1dm9HR1h2NngzS1hrUE5kT2NSX3FOOHY1NWxHODBTamtfT0U1dDRxLXktQWNpeXdiY21aemJGZm43Q0tyOXJzb0lWV25CNWxY?oc=5",
       "date": "2026-01-16",
       "source": "CIC News",
@@ -379,20 +392,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
-    },
-    {
-      "id": "20a7ae97142054f1",
-      "title": "BREAKING: Canada restructures delegation of authority to immigration officers",
-      "description": "BREAKING: Canada restructures delegation of authority to immigration officers  CIC News",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUHlvdzlQQ05qRTdTR3pITTFyVWJqVnV4UWZDdmtlQ0cwSlZuX3FIVC1iYlFhN0trUDFoYzM4QllDRUNZOVQwa05ySlA0ZlZzX0cxdUV2SzlQbU9rR2lzUUZleVExY25VamM4LWJnQWVWMVAyREpya0VlNjlqdFpwOEFJXzhfSS1ZNkpDcXhYY2dXekJUM01sRHhfSkJOSHBjTlV5Ykp5TGowSDZJYnBZRmRR0gG3AUFVX3lxTE5seFdKSXRCSVNzX0RxQXJZYzJheDF1c00xZlNOVWg4RDk1Q1lUSml0RjVBSXVTTWlLYWdwdndOcE00NmpDaVNDcTBzakN5VVd0RFBGY3VwaG5TT0ozMTcyMWh6U3VmR2pJYUcwVUxoLWRfSTRnSkVYcTV3SGY1WnE4ekJwdWVzX2dsRGJWeXZzWGN2Nm5nZldhRWRqcW5EZi14bkNpVnZkalVyaHpBMFdQZnBRWGRwcw?oc=5",
-      "date": "2026-01-16",
-      "source": "CIC News",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Immigration Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
+      "fetched_at": "2026-01-17T18:35:19.960288"
     },
     {
       "id": "e09a8c1b70ec827f",
@@ -405,20 +405,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.782772"
-    },
-    {
-      "id": "8286be0f002e82ad",
-      "title": "Trump suspends immigrant visas for 75 countries: Who’s affected?",
-      "description": "Trump suspends immigrant visas for 75 countries: Who’s affected?  Al Jazeera",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTjVzTnptLUJrX3dSU2tlVUVfRnJqdFRJaFNuN1VkMjB3bl9Wb25VZGFJYXFOb0RRTGdvXzVQTFpza3pkY3BpX1FPNmF3ZUdXbnlLUndsZ2lmS1ExV1RjZzAxcklaazBRbzU2bUNSODB5S3VIQjF2eHZ3aGtoR1Y1Y0dvWUlCS0V2aTdKbGVMLU9VeFpNZC1hM2VkaFkxZUZzeTFfWdIBqgFBVV95cUxPRjM2TzlGS2dycGVwNHRFdnVvNEdZMEI1VlplOGlid1FveUxfeFZRMGlXZmhORlBvM2VUNUNWWHYyUmROaDFfVlRUbEJaNl9MWlZhbG1fYS1rOC10ekl5N0tRcnJndG1fXzJ4c3JuT2NnY2VzTmt4cVZWejhOMm5QbmpZOC1FWV9Gbm5yN2JpN2N1eF9vLXlHeUFFUUFNYzhzbTBFLWpkaEU4QQ?oc=5",
-      "date": "2026-01-15",
-      "source": "Al Jazeera",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Immigration Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.783773"
+      "fetched_at": "2026-01-17T18:35:22.294460"
     },
     {
       "id": "4e283a8bbd4ac025",
@@ -431,7 +418,20 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.656309"
+      "fetched_at": "2026-01-17T18:35:19.960288"
+    },
+    {
+      "id": "e81f4fcdf8289da1",
+      "title": "We asked AI to predict Canadian immigration in 2026. Here’s what it said",
+      "description": "We asked AI to predict Canadian immigration in 2026. Here’s what it said  CIC News",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONlJ4WjJWa2l1Vi00SE5iV3BFMVlQNVVfUFdscllBU3FXbVNtdFpldlRmTndhd1JGTHp0dlNGV1pkY0NybWVwdlpHX3o3QVMzUUFhSl9ULVVsWldtdmtKdmdSYXBLdk5hZjhJYVZjVlk1bXlqREJYcnZkYV9iUkpVaklicTFEWHR1YmNteklVTnI5Y29Hc0dTSUswVE5CX1dnNk1FWXUzYy1SeUtkNFdKVDNsczBuZ9IBuwFBVV95cUxPYTJKZk5RMFVRMzV5aXhpLXVSNnFfaFJ4TnptVjZHMWlBMWhLS0hJaUFyM3F4UVNLc1BqRkNLVjlRNV9kRDRINkd0MnM3NGJMcFdIcVc3aXNtSlJsS3ltMmlsTHpvRmRCYVBEbnJEeTRqZ3dGX0NuaTJtVG5SUGxjeEx6c25QclhFY1o4N2o5TXFELWVWMTVlLUlGZEF2QkVQN2doNVpvRnUtWFFzdjRib00zb01ZWlRVS1VF?oc=5",
+      "date": "2026-01-14",
+      "source": "CIC News",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Immigration Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:19.960288"
     },
     {
       "id": "a9e397b5e1201e7a",
@@ -444,7 +444,20 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
+      "fetched_at": "2026-01-17T18:35:19.959289"
+    },
+    {
+      "id": "feb2ebc1b9c8a0af",
+      "title": "New year, new rules: Five Canadian immigration and labour reforms now in force",
+      "description": "New year, new rules: Five Canadian immigration and labour reforms now in force  VisaHQ",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNbnJQd0hpem5iQmNwZENFODFLVHkxTkFIcDM1SldTSmg1aHZTZ1JBeTQwTmF6YWpmZXlmY0pWT05kRnM0NTQxeVBSV0hyeFY1SXpVdC0tbk5jU1UyQlo1bzR0RGhGSlhSeWJZN0VLbWdpc0QzVGd5d3RrRnhRQmcyRVlQcGVvNTJuRzVVTG1Ib1kxNWFGSWRXSFZlWHoxNXlNLWdGY00yblZDZWhpc2E0YzhxbVVrckdHSi1z?oc=5",
+      "date": "2026-01-10",
+      "source": "VisaHQ",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Immigration Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.294460"
     },
     {
       "id": "9379ebf40eed789e",
@@ -457,7 +470,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
+      "fetched_at": "2026-01-17T18:35:19.960288"
     },
     {
       "id": "f1d78cbae7293fb1",
@@ -470,7 +483,20 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.782772"
+      "fetched_at": "2026-01-17T18:35:22.294460"
+    },
+    {
+      "id": "71f49061cbf6b132",
+      "title": "What to expect from Canada’s new immigration rules in 2026",
+      "description": "What to expect from Canada’s new immigration rules in 2026  CTV News",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMmJxSm9EUlRCODZ1QS1CSU9OQ2thNWtSSFdmOUFTem5IbU9aaFloS0h0TG82eF9HN1Q4VnF2N2gyMFF4aU9nVjJ4dTJHdjJzdmJEMFpWYXF4dS1XcnJPR29NdTlza0M1QVVOTHEtVWcwZnhkVF9pNHh5TnBpNVpGY0FSZDFSTi1KV1BBQXdSbm1oZUpOV21RcG96MXQ1c0cwdUJGT1JFMXpNZDlPX0ZIcjRPRXROMzcwejdGVHVLU3Q5R1FuNGdBRnFB?oc=5",
+      "date": "2026-01-02",
+      "source": "CTV News",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Immigration Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.294460"
     },
     {
       "id": "31ce296419558772",
@@ -483,20 +509,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
-    },
-    {
-      "id": "ad981ffdfa578b8c",
-      "title": "Canada invests in Francophone communities and helps build their future by attracting top global talent",
-      "description": "Canada invests in Francophone communities and helps build their future by attracting top global talent  canada.ca",
-      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQbmxMelpjRUVlOFVxNDVkZl82NFdBM3dFa1htS3BqOFk4YlpOTGJvWWtES084bXV0MXpwNEtlSElhcDg1NDZlbGlRTWhYcGFQNEZuTUxuaF9uNHhkTHFLMjM3Tk5hZ0hlcXNjOUNqQlZCbEJncnFpQ21na0lWdk8xSHRHTk1wZ1NiX3BULTVaREpLOV94VjByeXEzZkhVMzc0WUlrWWEtSlBnZGlnTUlGUWYycEtPeElMRmZFNXFzS0QzUFk5U2VZVkEwc256cXd0VzFtajZhSk5FLThiYVc2elZhbXN4a0Q3SjUwYU16azVVYnBDUDgtc3RDcXJYRWJXalNPMGkyRG1LQQ?oc=5",
-      "date": "2025-11-27",
-      "source": "canada.ca",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Immigration Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
+      "fetched_at": "2026-01-17T18:35:19.959289"
     },
     {
       "id": "56422c061ed3fef8",
@@ -509,7 +522,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.656820"
+      "fetched_at": "2026-01-17T18:35:19.960288"
     },
     {
       "id": "fadb78ae5962fe33",
@@ -522,7 +535,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.783773"
+      "fetched_at": "2026-01-17T18:35:22.294460"
     }
   ],
   "Family Law|Canada": [
@@ -537,33 +550,33 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.906514"
+      "fetched_at": "2026-01-17T18:35:20.692077"
     },
     {
-      "id": "f08c9c998b80b534",
-      "title": "Recognition of an Ontario divorce in Iran: Navigating the legal divide between two systems",
-      "description": "Recognition of an Ontario divorce in Iran: Navigating the legal divide between two systems  Law360 Canada",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOUzBIMXlsSlpmUHN1TjBucHEtSVhZcGUwekJvWFVIRHlIR0VGYTVzRjlzYXFpZEs0UjBMdXZtTFdBWTVoRXZnWnpVZWMxUWIwMDNtVlRtNlBDczZzQ1JXQ3owdnlZT0VsOVpGOUlZV1g4U240MktYd1ZQSGxoVVFxS0dEOEx4UGF3eGU1bTdFajNIbk54ckFOUm9pOV9MTGpYTmJ3MmtrMVhPLXRaTXRnM0NGaTJsZzh6TWxzV2o5SzFHVkdQZWIzQ0xiX3ZHRmMwWFZ2ZkFITUdFeVHSAVhBVV95cUxORlZZQ09XR2ktZVpueGl3UzV3eTh5bTN5cDE1bUM2R3FZek9YZDF4OTcwLUNULVFGTXpNMU14RUdSM3FFbTlCMzlNLTVwaWctRTI2MXZlblRI?oc=5",
-      "date": "2026-01-08",
-      "source": "Law360 Canada",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Family Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:29.787356"
-    },
-    {
-      "id": "1ed08e3039d04206",
+      "id": "c316ddd1be1253ea",
       "title": "Divorce Coaches Academy Launches Canada-Focused ADR Divorce Coach Certification, Advancing Professional Standards Across the Family Dispute-Resolution Ecosystem",
-      "description": "Divorce Coaches Academy Launches Canada-Focused ADR Divorce Coach Certification, Advancing Professional Standards Across the Family Dispute-Resolution Ecosystem  The Globe and Mail",
-      "link": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxOa0hEcjIyU2xwajkzQllPLWY0R0g0NC1uY0M4YUVQMGVKbUtkS0VjZnMzcUZ1R1YzS2pJdlMwcUpXazBhVnVXU052d21lU3FpMDlRTUhSVmcxdVUxRVUzbURzQXFzWTFja25aM3FUcVM5N1RRZVAtZ3IzOEpDWkprTThHZ0pIVGhqbHozODc5dS1jbnd6LUpYX0lBQ2ItMUxnSzM3WmNDdGhtTGh5U2ZONnN5b2J2UzRHY1lieEZTa0p6c3E5VHBaN0dFR25QUTA0YXhfQnpfSy03VUFOQmFzXzhZdUNhRjJOcDRLdlRSTEo5Vm9xLXZoMVVWaUt0OVdSVWJpbzNiWl9laHZVVFNpRnZ1dTlra3ZMYUJlN1ZJSE1hY3BmWmlWR29hYnljWWV1bVFoT1JkaFlFMDZtQmJDUHRSeEtIeVUxZnZ0dlFob0F3NXc1ZEl0NWFxajBXQQ?oc=5",
+      "description": "Divorce Coaches Academy Launches Canada-Focused ADR Divorce Coach Certification, Advancing Professional Standards Across the Family Dispute-Resolution Ecosystem  Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNzBiOWpXMzczUUpwOWg5eHVWeDlFUFlLelhCSDU4amNfMHdzT1kwTXVhcFhyUlZXbVZ1RWNKa2N5RXdDdVcwRkNIR1ZzNXp4ZUNFMWRZc201dXMtQVJwZlhtZmktZUt6N2NhTWsxczdKUktmT25kREtWc3V0U0lhbnJoUThFdktUMkRjZVRR?oc=5",
       "date": "2025-12-29",
-      "source": "The Globe and Mail",
+      "source": "Yahoo Finance",
       "jurisdiction": "Canada",
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.787356"
+      "fetched_at": "2026-01-17T18:35:20.437124"
+    },
+    {
+      "id": "60bff80fe6369fb9",
+      "title": "Holiday co-parenting after separation or divorce: 6 legal and practical tips for surviving and thriving",
+      "description": "Holiday co-parenting after separation or divorce: 6 legal and practical tips for surviving and thriving  Carleton University",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9YcjdTWWhFRFFUQXA2bWJTeFU3NXJOTV9xOXZWczZUOHJSb1ZkS3k5dmlzc3pKZGU3R2M4bEhmQzRaakdsQ3ZMS2pEQmFCaDN5cWVmbEo0UWtxYk5wT29WUjI3SjZxMzFEUTg3aTNDYkctSEpDSDhYUA?oc=5",
+      "date": "2025-10-23",
+      "source": "Carleton University",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Family Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:20.436122"
     },
     {
       "id": "3cbb1f19d81f75c1",
@@ -576,7 +589,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.786374"
+      "fetched_at": "2026-01-17T18:35:20.436122"
     },
     {
       "id": "a14a0216e1b8362c",
@@ -589,7 +602,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.908027"
+      "fetched_at": "2026-01-17T18:35:20.693245"
     },
     {
       "id": "ee6c5d0cf23dbb73",
@@ -602,20 +615,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.908027"
-    },
-    {
-      "id": "123b14ab15e10406",
-      "title": "'Queen of Canada' remanded in custody, will represent herself at bail hearing Monday",
-      "description": "'Queen of Canada' remanded in custody, will represent herself at bail hearing Monday  Yahoo News Canada",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBvaDFtZUFUX081amdxUDYwVVZrSWJuRUtsX2QwaFo1YzkyNWIwMjBwOVV0LWk2TTQxMzk1TTVieE0zNVpBZDJUZjhDVko5djJfX01aUlVHdDd2V0dQbFdJOGk1ZXJlbXBkQllFbE9PSnNLc0ZnZkthMTJwYjU?oc=5",
-      "date": "2025-09-05",
-      "source": "Yahoo News Canada",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Family Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.908027"
+      "fetched_at": "2026-01-17T18:35:20.693245"
     },
     {
       "id": "7d1c9c136f541230",
@@ -628,7 +628,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.787356"
+      "fetched_at": "2026-01-17T18:35:20.436122"
     },
     {
       "id": "2862fb0caed98573",
@@ -641,7 +641,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.908027"
+      "fetched_at": "2026-01-17T18:35:20.693245"
     },
     {
       "id": "08472e54b55441f9",
@@ -654,7 +654,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.787356"
+      "fetched_at": "2026-01-17T18:35:20.437124"
     },
     {
       "id": "d0f7c793195f3991",
@@ -667,7 +667,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.908027"
+      "fetched_at": "2026-01-17T18:35:20.693245"
     },
     {
       "id": "1f80a030b64478e7",
@@ -680,7 +680,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.787356"
+      "fetched_at": "2026-01-17T18:35:20.437124"
     },
     {
       "id": "a5b2bbccdd4b41e9",
@@ -693,7 +693,20 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.787356"
+      "fetched_at": "2026-01-17T18:35:20.437124"
+    },
+    {
+      "id": "72dd4fd90d389247",
+      "title": "Colucci v. Colucci",
+      "description": "Colucci v. Colucci  Supreme Court of Canada",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uVWc5TkYzQjZHRUFlMHd6WWRVZDN5NVhSOW5FX3ZsSkcxYjJCTGo4Qm1ldjEydDRDbmVwMlp3VDNIa3dRZUx4RDNuUEl2dUxLYW9iNTJiM3QybGRFbzVMb1laakw2S1hk?oc=5",
+      "date": "2021-06-04",
+      "source": "Supreme Court of Canada",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Family Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:20.693245"
     }
   ],
   "Employment Law|Canada": [
@@ -708,7 +721,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.036435"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "e38b824995989ed5",
@@ -721,7 +734,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.833075"
+      "fetched_at": "2026-01-17T18:35:21.274738"
     },
     {
       "id": "f20ba6e4c0f3ea19",
@@ -734,7 +747,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.036435"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "57399fc07f8ab9f7",
@@ -747,7 +760,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.833075"
+      "fetched_at": "2026-01-17T18:35:21.274738"
     },
     {
       "id": "980ab52ee13805f6",
@@ -760,7 +773,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.036435"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "f94da6f23b9b65f0",
@@ -773,7 +786,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.036435"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "aaa057455ba419e5",
@@ -786,7 +799,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.834070"
+      "fetched_at": "2026-01-17T18:35:21.275736"
     },
     {
       "id": "d6b7025620d836e4",
@@ -799,7 +812,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.036435"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "048142bf8fc2d854",
@@ -812,7 +825,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.833075"
+      "fetched_at": "2026-01-17T18:35:21.274738"
     },
     {
       "id": "61cd9f1ec19b0370",
@@ -825,7 +838,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.037437"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "6747a40507e75f43",
@@ -838,7 +851,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.833075"
+      "fetched_at": "2026-01-17T18:35:21.274738"
     },
     {
       "id": "af09fac1646dfb93",
@@ -851,7 +864,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.833075"
+      "fetched_at": "2026-01-17T18:35:21.274738"
     },
     {
       "id": "1ea38b4371f5c105",
@@ -864,7 +877,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.037437"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     },
     {
       "id": "f419db33182f79a0",
@@ -877,7 +890,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.833075"
+      "fetched_at": "2026-01-17T18:35:21.274738"
     },
     {
       "id": "7b52e72d7fa493bf",
@@ -890,7 +903,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.834070"
+      "fetched_at": "2026-01-17T18:35:21.275736"
     },
     {
       "id": "58221bb0cfeaf870",
@@ -903,7 +916,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.037437"
+      "fetched_at": "2026-01-17T18:35:21.445507"
     }
   ],
   "Business Law|Canada": [
@@ -918,7 +931,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.789118"
     },
     {
       "id": "9da17e6bdedb58ac",
@@ -931,7 +944,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.790127"
     },
     {
       "id": "f0b502ef943fac9b",
@@ -944,7 +957,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.245277"
+      "fetched_at": "2026-01-17T18:35:19.770797"
     },
     {
       "id": "eda324e05a8553d4",
@@ -957,7 +970,20 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.245277"
+      "fetched_at": "2026-01-17T18:35:19.769794"
+    },
+    {
+      "id": "c918594fd5fa62f0",
+      "title": "Shareholder activism in Canada: trends and outlook for coming years",
+      "description": "Shareholder activism in Canada: trends and outlook for coming years  Osler, Hoskin & Harcourt LLP",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOczFiSGMySWhnTl9OZUhyN2pnZDY0RDdWcWpMX1RMVk5kYXI2VlQzUDdwLXQ1cTYwR3BJemlYM3dvbXF5S2p4a1hodXZuY2NobnpjMDlWc0lGeEMyaWZhR280TENjYkc0R3FGdS1iQ1FqVEpoVDhZcEZfdUx0RzJ4UFBzV1k4cVRMYXBiVjBXM1I3WU9Nb2ZZenFWeUpxLVRVZnREc0FQLUlCQWluOFFGWFloVnFsbldjTEZBeC1xQ2UxNWhVX2k0?oc=5",
+      "date": "2025-12-04",
+      "source": "Osler, Hoskin & Harcourt LLP",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Business Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:19.770797"
     },
     {
       "id": "6ebe2e98f48e9cdf",
@@ -970,7 +996,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.789118"
     },
     {
       "id": "09f6a6267e44d39b",
@@ -983,7 +1009,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.789118"
     },
     {
       "id": "e46e333789d2f770",
@@ -996,20 +1022,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
-    },
-    {
-      "id": "43eeafba58038b87",
-      "title": "Harvey's $5 billion bet: Why the hottest company in legal tech is eyeing Canada",
-      "description": "Harvey's $5 billion bet: Why the hottest company in legal tech is eyeing Canada  Canadian Lawyer Mag",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOU2FHbjJsSU1YNl9VOC1ISWlPejVvazdHUWw5SXRPdGlRbEJLMmczNHhTcFJlNXNtc1k2LUFPRWdVcUpldm10aTNRWTlJVGozVUl6WkZNWm1sSGlNdmRYdXZpV1prU1ZSZ2ZvZXUwTE5nRGl1eXpQMVdleS1HcnRoT2NRNmlpS090M0RNZmEwS0JqbW9rR04taGNyYlc4OGNpQjFJRkNMektQbmhQcWNUa2JCX0xwemh0a0Y5RlNLODlaVm9QLXJHUEVIMA?oc=5",
-      "date": "2025-10-28",
-      "source": "Canadian Lawyer Mag",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Business Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.789118"
     },
     {
       "id": "b6baa67909907cac",
@@ -1022,7 +1035,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.790127"
     },
     {
       "id": "de9ffa7b90d6ec38",
@@ -1035,7 +1048,20 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.245277"
+      "fetched_at": "2026-01-17T18:35:19.770797"
+    },
+    {
+      "id": "74831a8c1fd29608",
+      "title": "Bridging the border: Navigating key differences in Canadian and American M&A",
+      "description": "Bridging the border: Navigating key differences in Canadian and American M&A  Dentons",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOdWZNVkRha3FqR1NrOFZiQlpuZGFxV1dKRzZOX0hGMWVuTnY4VVNKV0NMbkNlZk1zUTZJZDJhSWNFenA0OUdBbjdOX2Z4Mk9wb2FUS29PbzltZi16RTlqWG93bDg5LVdWQms3OUwyLTJRcnZ3Rnl6enlFLUxFbGo2VTN2MEFmUQ?oc=5",
+      "date": "2025-08-27",
+      "source": "Dentons",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Business Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:21.790127"
     },
     {
       "id": "f2e0334bbaa0eb5e",
@@ -1048,7 +1074,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.245277"
+      "fetched_at": "2026-01-17T18:35:19.769794"
     },
     {
       "id": "053733b2ac1c2f6e",
@@ -1061,7 +1087,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.246280"
+      "fetched_at": "2026-01-17T18:35:19.770797"
     },
     {
       "id": "32e0dc6413a523fd",
@@ -1074,7 +1100,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.031700"
+      "fetched_at": "2026-01-17T18:35:21.789118"
     },
     {
       "id": "67880adafd2ea405",
@@ -1087,7 +1113,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.245277"
+      "fetched_at": "2026-01-17T18:35:19.769794"
     },
     {
       "id": "71df4973b50291e4",
@@ -1100,20 +1126,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.246280"
-    },
-    {
-      "id": "aa3d08a95c3ad188",
-      "title": "Updated: Does Canadian modern slavery legislation apply to municipalities?",
-      "description": "Updated: Does Canadian modern slavery legislation apply to municipalities?  MLT Aikins",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQaWJ5cEIwbXhhRmFJanJFTkgzVWNPcGowYnRRV3FxSlZkQzBNNmhzUHd2eGhBM3M5TE9ZR2cydTFHYVRKRnNHUmtyanBOZW9xMWt2UFppTHp3NzhMR0xybzJWZjVCeUx1ay15azN0NlpnaDRkbmRkZHhkUVpzWmZCelUtc1NMLTYtTE9Vb0sxTm1ONTlxYlVUSmxrcGM5RkE2Y1E?oc=5",
-      "date": "2025-02-13",
-      "source": "MLT Aikins",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Business Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.246280"
+      "fetched_at": "2026-01-17T18:35:19.770797"
     }
   ],
   "Business Litigation|Canada": [
@@ -1128,20 +1141,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
-    },
-    {
-      "id": "b63beeece963a2a3",
-      "title": "Ontario court rejects FSRA appeal in licensing dispute",
-      "description": "Ontario court rejects FSRA appeal in licensing dispute  Insurance Business",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOLXQ0aURqLVJMZGZOUjBDNy1aYWEyWUw4WjNVTDJkMVJzWGU4NG02bzZFa1R6UFZadlRTUjJMdjZ6eHJfSmlOZEdXUzhLcElBby04VFZFWncxVWRTb3E4ZHI0S05BMlJvaGpfMFg2WWNVT0o0cVVGVU5xZldHdUdoQkZKNWthenEwTjJKYWpJWXVaRkwzM1dzS2VVUXJJYy16TXhQQ2dKclZtTTFjZGtzZnQtdDBtbTBSUkNwR19wME5Ud2c?oc=5",
-      "date": "2025-12-01",
-      "source": "Insurance Business",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Business Litigation"
-      ],
-      "fetched_at": "2026-01-16T17:49:26.555403"
+      "fetched_at": "2026-01-17T18:35:22.966325"
     },
     {
       "id": "492f03bc9d806ba9",
@@ -1154,7 +1154,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:26.555403"
+      "fetched_at": "2026-01-17T18:35:20.114418"
     },
     {
       "id": "6ebe2e98f48e9cdf",
@@ -1167,7 +1167,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:26.558429"
+      "fetched_at": "2026-01-17T18:35:20.115423"
     },
     {
       "id": "b24c03c334dc45c5",
@@ -1180,7 +1180,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:26.555403"
+      "fetched_at": "2026-01-17T18:35:20.115423"
     },
     {
       "id": "19b192c5628f80e3",
@@ -1193,7 +1193,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
+      "fetched_at": "2026-01-17T18:35:22.966325"
     },
     {
       "id": "bd796939fefa8df0",
@@ -1206,7 +1206,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:26.555403"
+      "fetched_at": "2026-01-17T18:35:20.115423"
     },
     {
       "id": "fc2bd85df24356d7",
@@ -1219,7 +1219,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:26.558429"
+      "fetched_at": "2026-01-17T18:35:20.115423"
     },
     {
       "id": "36e08d166fab350c",
@@ -1232,7 +1232,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
+      "fetched_at": "2026-01-17T18:35:22.966325"
     },
     {
       "id": "41cc798a6858cc0a",
@@ -1245,7 +1245,20 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
+      "fetched_at": "2026-01-17T18:35:22.966325"
+    },
+    {
+      "id": "0a88370cbfae8a9a",
+      "title": "Litigation funding surge raises red flags for Canadian insurers",
+      "description": "Litigation funding surge raises red flags for Canadian insurers  Insurance Business",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOZ0hHZDFmaEJjUTNuUVltTXUzczN3N2tIdEpRMUxSdEJRelpKRDN1dC1XOGotempoVXZJLUNaNGtLM1RWQWtGS3ZhU2laUEZ0eWdpRmg1V0NqbVJoMGRaSTh2VEU5Zi1yZ0FzbVdQTlJsZmZ2eDBmUXM5YmFLZG03cWNVM0JnSEdEWWZNRnVUU3NKaFNEVy1rWTVLcFdhWk8xb002djd2c0dLSzRrbE9BUWxrZHJTa1dWaWRWMHNXWWRrbzAxWFdhbTBJalIwbWVD?oc=5",
+      "date": "2025-06-12",
+      "source": "Insurance Business",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Business Litigation"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.966325"
     },
     {
       "id": "776e0d678f8c5e89",
@@ -1258,7 +1271,20 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:26.555403"
+      "fetched_at": "2026-01-17T18:35:20.115423"
+    },
+    {
+      "id": "0d9e81093fd40ae2",
+      "title": "Union says lawsuit over federal pesticide safety rules aims to protect agricultural workers",
+      "description": "Union says lawsuit over federal pesticide safety rules aims to protect agricultural workers  CBC",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMU4yblVyVzhlS3cybmhLU09uUUJzSS13MDU0Mnk4Zl9IaEd0ZFRWTkptUWVDcE43SHVnWVdLblp5VjNEaVpUNzVmTmludWRLVkxVdjJYZGdldDMzRnFhT2RxeGRITGsxQW1qUE54TGNJdm1lQnNiWHZBWFAxME9HNDZ1b1pJaXA1ZjFPel96QQ?oc=5",
+      "date": "2025-06-09",
+      "source": "CBC",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Business Litigation"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.966325"
     },
     {
       "id": "fd7fbaae9313ead9",
@@ -1271,20 +1297,20 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
+      "fetched_at": "2026-01-17T18:35:22.966325"
     },
     {
-      "id": "88d472c52fd14cc9",
-      "title": "The fight against forever chemicals",
-      "description": "The fight against forever chemicals  CBA National Magazine",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZHBIY1Y3WU5pR2J2LUVCY3ltTGJTRDZ0ZGFSek1fXzhyRUl0cnJYWlBiUlJlUTk5T1Z4VjV6eFVsSEVOcjlpNVk4TVlUUk9ISXgxLUFNamJWSlplcGV0enJrOFRNTkVkemM1cEx2MlpQaF9LM01Pa1NZdEttWlNJLTlZcnpsVmRKU3dtT1FXV2FrTGJnRkZsazN5MDM0SkFNcW11dE1tbms?oc=5",
-      "date": "2025-01-28",
-      "source": "CBA National Magazine",
+      "id": "3a4dbbe77d862908",
+      "title": "The Honourable Suzanne Côté",
+      "description": "The Honourable Suzanne Côté  Supreme Court of Canada",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4yZzB2aUg1NnNWRTNIc05oSENBMktXQ0dsR1NfRGdtYWMtTGxaZDBaUmZUQUpZZzhJYl9LWUJ2WEplWFZOYS1BRWxBSWJFTUd5a09iRGEyT29RTEFSZFR3cE9aVUFJbHo3MXRQWmJlbGcwY1hoQnlEZWM5NFhvQzA?oc=5",
+      "date": "2025-01-27",
+      "source": "Supreme Court of Canada",
       "jurisdiction": "Canada",
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
+      "fetched_at": "2026-01-17T18:35:20.115423"
     },
     {
       "id": "3b5e3b825c6959c4",
@@ -1297,20 +1323,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
-    },
-    {
-      "id": "04e87acf01fd6b89",
-      "title": "Jason Mohrbutter to speak at CDL Class Action Symposium on June 7 in Halifax",
-      "description": "Jason Mohrbutter to speak at CDL Class Action Symposium on June 7 in Halifax  MLT Aikins",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZjlzTjNsRmh5WWNuYUk1U1plcktWMGFQeENZS1B4MXlZNVFVQTFSYzFPRjliVllZbFA5NkVjb1R1OE9QazlTRHZzbzlwN1hZYS1BWHphdXlNUWR3YkdDellFUllkZm5xN2NieU5tRHI4am5NM1BYZzhzUDJkZ1hLVWJkR290QUlOUS1TcE8yOVhpbFppeVp1ZmN3bzB3QlJUYzdNb0J6cFktZXBx?oc=5",
-      "date": "2024-06-05",
-      "source": "MLT Aikins",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Business Litigation"
-      ],
-      "fetched_at": "2026-01-16T17:49:30.152953"
+      "fetched_at": "2026-01-17T18:35:22.966325"
     }
   ],
   "Real Estate Law|Canada": [
@@ -1325,7 +1338,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.897209"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     },
     {
       "id": "fd5f3a4eced362f9",
@@ -1338,20 +1351,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.226761"
-    },
-    {
-      "id": "17fe3e18c7ad351f",
-      "title": "Tenants win big in dispute over Toronto building's derelict swimming pool",
-      "description": "Tenants win big in dispute over Toronto building's derelict swimming pool  CBC",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOUZobFN0UHJiMmhwQ3FJYXJ5SjhNQUQzMW0tSUdJS3dCN0ZfYkFxYkNkNVNRWm5FOHQ2Nm9KYnVOQ1Zhd0twSXFvNWVwX2RIbkVUUW9fSUh5N05GYV9BVFZvMWJzejFxVngtOVNvM3dwQUdmS1E4WXVXeGY4N2V5c1JNRGdEek4wd2otaUpDM21tcXE4VFc4?oc=5",
-      "date": "2025-10-02",
-      "source": "CBC",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Real Estate Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.227759"
+      "fetched_at": "2026-01-17T18:35:19.293277"
     },
     {
       "id": "574e79294f8b04fb",
@@ -1364,7 +1364,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.898212"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     },
     {
       "id": "705c5f7541425d22",
@@ -1377,7 +1377,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.898212"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     },
     {
       "id": "cfc18da718cc005e",
@@ -1390,7 +1390,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.227759"
+      "fetched_at": "2026-01-17T18:35:19.293277"
     },
     {
       "id": "f12f2b3ade84efe5",
@@ -1403,7 +1403,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.226761"
+      "fetched_at": "2026-01-17T18:35:19.293277"
     },
     {
       "id": "92836db355a4d810",
@@ -1416,7 +1416,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.226761"
+      "fetched_at": "2026-01-17T18:35:19.293277"
     },
     {
       "id": "c1a82ef610e8c304",
@@ -1429,20 +1429,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.898212"
-    },
-    {
-      "id": "fcd5a2e0fe64487f",
-      "title": "Brampton's Residential Rental Licensing Pilot Program - Landlord & Tenant - Leases - Canada",
-      "description": "Brampton's Residential Rental Licensing Pilot Program - Landlord & Tenant - Leases - Canada  Mondaq",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMmc3dHhFS0ZRVDRpZFlfUzNOZVJiTFFaUEs1aG04MmpJVHdyV0xWR3ZGeEJHemxxQUJXZXpuSk41cXVqN254YmttWGlwOUdyTzVQcTVkYzJOU0pZVDZKY0thVUxGNzgtZGFTYW9OR3AxaWNwTkh6U3NLYW9yZWhncVVya0tZVWxuR0ZjcFFUQmd2UkIzN0R3dVdxWEJLcFRhV0tzbmJ4R2pBVTVCMmNQTmtaOA?oc=5",
-      "date": "2025-08-12",
-      "source": "Mondaq",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Real Estate Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:28.227759"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     },
     {
       "id": "ab945e1ee97697f5",
@@ -1455,7 +1442,20 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.227759"
+      "fetched_at": "2026-01-17T18:35:19.293277"
+    },
+    {
+      "id": "31145d9c9c2dc859",
+      "title": "Ontario Court of Appeal slashes $700K costs award in rental dispute due to ‘chilling effect’",
+      "description": "Ontario Court of Appeal slashes $700K costs award in rental dispute due to ‘chilling effect’  Law360 Canada",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSmtLZE9mX0E4Q05icl9uamdQcW56eHRkZXpSTFVaSW9aenhObDlfdlEtUXUxNDRmbS00SWwyYS05TWU0b1JNOFNwU0RmM2Fha0NKYVJUX25YRjhZNTI5b3lfSUdEZDlLV0ZyT21PaHdzR2UyeWVhbUVqVzFGVUFuYUVJOWV1RXl1RFl6RkVwODBVUkI0eHhpMTZ0eGtRdHFQRkx4YTZ5cmJOSHpYWnJKVEJiYkJxX3JpYzJES3o2bGtlLVhnY3dWZXFlWdIBWEFVX3lxTE5qVUtzOFNQSHNuLTdiWlJGeUpKdmkyRUl5X01ORU1vQlhONHNRZFBRUGJGcjRGbFcxd3ZiX1RZZDJxUndva19oNk5FZE9sQkVHMm9aUzNlbEs?oc=5",
+      "date": "2025-06-24",
+      "source": "Law360 Canada",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Real Estate Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:19.294280"
     },
     {
       "id": "b7573a0148ac392c",
@@ -1468,7 +1468,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.898212"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     },
     {
       "id": "0c16f6698cc5da80",
@@ -1481,7 +1481,20 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.227759"
+      "fetched_at": "2026-01-17T18:35:19.294280"
+    },
+    {
+      "id": "bbf4324b381fe221",
+      "title": "B.C. strengthens supports, cuts wait times for landlords, renters",
+      "description": "B.C. strengthens supports, cuts wait times for landlords, renters  BC Gov News",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94R2JaNUk5QlZhcU15bWtTV3NwMTRwa2RnWmNjcFpsb3c2Wi1MSGF3UklNR2dBLXBudGVZMW5ZTFFIamJ1R1dST05vLXJpSV9OcTA1T0FlTDVnbkdfMUFZ?oc=5",
+      "date": "2025-04-08",
+      "source": "BC Gov News",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Real Estate Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:19.293277"
     },
     {
       "id": "b647be22dbdc4b79",
@@ -1494,7 +1507,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.898212"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     },
     {
       "id": "2d1a8ce68cde5b3b",
@@ -1507,7 +1520,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.898212"
+      "fetched_at": "2026-01-17T18:35:19.132943"
     }
   ],
   "Tax Law|Canada": [
@@ -1522,7 +1535,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.156797"
+      "fetched_at": "2026-01-17T18:35:22.832219"
     },
     {
       "id": "b5cb5adfec528f06",
@@ -1535,7 +1548,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "93f8d8861027bb9c",
@@ -1548,20 +1561,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
-    },
-    {
-      "id": "c076737913a85686",
-      "title": "CRA's refusal to return $880K to Vancouver firm 'unreasonable,' rules court",
-      "description": "CRA's refusal to return $880K to Vancouver firm 'unreasonable,' rules court  Business in Vancouver",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNY3BjUlk3SzZYM2VoOXJWSXpxWXVzNjBYLWk3akVDeHlmc3lfaTd1MVJLcmFnRkQ2bGR0enJJRVRjTEw2ZDJScG9aTnZNS2RpQ1EtTGV4S1FOdXlvdm9maUJiYjZGX1RDZHhab3psTWlQS0RQQnc0WFlmc2ItaGg2X3VlMF9vZ3FuQl81YUNCYW5sNVpjNE1rTjliMWxkaTJSdDZWTG0zejRlLS1FMEhxNHV3WGd4ZDRhNm95dDVvcmdyLU0?oc=5",
-      "date": "2025-12-22",
-      "source": "Business in Vancouver",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Tax Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "db401ab3ffcd3efc",
@@ -1574,7 +1574,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "3a8a021f1bf909f5",
@@ -1587,7 +1587,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "3142ca3561900f88",
@@ -1600,7 +1600,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "a2beba15d7c3e4fb",
@@ -1613,7 +1613,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "070546a3b10eefef",
@@ -1626,7 +1626,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.832219"
     },
     {
       "id": "aafb4c572d916869",
@@ -1639,7 +1639,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "8cc0ec464f1510b1",
@@ -1652,7 +1652,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:28.347718"
+      "fetched_at": "2026-01-17T18:35:22.602456"
     },
     {
       "id": "0568d4799cb845b5",
@@ -1665,7 +1665,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.832219"
     },
     {
       "id": "c361a584dfa77463",
@@ -1678,7 +1678,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.832219"
     },
     {
       "id": "ef25b3e9e6d3e78c",
@@ -1691,7 +1691,20 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.832219"
+    },
+    {
+      "id": "7391fe64202450b7",
+      "title": "B.C. woman who donated to ‘tax shelter scheme’ denied tax relief",
+      "description": "B.C. woman who donated to ‘tax shelter scheme’ denied tax relief  Business in Vancouver",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUmRsdFo5V1UySm5qSVA4bEdITWNvbGhBRER5VksxcWNtNzMyX0dPSFE5bS1ZRkk5S2M5cXpiNGZ1NW1JTjFRUXo3VjBPeUw4ajhnc3hfQnJjNjN4Sm1yYzF3dGVubmhKOEFUMXVxMmgybVkzV0ZvMmZuenNadkVtYzl4SzJQc1hDNFNMV3ppb2xiNjhISG53NWh3?oc=5",
+      "date": "2025-03-14",
+      "source": "Business in Vancouver",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Tax Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.832219"
     },
     {
       "id": "76ae79ba9e009af6",
@@ -1704,7 +1717,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.832219"
     },
     {
       "id": "46957acc135f5f8b",
@@ -1717,10 +1730,23 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.157794"
+      "fetched_at": "2026-01-17T18:35:22.832219"
     }
   ],
   "Constitutional Law|Canada": [
+    {
+      "id": "b4e25e5a46a50a78",
+      "title": "Federal government loses Emergencies Act appeal, court says use during convoy protest was unreasonable",
+      "description": "Federal government loses Emergencies Act appeal, court says use during convoy protest was unreasonable  CBC",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNEZlNElPNHRvb3ZhR2UyNVVSd2FEQkxRZnJrMzZ3QzlXTFVaSTROQ2IzUUFkMDg4X1J6cm9iODFKQmt4YVloR1hzcmZMYWg4bnlsTDd5bFNKa2pENXFBdndNTHpIMDVlaldMQVI5SU9oNWlmZmFLNy12dUZzQ1J2NExCZS1sSWs?oc=5",
+      "date": "2026-01-16",
+      "source": "CBC",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Constitutional Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:23.321945"
+    },
     {
       "id": "0258e4e1466f6899",
       "title": "Life, a true Charter guarantee",
@@ -1732,7 +1758,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.988091"
+      "fetched_at": "2026-01-17T18:35:23.321945"
     },
     {
       "id": "65636885a978e5e9",
@@ -1745,7 +1771,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.847524"
+      "fetched_at": "2026-01-17T18:35:22.116571"
     },
     {
       "id": "cc2ec22c05858856",
@@ -1758,7 +1784,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.847524"
+      "fetched_at": "2026-01-17T18:35:22.116571"
     },
     {
       "id": "41095a81c950ce0f",
@@ -1771,33 +1797,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.989091"
-    },
-    {
-      "id": "9bd125dc85ca18f4",
-      "title": "Why an Ontario couple is leading a court battle to change MAID in B.C.",
-      "description": "Why an Ontario couple is leading a court battle to change MAID in B.C.  CTV News",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYlFYVkhjYkpaRjNtb0xBUllocEdkV3hYNkVVM3I2b18xOEtJUnZjOUxOVVQxZVlkNHRSbHphVnBUbzFqd1pwMm9uM3hqd2kySUZENFpBdkRxSFFWeHVvamNwVUFhZlpZbC1kaE1VLVlxaUgzZ3lEOFRMZ1ZVdGdoTHJHaWdJYmFmRXFET1M2YmZfUjQ5ZDVtWk5SX011NlNSY1dBVFh1Uk5HS1hUcHFR?oc=5",
-      "date": "2026-01-14",
-      "source": "CTV News",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:26.989091"
-    },
-    {
-      "id": "7a4ece61cedc08aa",
-      "title": "Family of woman forced to transfer facilities for medical assistance in dying takes case to court",
-      "description": "Family of woman forced to transfer facilities for medical assistance in dying takes case to court  CBC",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaG9FaDJKNEFYejhBMERib2tRZFZRc3pURll0bUNrZkRJWjU1M3lrZ1BZWEVDQWlvcnZoQXE4MGxSMWNqQ1B3dV9FQ0hyS2p0YnpLTzA3UDhvaWg5X1kwSEVORlMzX0hwTVdWVkIzMnU1M2dvVHMxNmdla3hEajZ0cFlZSDJqWmxRR0dtSS1HMTRURUw2REE?oc=5",
-      "date": "2026-01-12",
-      "source": "CBC",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:26.989091"
+      "fetched_at": "2026-01-17T18:35:23.321945"
     },
     {
       "id": "be40b3f6a7dffeae",
@@ -1810,7 +1810,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.989091"
+      "fetched_at": "2026-01-17T18:35:23.321945"
     },
     {
       "id": "bc0af3609a605375",
@@ -1823,7 +1823,20 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.847524"
+      "fetched_at": "2026-01-17T18:35:22.116571"
+    },
+    {
+      "id": "9469670f2608760d",
+      "title": "Notwithstanding the Charter, neither legislatures nor courts protect individual liberties in Canada",
+      "description": "Notwithstanding the Charter, neither legislatures nor courts protect individual liberties in Canada  Fraser Institute",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX1pUYUoyS1JNaWZjc2NDc2l2T2FKamZTV21lbHNobk5DcER6TFoxdXY1RDh4QzE0b3FxZUswcnlGRmttc3NFQmJmUHlnRFNpbWJ4SF96UkY5WERFR09iRklBWVdTZFJMclJheDhLNU9ZdGtiMzR2QVFoQVRxYVNlazIwZzhqVHFTX0RabkhoQWg0WEY4ZDR4THJseldoa3FVdEtiMnZkTjRwWkptbnh0QmxqaDRGWklJZkJBcGEtaVBxTldOVWc?oc=5",
+      "date": "2025-11-03",
+      "source": "Fraser Institute",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Constitutional Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:23.321945"
     },
     {
       "id": "f5f3c23e3dfa7967",
@@ -1836,20 +1849,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.989091"
-    },
-    {
-      "id": "b6086bddfb1c0290",
-      "title": "Judges are Remaking Constitutional Law, Not Applying it – and Canadians’ Property Rights are Part of the Collateral Damage",
-      "description": "Judges are Remaking Constitutional Law, Not Applying it – and Canadians’ Property Rights are Part of the Collateral Damage  Todayville",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQWkRYSVRRYmZzaWdSOHh4TzliYkQzeU10SWJDeUNSallBeVR3ZjEyekk1NWJwdTh3Rkx4YWlLV3BvMDVMSDcxRTd3ZGNtdkhFVG5SdFRqZDhVWUxnMUNJd3FxMFpYVHNraEp0OEZERXRmMHpMYXNlQ0RjSklwM3BZWmkxbEVWV2U4Z0J4ZVhZX3k1ei0zbkFlQW5rNUZPMWNzUHdHQWVHVjgzNlN4R2hxZHZ0dEVuY3UzdEMyQTRLc0U2dTJWeDhfc3JJMmV6Uk9LdVNldU0yNVFfczlzNThz?oc=5",
-      "date": "2025-10-19",
-      "source": "Todayville",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:26.847524"
+      "fetched_at": "2026-01-17T18:35:23.321945"
     },
     {
       "id": "27e880f29fe2546b",
@@ -1862,7 +1862,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.989091"
+      "fetched_at": "2026-01-17T18:35:23.321945"
     },
     {
       "id": "855beb6cdb8fb42b",
@@ -1875,20 +1875,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:26.847524"
-    },
-    {
-      "id": "9cdf7d996d84466b",
-      "title": "Quebec seeks leave to appeal school board reform ruling to Supreme Court of Canada",
-      "description": "Quebec seeks leave to appeal school board reform ruling to Supreme Court of Canada  CBC",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdDVGd2JFdEhqZnJKVVVsVkVzY2hUZUlhTE5FVHdkVDdZMzg2ZEFvV19ZWWoyMlJESmZUV1ZTQ0c1VDc1QlFXY3pzOVhTSm1BZnpEWmFwRFJQbWFkWS1oZjlDOEM5WGFmRjZXSG50QTBYcy1kYjhFVXowSnZfQnBQMU5xMGJ2N3VSb2ZYX0Vna2t4SmhDZWF4RU05QUdCQTJlTnNxQ1BjWUxOcUk?oc=5",
-      "date": "2025-05-31",
-      "source": "CBC",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:26.847524"
+      "fetched_at": "2026-01-17T18:35:22.117574"
     }
   ],
   "Civil Law|Canada": [
@@ -1903,7 +1890,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "a51506136f9cc88d",
@@ -1916,7 +1903,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     },
     {
       "id": "0d1bec06abc48345",
@@ -1929,7 +1916,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     },
     {
       "id": "5701cbccb012d5c0",
@@ -1942,7 +1929,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     },
     {
       "id": "6fcf75707a3922f7",
@@ -1955,7 +1942,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "f41b5d172b3033fb",
@@ -1968,7 +1955,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     },
     {
       "id": "8d1452bd83836add",
@@ -1981,7 +1968,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "22f9caa8e720e1b4",
@@ -1994,20 +1981,20 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
-      "id": "49603f118cd9cc28",
-      "title": "B.C. court narrows herbicide class action, strikes battery and general damages claims",
-      "description": "B.C. court narrows herbicide class action, strikes battery and general damages claims  Law360 Canada",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUVYZG9UVzhEbmxodFdXWVl2eUF3WXktR20xQWZPV3JnUkFpZFZCdmZ0eEVsaURhaWc0UEJJNnh0UFN3QkhJY1lBbFM1WkdkTldVSmgyUW9pbEZtZ2p1QnJrVkJoZWQwTUROV3V5OGtPWEh3VGk4SmpPSzJMT0gxa2E5TlJfSWdkNzlxaE9EV0ZHd0VUeFJEa3VsVlRFZnFDUm1WWGM0eEdvVkFFVXZabXBYLTZLWDBZZm0wcGlleklKZ1HSAVhBVV95cUxQb2xoTGFBanVjM2wtdmk0ZlFzTXRRX3E0NzJQS19XMWM2ZmNsWlpOY1l4VnJtOEhSazd5ZWk5WTRpcWktWXMyS3h6eHQ3SFZ6YnlJMEpHZjQ1?oc=5",
-      "date": "2025-09-25",
-      "source": "Law360 Canada",
+      "id": "787cbd0dd1b7012c",
+      "title": "Superior Court makes insurer give answers on off-coverage position in catastrophic injury case",
+      "description": "Superior Court makes insurer give answers on off-coverage position in catastrophic injury case  Law Times",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPd3Y1Y2xzRnFwWXZScjhjU1U1THlacFdOVDRnNWdQdUxMd2hXYVprRjFEdFNzZTV1MFd2X3Ntc0lnbG9pLXFZamJ4WnE2b2hHUkhyUm1LSXhFRmh5elp2LWtaLVJyNmdiNnhoSThrclRnaXRUQzhjRHEtSmgyckZkeXhhTWZKRzlwVEduZkJld3V2UTVQU1JEUXdyalZUMWxUYzk3d0ZmVElIUzhSMHlid1lzUlJZbGRhWkxydmVxc2Rqa2xZUnJCYk5aUE05ekJHb3Bta01wU1lnZXUySWEzRU5VaDduenMtLVFxM1lHTkdCUk0?oc=5",
+      "date": "2025-09-22",
+      "source": "Law Times",
       "jurisdiction": "Canada",
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "13a42ece1b567d02",
@@ -2020,7 +2007,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     },
     {
       "id": "d94d9842a584c4f7",
@@ -2033,7 +2020,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "bab337d4b41724b6",
@@ -2046,7 +2033,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "355c0ef9fee3eeb0",
@@ -2059,7 +2046,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     },
     {
       "id": "c7b8769934175fc6",
@@ -2072,7 +2059,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:19.509282"
     },
     {
       "id": "bc32e12cebc65656",
@@ -2085,49 +2072,23 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.995541"
+      "fetched_at": "2026-01-17T18:35:21.600868"
     },
     {
-      "id": "133e2d8fee1bb33a",
-      "title": "Baker v. Blue Cross: the largest punitive damages case in Canada",
-      "description": "Baker v. Blue Cross: the largest punitive damages case in Canada  Lexpert",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ1lRWkd6c3RlbEM0WVdBQkdDYnBpalZkeEtoMUU1UW53YjkzU1p0U19sWS1YMG5nRUZQNWcwb1B6OHBXYXdscFMxeEkxV2FvQVBxUWVLY0wzMk1SSTViUzcxUnktUzhhYi1hUFZCSFhBT2QwNnFiRno4cUtqazljc05nOWl6a2pvMUs4cjh1RlRqNzJtRUJET3FXRlAydGRfNDVWN0JIeC0yY0U?oc=5",
-      "date": "2025-04-21",
-      "source": "Lexpert",
+      "id": "01d3b7a10afdbfab",
+      "title": "Court stays class action against workers’ compensation regimes over lack of legal representation",
+      "description": "Court stays class action against workers’ compensation regimes over lack of legal representation  Law360 Canada",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbnRYSVhfS19nOHFmdjJzdl8zc1dwWUF6TWhiaGZTZkxHZGVRSG9hSmtyeW9DVkZ5a0V2SDVreVkyUHVOQnF6SHIxVHo1UlRidWNKTk1PaGFyYmI3T216cGxEQ3p5QThxZ3VNZVhiR3dDVXplczl5eHB3YWN4aE95bFN6ZHpkWXFNUGRfNHJuVWlQejlNcHlfbTItc01RbDBkdlJ4UWNEWUNCMjBFSWhtRzlpaUUtYzVNQlptamgwNkQwQkUxZWN6a2lqOEdCWlNVemVr0gFYQVVfeXFMT1p6Zkx0b1pBS0Q1clN5RXo2THB5M2Exd2xhaEc1Qm9Fc2pkT2hFN0p6TjBsZVBxMUQ0Q1hNdVNoTVRxVHd0UW1kNXItSVZTSkd0dnNIVEN3Rg?oc=5",
+      "date": "2025-03-07",
+      "source": "Law360 Canada",
       "jurisdiction": "Canada",
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:29.172311"
+      "fetched_at": "2026-01-17T18:35:21.599336"
     }
   ],
   "Administrative Law|Canada": [
-    {
-      "id": "77f1cad4648ccd9e",
-      "title": "CFIA looks for feedback on proposed seed potato rule changes",
-      "description": "CFIA looks for feedback on proposed seed potato rule changes  Country Guide",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPdFBmWGE4SDV3OWM4cFZudng1YXNTdFRxSlA0NUg0RUhfandtQmZYNEhPV0VidElPVkN2V0k4NXVYTlBYRy1FNE53azdEZ2VPR2NJczYzVTBWTEFVMlBXUkxqZ0c4dnpLaXlTblRGaE55aVB4cW5oOFRiUmhwNGZSa2wteVotOThPNE5LeVcxMFpDWktLcUs5d2xZYms?oc=5",
-      "date": "2026-01-10",
-      "source": "Country Guide",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Administrative Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
-    },
-    {
-      "id": "5f028afc2cd93555",
-      "title": "Five years and counting: Inside Canada’s seed regulatory overhaul",
-      "description": "Five years and counting: Inside Canada’s seed regulatory overhaul  Manitoba Co-operator",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOC04Q3BZNXhkOWc2b3g3VGZlS01GRXBERjBqUWdfR2hHcW1BdlZkMG9MRVk4R20xazFlaVpfSkpLYjFHUlpRS2N1dTdNSE1YNXFuSG9yMmtmSnl0cmVIdGRlNzNLWEdVX0pZNW9XTUlBdmc5YUpvMWV4OXBRRXBjOUN3RWUwT0hWeHEzRDA0R1U4UVpmVEcyQ0VCRGI5ZVdlQndDOE0zYw?oc=5",
-      "date": "2025-10-30",
-      "source": "Manitoba Co-operator",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Administrative Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
-    },
     {
       "id": "358d1b8f7ccb9157",
       "title": "Health Canada proposes new restrictions for dicamba on soybeans",
@@ -2139,7 +2100,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
+      "fetched_at": "2026-01-17T18:35:22.730604"
     },
     {
       "id": "2180299db6a57305",
@@ -2152,20 +2113,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
-    },
-    {
-      "id": "07dfd8a8bbb67d51",
-      "title": "Health Canada looking to ban in-crop dicamba in soybeans",
-      "description": "Health Canada looking to ban in-crop dicamba in soybeans  RealAgriculture",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMGxmWXZuTDhRZ1N0YXN5RV9qZjNDbm5pTV9kRmF0RElKOVotX21ha0hkb3hOSWxGQi1qQmZUMS1VZzhmUUFGa0pRaXVub01aam50WDRfY1RscFJ0YTF4VWxWSFRXcGotMGp2VlFBbXZnaDBXOWowYnhVejI0Y0ZlRXJ1S1FNZnJUMHNvSVhNZC1tam1oX1N6RmxtUlVjUQ?oc=5",
-      "date": "2025-09-17",
-      "source": "RealAgriculture",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Administrative Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
+      "fetched_at": "2026-01-17T18:35:22.732116"
     },
     {
       "id": "d99a338f841259dd",
@@ -2178,7 +2126,20 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.091993"
+      "fetched_at": "2026-01-17T18:35:21.934022"
+    },
+    {
+      "id": "ee15686d279fd1ed",
+      "title": "Telecoms push back after Ottawa upholds CRTC’s wholesale internet rules",
+      "description": "Telecoms push back after Ottawa upholds CRTC’s wholesale internet rules  The Globe and Mail",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSkZ3MjZhdTZwUGpYcTBERnJFMml5RHJJN2N3X29EMzAybnRPWnZ2SnpSajU2U0c1VThfeFJJZVdDeGVzODJsemRFZDBfOUNzak5nMFpSV3ZyUDd2RWNTcjJKREtuSmk3R1NBcXNiOFBXLTdMb21KclpnWEdRV1ZTTDZQNzdhbHlZdDU5WWNFeHBlV09CV3ppSkoyZnBjTmRJNm5sYTZIRG8zZw?oc=5",
+      "date": "2025-08-07",
+      "source": "The Globe and Mail",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Administrative Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.732116"
     },
     {
       "id": "d7f6e425921cf692",
@@ -2191,20 +2152,20 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.091993"
+      "fetched_at": "2026-01-17T18:35:21.934022"
     },
     {
-      "id": "621627944dcd420c",
-      "title": "CRTC upholds decision allowing large telecoms to resell internet services on each other’s networks",
-      "description": "CRTC upholds decision allowing large telecoms to resell internet services on each other’s networks  The Globe and Mail",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObW5qNVFmTk1LMmdSUkxXcjJwbkxFek0zTTd6NUFMT0hiZkllYWJ6bFRtdTV6MWc2TFFXNnlIcFFrckV6MV9YQjZWZVl0M2JvdnR0Q2NZUk41cno0Qk1ValpzTDZjZGRBb0tzUUJta3dSaFZ2MkdubG90QWJzWVgyNWpEbjZVWm9lMmp6X2pZSjNhQQ?oc=5",
-      "date": "2025-06-20",
-      "source": "The Globe and Mail",
+      "id": "d13d23ec3f2d066c",
+      "title": "Drug and alcohol testing in Canada: SCC denies leave to appeal in Power Workers’ Union v. Canada",
+      "description": "Drug and alcohol testing in Canada: SCC denies leave to appeal in Power Workers’ Union v. Canada  Borden Ladner Gervais LLP (BLG)",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOWlNsay1EWUVGSm1CczdUZVRRT1ZsczVmU1hTSElWMklxZ2otV0h5QUVsVERaS1VGWm12b0kxSFFDMERvdnVZWTJBTkRUUjNKVTg3a05vd2o2Y0QteEVScUJnRjZvNUh5Z2FNMFVFWWs0TDRfX2tuVFk0YjU1Q2I4UkxNNVBOQnFmOHFqaW9UeVg1dDFxdHhLaTkzUFV2VW1hVEVzOXhMQnhFSHRRLXpZVVBjVS1JOEdyWFh0STFNZ212R19lMjVGZGtGb081UQ?oc=5",
+      "date": "2025-06-12",
+      "source": "Borden Ladner Gervais LLP (BLG)",
       "jurisdiction": "Canada",
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
+      "fetched_at": "2026-01-17T18:35:22.732116"
     },
     {
       "id": "9cbd74849e4e3d9c",
@@ -2217,7 +2178,20 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
+      "fetched_at": "2026-01-17T18:35:22.732116"
+    },
+    {
+      "id": "e8ae9f5966274100",
+      "title": "Legal Ruling Questions Canada’s Glyphosate Approval Decision",
+      "description": "Legal Ruling Questions Canada’s Glyphosate Approval Decision  Ecojustice",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPa1FkTzZfT0JtZjRYNkZNUEhJNWZOS1VKcTI2d29ITXhsRXc3VGdaX2RqbnpfN0FRWnU1MkNBc1ZGdlVuSl9EMWYtelNsR18yZXJmNmFyekx0aEpnMFhuTVBNY0I3TzdhMjEwNl9jT2JFVFROb2ZSNkZBNW5CTzd5Yy1XWDFabmljNUtTYXMwOGRzVnJHQUhBUkR2bUFuYUcz?oc=5",
+      "date": "2025-02-20",
+      "source": "Ecojustice",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Administrative Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:22.732116"
     },
     {
       "id": "47042a45e16b0922",
@@ -2230,7 +2204,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.091993"
+      "fetched_at": "2026-01-17T18:35:21.934022"
     },
     {
       "id": "727badc2c53ee5ef",
@@ -2243,7 +2217,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:30.061703"
+      "fetched_at": "2026-01-17T18:35:22.732116"
     },
     {
       "id": "d1f9b0c13074fcdd",
@@ -2256,7 +2230,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.092992"
+      "fetched_at": "2026-01-17T18:35:21.934022"
     },
     {
       "id": "dea1c5e4adade64c",
@@ -2269,7 +2243,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.092992"
+      "fetched_at": "2026-01-17T18:35:21.935018"
     },
     {
       "id": "dfbfb7de9f0b9427",
@@ -2282,33 +2256,33 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.092992"
+      "fetched_at": "2026-01-17T18:35:21.935018"
     },
     {
-      "id": "369379f49f37302d",
-      "title": "Judicial Deference to Administrative Tribunals in Canada: its History and Future",
-      "description": "Judicial Deference to Administrative Tribunals in Canada: its History and Future  Paul Daly | Administrative Law Matters",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOd2RNTVAxa0ZuYmltcXphQlFMLUF5UHRtcl93b2dMRkNWVENLaTZCOHZGdnV5QXpaSTVJV1BNUktRSVNpRmRGNGp3R0duTTc3c0RfMGVzUjBvMk9Tb1AzNzVyeks1RWttUnIzRUU1ajBhSzdkU2ZGMVEtQ1FfenJEb0xRSjlGbG00WlZPeVN1N0RmVHNUQUNobXdMV0RRLTh1SC1OSmxvNmthYjd0OEdLeTZmaXllSUI5bTJyR0FpWV9ielZVWkRRLWpzeUJxV2M?oc=5",
-      "date": "2020-02-13",
-      "source": "Paul Daly | Administrative Law Matters",
+      "id": "dc801abd753229be",
+      "title": "Québec’s Financial Markets Administrative Tribunal Can Properly Claim Jurisdiction over Out-of-Province Defendants in a Pump-and-Dump Scheme Enforcement Proceeding",
+      "description": "Québec’s Financial Markets Administrative Tribunal Can Properly Claim Jurisdiction over Out-of-Province Defendants in a Pump-and-Dump Scheme Enforcement Proceeding  Fasken",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQb2FoZTZ2RzBDenhIZDFFSUZiZUZaSExQejlUVXljYVpXdW5kTFkxeGZIbTh2a25tdERVd1lxdmxmcV9KMFFKUWNYOXQ3VDctcWtob2V0NWtRRFl5SXVpLTZfWW40MzlSRnNoUWpXZ29aWTROR2kxT1RJZHJIOENuTGZyOHlMV29rVHlQbzdDZ3g2V1hud0N0NEh0bEprN2FDZ3JoM09mTTUtbGFLalRTSElCRXQtX2ttZ1hybVJ1TDd0TGE1VmMwQ2tZVWdjS0ZMYmZpVzVxNGc2cnNW?oc=5",
+      "date": "2023-12-07",
+      "source": "Fasken",
       "jurisdiction": "Canada",
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.092992"
+      "fetched_at": "2026-01-17T18:35:21.935018"
     },
     {
       "id": "6191713d354a22ed",
       "title": "Administrative Tribunals in Canada",
       "description": "Administrative Tribunals in Canada  The Canadian Encyclopedia",
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5mMkUyZ1ZJMWhjZmZYdnNIb0puZTVFLVdtaURqNkVhNzJqZldHdkJlc21ZSEtkbGdNdjk2ZW1mZEJYSDBMLVBTaGVGWUg1bjdGclFRZDFUTzJZZmp5Rko1TFVxRmd6Qm9VdWRqUDdUbFhBUS14U2lMV3Z3?oc=5",
-      "date": "2006-02-06",
+      "date": "2018-09-20",
       "source": "The Canadian Encyclopedia",
       "jurisdiction": "Canada",
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.092992"
+      "fetched_at": "2026-01-17T18:35:21.934022"
     }
   ],
   "Wills, Estates, and Trusts|Canada": [
@@ -2323,7 +2297,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.927786"
+      "fetched_at": "2026-01-17T18:35:21.070984"
     },
     {
       "id": "8b161f9d89923d2f",
@@ -2336,20 +2310,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.927786"
-    },
-    {
-      "id": "a1ba3adfa79e1654",
-      "title": "DIACC certifies ID verification for legal industry to Canada’s trust framework",
-      "description": "DIACC certifies ID verification for legal industry to Canada’s trust framework  Biometric Update",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcDRldXpOUHlObl8wY2dRQVdsSDlfUnIzdmhwSmw3M3VaeFkyUExtaUstSDZBMXhwQ1d5NlRiMHVnOW1CVkZydU1CYngydnBfdHh3VUlsQTRaMENSTGJGYk1jOVlSaG1jd1JNU0xKdmlvdkFDTThKQkFLMlEtamo2bG9MRVR5dDQ5RWdZbkVWX2dDWl8yX0UtQzJaeGFRd21yemdEQkZzbEpCWGFNcDhIbWdYVDJOSUU?oc=5",
-      "date": "2025-11-05",
-      "source": "Biometric Update",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Wills, Estates, and Trusts"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.415650"
+      "fetched_at": "2026-01-17T18:35:21.070984"
     },
     {
       "id": "72474c3fdfeebff5",
@@ -2362,7 +2323,20 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.415650"
+      "fetched_at": "2026-01-17T18:35:20.950001"
+    },
+    {
+      "id": "78a93161b41c1177",
+      "title": "Validation denied: Pour-over will clauses in Canada",
+      "description": "Validation denied: Pour-over will clauses in Canada  Law360 Canada",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVXVLTm5TQl9Wbk1wVFFQbHhDX2F3Y0l6VGUzM25yNF8tNzB5Z2ZBQnpZeWNTZHU5SnNjY3Z3TVlrRTFMZnl4dFptckczYWFyZzliYUwyUGViNzJvSTlDNzRiVGljZjlGSEdEaWpxTWtrNmNEUFFmTDdlMzRfZ29JS1NmcVJRd1A0TzdHaTl5RF8wUDVrT1ZN0gFYQVVfeXFMT3dQZWVGdVN4Tlo1dG5wUDhPYnZEWnNXNVdpOXhsRXJnX2wyaXYxMUVMN0pHb25taVpEeTlhVlU5ZWNLd0k2WGlENktyN3ZYQ3pLTkFiUVR6VA?oc=5",
+      "date": "2025-08-13",
+      "source": "Law360 Canada",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Wills, Estates, and Trusts"
+      ],
+      "fetched_at": "2026-01-17T18:35:20.950001"
     },
     {
       "id": "1341261c9d75b0ec",
@@ -2375,7 +2349,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.414637"
+      "fetched_at": "2026-01-17T18:35:20.950001"
     },
     {
       "id": "4ed68ba7f251281b",
@@ -2388,7 +2362,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.927786"
+      "fetched_at": "2026-01-17T18:35:21.071982"
     },
     {
       "id": "008d670e5ec3c88a",
@@ -2401,7 +2375,33 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.415650"
+      "fetched_at": "2026-01-17T18:35:20.950001"
+    },
+    {
+      "id": "f8e6294c224cd7c2",
+      "title": "Wills, Trusts & Estate Litigation",
+      "description": "Wills, Trusts & Estate Litigation  Fasken",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeUJ1RGdDS3JpNFdjRnR2UFZISmdTLTVranJGNmRMOUE0Wk9ULXoyMlRyTUI0UmhrM09iTi00UG1vUHp3dWJrX3pCaTdYaG1jY0ozcnQzUU84OTVacmhKNW1HcWR3cXZCay0zMHN6UmtZdXZ5VkFQeVNmRFJWTnVYeU96dFNUSkF0MVV2SlFwcGQtUkJyUzV2YWpn?oc=5",
+      "date": "2025-06-11",
+      "source": "Fasken",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Wills, Estates, and Trusts"
+      ],
+      "fetched_at": "2026-01-17T18:35:20.950001"
+    },
+    {
+      "id": "8fce3bf392ecbf7e",
+      "title": "Misconceptions around estate planning could cost families dearly",
+      "description": "Misconceptions around estate planning could cost families dearly  Today's Wills and Probate",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNYzFGLVJaQm5qZFp6OTcybjUtWHJnQ0k3Qlh3cmlfZ2ZmVTRMdjhNcGRLWU95UWl2dWk2SlBfVXRfU3UwV2RYWWdfcmdiTjR6RU9ZZHJQcFdHMlQzLUlXc0xyTUVnUkJaTEY1dnRhRU84Z0pMeVVvVzVxM01oY3hISGZKN2c0VzhTY2RSUWhVbGJSdEpyLXh6Vno1bVE0eURCM1ZZ?oc=5",
+      "date": "2025-05-14",
+      "source": "Today's Wills and Probate",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Wills, Estates, and Trusts"
+      ],
+      "fetched_at": "2026-01-17T18:35:21.071982"
     },
     {
       "id": "00a59dace208fc92",
@@ -2414,20 +2414,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.414637"
-    },
-    {
-      "id": "65b69baccfe1ffca",
-      "title": "2024 Year in Review",
-      "description": "2024 Year in Review  Supreme Court of Canada",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE42aGNGZkFDSVdwS3M5dlREbUhmQ05aa1JzSnlBQmMxM1dVWmdCT2xYVDU2UnY1WHlWc05NZW9NSmVTNlNKVUQ0ODk2NkVYejJZVWlWRXFfREdRV0ZURl9aZ0hmZGVEc0FwWVAwMGVpWmtjdnE2RXBV?oc=5",
-      "date": "2025-04-09",
-      "source": "Supreme Court of Canada",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Wills, Estates, and Trusts"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.415650"
+      "fetched_at": "2026-01-17T18:35:20.950001"
     },
     {
       "id": "568278f69427dd3d",
@@ -2440,7 +2427,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.414637"
+      "fetched_at": "2026-01-17T18:35:20.950001"
     },
     {
       "id": "a2cce6297687bfa4",
@@ -2453,7 +2440,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.928785"
+      "fetched_at": "2026-01-17T18:35:21.071982"
     },
     {
       "id": "458a999edcb1fc4b",
@@ -2466,7 +2453,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.414637"
+      "fetched_at": "2026-01-17T18:35:20.950001"
     },
     {
       "id": "caf3c752c8a3de5b",
@@ -2479,7 +2466,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.928785"
+      "fetched_at": "2026-01-17T18:35:21.071982"
     },
     {
       "id": "cee6a20b274e8160",
@@ -2492,20 +2479,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.928785"
-    },
-    {
-      "id": "46786d07ecfe167b",
-      "title": "Facing high probate tax, Nova Scotians can’t use dual wills to escape",
-      "description": "Facing high probate tax, Nova Scotians can’t use dual wills to escape  Investment Executive",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQjhxRlZqQ0tkTThJZVVyY3dmZzdtTUlRMTBwM01NaGJySGxTU0NsSXc5b1BaNUtjbmtPWUhiaDVzTldieGp4eG5YZ2lfSnJLYWw4aFVIVkduN1gtWVFHOUczVDdfcTZJV1drY3k0ZUVGQkl3ck92N1J4TlM5NnB1X004UmpEQ1VUSGtTYWxTRkI3YlZ6RU1wcGF6SFZLZDZGVVlSclRuNjcxYzFXc0wyNHRGNDZlcGxOLXZiQ3ZwblpUQ1pUdC1hcFdFVQ?oc=5",
-      "date": "2023-12-11",
-      "source": "Investment Executive",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Wills, Estates, and Trusts"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.928785"
+      "fetched_at": "2026-01-17T18:35:21.071982"
     },
     {
       "id": "9d47a46b0a9fdd95",
@@ -2518,7 +2492,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:27.928785"
+      "fetched_at": "2026-01-17T18:35:21.071982"
     }
   ],
   "Health Law|Canada": [
@@ -2533,7 +2507,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.701932"
+      "fetched_at": "2026-01-17T18:35:20.842861"
     },
     {
       "id": "458bca63ac17f099",
@@ -2546,7 +2520,20 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.701932"
+      "fetched_at": "2026-01-17T18:35:20.842861"
+    },
+    {
+      "id": "2e6cfe222bd7b179",
+      "title": "Opinion: Alberta is about to test public-private health care. Canada will be watching",
+      "description": "Opinion: Alberta is about to test public-private health care. Canada will be watching  The Globe and Mail",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNY3ZWOXM4NVZNWW1wTjNaLUNLdjdiZkZ0dFBDREZPd1RUSHRGaUc2Sm9sUHlUX1ZCMUlPVENyVjNQQmJUV1kzQXczc1RjbDFnTkp0NS1uYmQxOTZ1c1NpVVpRNV95Skl3ZEo1VzdkSnV0WnM5b0FZUTVwQTdCWmhfU05UTEV2RGU3MlNF?oc=5",
+      "date": "2025-11-20",
+      "source": "The Globe and Mail",
+      "jurisdiction": "Canada",
+      "law_types": [
+        "Health Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:20.842861"
     },
     {
       "id": "ba827a4e23ddf779",
@@ -2559,7 +2546,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.702931"
+      "fetched_at": "2026-01-17T18:35:20.843862"
     },
     {
       "id": "52c2f6275272f7b3",
@@ -2572,7 +2559,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.702931"
+      "fetched_at": "2026-01-17T18:35:20.842861"
     },
     {
       "id": "21452add2e2c8e4c",
@@ -2585,7 +2572,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.701932"
+      "fetched_at": "2026-01-17T18:35:20.842861"
     },
     {
       "id": "18368d6605f0e25f",
@@ -2598,7 +2585,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.702931"
+      "fetched_at": "2026-01-17T18:35:20.843862"
     },
     {
       "id": "48ca8eeb1e9dcb44",
@@ -2611,7 +2598,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.337437"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "0941f3787e8ca5d2",
@@ -2624,20 +2611,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.702931"
-    },
-    {
-      "id": "2f4504d1296a551a",
-      "title": "E-health",
-      "description": "E-health  Fasken",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aeU5haVR2bnhWbG5rQXJXbVVISGRyTUJjcW5VZ0g2VE04aDZ1aVdYZEVFakNUTUYtdmcwY3VaRGlkeWEzTXNGbnFUMkxXT3FaT1JQUExoRlp3QU82V1gxZVFpODZKRWttbnBPZw?oc=5",
-      "date": "2025-06-11",
-      "source": "Fasken",
-      "jurisdiction": "Canada",
-      "law_types": [
-        "Health Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:27.702931"
+      "fetched_at": "2026-01-17T18:35:20.842861"
     },
     {
       "id": "b320b020bb20fc74",
@@ -2650,7 +2624,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.337437"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "9ed674c3bb820aed",
@@ -2663,7 +2637,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.338438"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "fb527a5b72959230",
@@ -2676,7 +2650,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.338438"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "c6e6f7de4f39eb62",
@@ -2689,7 +2663,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.338438"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "9e170c55e0539c63",
@@ -2702,7 +2676,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.338438"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "a8310a2ef2676d8f",
@@ -2715,7 +2689,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.338438"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     },
     {
       "id": "571d971ede997adf",
@@ -2728,7 +2702,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:27.338438"
+      "fetched_at": "2026-01-17T18:35:20.258827"
     }
   ],
   "Criminal Law|USA": [
@@ -2743,7 +2717,20 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
+      "fetched_at": "2026-01-17T18:35:26.365311"
+    },
+    {
+      "id": "66a98f50d7cf3e06",
+      "title": "Do U.S. Courts Have Jurisdiction Over Maduro's Criminal Case?",
+      "description": "Do U.S. Courts Have Jurisdiction Over Maduro's Criminal Case?  The National Law Review",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOeU9Kand4RFV3MTZxNTlzYmRfMGotbmVpLTJfU1ZHSnBWZS1qVjJsYXNXSlhETWhFdnFZTGxsTG1PTEM3SE9MZmxMMUd2eTZFVi1meU5lVkR1VF9hSEh1SVlfa2hpU3pqZ3RhLU9aWWtGTUF3MVo2aEdlNGZ2M3c1cXJGNW9NX3Q1Y3p0d0VVRjVGNTFu0gGaAUFVX3lxTE9mMk1meWpLaHN5eE5fNWZUbkhHSzFBOEcwTHM5LWV0Y2VYWjFQWlJzdVdzaFFpWXhhNGU0MU9sXzV6NThhVXNrNW9MVFgzRGxKM3hfcXllLXVWTHhzU2dOZ05TUnZ2eFdTbWc3SXRsT2RLY19sd2t2V0FBSDB3NVlPQ2NILUdqdy1XOTllU1JnSWtkUXZyT2tUT2c?oc=5",
+      "date": "2026-01-07",
+      "source": "The National Law Review",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Criminal Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:26.365311"
     },
     {
       "id": "a63c42e4629f783c",
@@ -2756,46 +2743,33 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.365866"
+      "fetched_at": "2026-01-17T18:35:26.366311"
     },
     {
-      "id": "bd9c525fba7216c6",
-      "title": "Head of State Immunity and Maduro on Trial",
-      "description": "Head of State Immunity and Maduro on Trial  Just Security",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA2cGRnWWZjVUx4QnZWZVp0S1JKVzZjM1dYQzhyeVY0akxOeGJOTjIwQk5RWm9kV1lXcVh2czVlRF9iWk5CLWJHdEs1dk9ZUDVXVEpWYXZuM0I5RXloLXdWT3EzN01sWnNtbWt6S0JJTzFQcFRTTkZ1U0RfdG4?oc=5",
-      "date": "2026-01-06",
-      "source": "Just Security",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Criminal Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.365866"
-    },
-    {
-      "id": "fca29da73d092372",
-      "title": "O.J. Simpson trial",
-      "description": "O.J. Simpson trial  Britannica",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1nQkl5S1pJbDc2VXdNM1p3Z1NWNUt5V2daTUdSZjhlSTc4WHg3WHFuLWx3R0Y2SmFYUDl3REoxTWZPbUU2VDc0MC0tTk94ZmtxZGJ5ckxsZm1IcWJDZy1F?oc=5",
-      "date": "2026-01-05",
-      "source": "Britannica",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Criminal Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.365866"
-    },
-    {
-      "id": "168750aee6344836",
-      "title": "Keeping Track of the Trump Criminal Cases",
-      "description": "Keeping Track of the Trump Criminal Cases  The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUHlqX1FPLWlPM0Q0SkRXMGhwZmxldXV6NVd2VURiV1pyRWpMSkFaTHgzSDdlUXlWMnRrenAyd29pb1hFWnp0eFZJYldBYXM1YVlRNmVDVTNVeEQxbzhfQmtORnJxUDVWNWhIMUNTTGxJQ1ozTW9ISk9fSTBkS2VKbThtZEQwQ3BlaGU4YXMtRExwTE0?oc=5",
-      "date": "2025-11-26",
+      "id": "0ea44874f899f439",
+      "title": "With Judge’s Ruling, a Powerful New Tool for Charging Crime in the Capital",
+      "description": "With Judge’s Ruling, a Powerful New Tool for Charging Crime in the Capital  The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTUNpMWI5Yk5oZVdpSUhYeTlHckx2SmRpMXl6OW1TaGRLdHV1ZG9PaUo5YmQzQVVMbTZsellnQUs5Mml0b0t2N3o3cnBwUUtHSEhQbTJGS25Db1JEN2gzazc5VkZ4ZEVjZjVzcDJWLVZaMWctNnQ3OUs1aVVhRnFURS1fQ2xhX1JnbndSVjdyQ3BIWE0?oc=5",
+      "date": "2025-12-01",
       "source": "The New York Times",
       "jurisdiction": "USA",
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.366865"
+      "fetched_at": "2026-01-17T18:35:28.355625"
+    },
+    {
+      "id": "b4179ab7be41dea5",
+      "title": "US judge dismisses criminal charges against James Comey, Letitia James",
+      "description": "US judge dismisses criminal charges against James Comey, Letitia James  Al Jazeera",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNN1RieXFZUVlVUGNKbFAwbnZoZGFtSm5SenRuRWtkemwyTEFXM1NkZ3pBYnhpWkNrbW5hX3ZnNHgxQnRnZ1g0cURKRGlxZ0diclB1YmoxWkVLMGc0eU1CZlBxTTktNk5LQktvX09MaFFaTU9NTjZJWlpjQThiY29RSDJERGVqUmhFdUpxbGtsaGZ0a2h1eW9wdGxNWlpRRm9MYldHSVozV0dPWl92NHl6VdIBtgFBVV95cUxPcXMtbVhWcV9PQWpGYUhFcDV2QndHR0ZDLWRhMjVpbzhxWGVYUGxPYWc0b2NfUVNHd3BpR0tXZXhfek9GN0hrNGVFeTcyRzlETTk3bXNzUXJVVFNfZHNfVWk3WThac2ZKVVRZaHNvenp0SFAzTzU2OXJ3MDhGYWF2NElSRVE5YWdSc1d0cVVCVTlIR2huNkE3S2txM1dUZmNXN1RVYlBQWjJlNzM4TUU1QUtLZXFBdw?oc=5",
+      "date": "2025-11-24",
+      "source": "Al Jazeera",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Criminal Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:28.355625"
     },
     {
       "id": "141699131ffd7ea7",
@@ -2808,7 +2782,20 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
+      "fetched_at": "2026-01-17T18:35:26.365311"
+    },
+    {
+      "id": "2e972bd691788ed6",
+      "title": "James Comey pleads not guilty to criminal charges following Trump pressure to prosecute",
+      "description": "James Comey pleads not guilty to criminal charges following Trump pressure to prosecute  Politico",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQRGNiYkxoUS0yVHJPckdFTnlSV0hldEQ3UGtBZFlGZDZHdUp4aktQVzYzQ2c2OUwyY3g3amJBbGk0UTA0TFY5ajRqdHl5NEZWWkJ2YkVKNUxiOGxQeFpESXBnY0xBemkxLWdlbE0xX3BXdjhrYzNPQXhiVFZtSEtYWUI1bGhRSlYtQ2gyOVZIb21ya1R4?oc=5",
+      "date": "2025-10-08",
+      "source": "Politico",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Criminal Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:28.355625"
     },
     {
       "id": "d76c9e272b42786d",
@@ -2821,7 +2808,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
+      "fetched_at": "2026-01-17T18:35:26.365311"
     },
     {
       "id": "f4e8705f0968457c",
@@ -2834,7 +2821,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
+      "fetched_at": "2026-01-17T18:35:26.365311"
     },
     {
       "id": "675e8f1eaa21334f",
@@ -2847,59 +2834,20 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.365866"
+      "fetched_at": "2026-01-17T18:35:28.355625"
     },
     {
-      "id": "5015e435989a3e1b",
-      "title": "Diddy acquitted of top charge in sex-crimes trial, split verdict from jury",
-      "description": "Diddy acquitted of top charge in sex-crimes trial, split verdict from jury  USA Today",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQnFjNW1YbTlrd1J4Q1VlTHJORms1SmZmQk5wZ1dfMWtXUkU5RHVvSk9pV3VsbEY4NHBKYm9Bal9FMy1UeFExSDIzYmUwendGVFV5SUtwUWFkQnc0UjZUSG9NazhiVExOQ3N3bzBZUUxzVjRTSUdWczdWNGlzQ3V0NGw2QlRBTmo3WmVya01QSU5ydzB0U2U0Z0tPOUwzak5iUi1qcDhQQVVQY1lPbzd5VlpHdVUwa1pM?oc=5",
-      "date": "2025-07-03",
-      "source": "USA Today",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Criminal Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.366865"
-    },
-    {
-      "id": "e9989d2190f73abc",
-      "title": "The Immigration Court System, Explained",
-      "description": "The Immigration Court System, Explained  Brennan Center for Justice",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUGpjNWJoUDlTZ2Rrcjczb2thcEQtbWlVc1JLSXhZWkQ0bC1rblZKWkRrR1R1Y05FT29hQU1HU1hZOW5OM0NNcXVjV0tSTzFzdUFsNjY0Y0twLUhLWU1STnh2anUxdEJHX0JTSldkOXA5R2pLTGhnb0Fzc2tCakRCV001MEdieUE3ajd5MERXTktMMGk4?oc=5",
-      "date": "2025-06-24",
-      "source": "Brennan Center for Justice",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Criminal Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
-    },
-    {
-      "id": "612e2c189bf884e5",
-      "title": "Prosecuting People for Coming to the United States",
-      "description": "Prosecuting People for Coming to the United States  American Immigration Council",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZkR4aTAxdmhlWWI5ZU5GVEFueTZuRVdsX2pTb3ZBNmVtZFJSV09lbVFkWnRJbEhKT3BBS0oyQXB5MjlNT0lPYnpLVzZqZGZJTUVKOUJnZTRLUzFWaTNkT1hQMndqcXBuSl9qbUl6TXIyZGZvZzdKakI0UWF6VTVpTjZzb2xNUQ?oc=5",
-      "date": "2025-06-18",
-      "source": "American Immigration Council",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Criminal Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
-    },
-    {
-      "id": "4132f1acd079d77d",
-      "title": "Trump was convicted of 34 felonies a year ago. He's still battling the case",
-      "description": "Trump was convicted of 34 felonies a year ago. He's still battling the case  ABC News",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZklkcEtYQTdhRzBISF9xWHVYUUJpOEk5RWtfalcxdE1TLWp0ZTdTRTZlU1VfQVE0aUh4MjVZSC1XdXlKcElTQlA4NS01cjZtQUM5QVhkTDBmc3lVNFMwZDNKLXhqTldaTmZzT2JNYjlqelRBdTdmaVNMVm5naXY3bzZqX1dWRkU0TnJaR0hTV3JZWjRHc0lUdjFoRWJBTEl1YzZlQVNIbzB0SV9oQmfSAbMBQVVfeXFMT293RVZfODViZEZlbTFEUV9RT3dLR3BkTWNZTGRoTmxsMlhjUlBFdnQzRXIxeHFBekxfcWJpX1A0TmI3T0YtYUt3eWk4QXFkaEl3d2JsUUxxUXZjZGdvWEtybW96Sm0yMjNMdUZvdVFRQXBZX3ZpMWtfZzJtN2U1ZjhJV1VTZ2Q1aU5vYmR1d1JWaE5GOGJkQmhaeGdGTlRxZTd2cjl2VzFnUkZCcFYyQXAwYWM?oc=5",
-      "date": "2025-05-30",
+      "id": "70cd67f094fc8d1a",
+      "title": "Kilmar Abrego Garcia brought back to US, appears in court on charges of smuggling migrants",
+      "description": "Kilmar Abrego Garcia brought back to US, appears in court on charges of smuggling migrants  ABC News",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNd1Fld3NLWlRUUjFybG5SZVF5YmdQeks4dHEyanRJd0J3b3NvNjNORC04c1FLVklCMDJMTERuQmVON3V2R3RjaWRVOHk0RVZTQjJYLU9qRzlrV09NYlc5NWV4M3A4c014QUxsY2VKcVNBaWFtS2taNnBJZnJEVFRRVWM0LWpxTngzSWFWcTZlaVNWWVEwUTc2d1VZdWtNZnfSAaQBQVVfeXFMUEpXVmxJTGs5ZzNicnVuemRLMmE5cG9maDIzMEVfV2Q2MXlLZ2pZWE1mMXZMUjBQb1lNeE9mWEpjYk5sZ1d6azFsbEpmRG9jZUItellySXdqUEdwbTVMaWR6X3E5TVdQZDA2UTAzamVLT2lZZ0RHYWNLb00yT0pyODVJWTlGakhfTEREZ1g4SjFPWVJDM2tfMG1ZQjBNcGFJekg2NF8?oc=5",
+      "date": "2025-06-06",
       "source": "ABC News",
       "jurisdiction": "USA",
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.366865"
+      "fetched_at": "2026-01-17T18:35:28.355625"
     },
     {
       "id": "87173edfac430a2e",
@@ -2912,7 +2860,7 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.365866"
+      "fetched_at": "2026-01-17T18:35:28.355625"
     },
     {
       "id": "a82d4e4bc7f1173f",
@@ -2925,10 +2873,23 @@
       "law_types": [
         "Criminal Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.187539"
+      "fetched_at": "2026-01-17T18:35:26.365311"
     }
   ],
   "Traffic Law|USA": [
+    {
+      "id": "f14df7069e411556",
+      "title": "Suffolk County Drunk Driving Defense Attorney Jason Bassett Offers Legal Insight on New York’s VTL § 1192(3) DWI Law",
+      "description": "Suffolk County Drunk Driving Defense Attorney Jason Bassett Offers Legal Insight on New York’s VTL § 1192(3) DWI Law  USA Today",
+      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNYXIwbGFZb3J6TThEeWdycE9qRk05X1hBa1ZBc2RfTTQtZ181cHkzNFVhUlN0ZUJibmpPY01YUlV6SF9UQTdPdGNRUjk3VndTYzY4bGNfODBLdl8zNE54cTFORkJhMkxKVUNKZ3hEZlF1NEdQSkZfNkMwQlVEZUw0c1dCNHZqSXg3WTk1TWtHaWVURGlQamtPZG1taEV4akpnWk1TN1RsYm03bEdHOGhkdmpRT2dmb3doYVRaVzZTaHdiUF84aUZBOXk4SWJabVltVi04U00xNUwxTWhuVmJvQnV0TS1oako2eGVnaWg0VHhYbFE3Unc?oc=5",
+      "date": "2026-01-17",
+      "source": "USA Today",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Traffic Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:27.815566"
+    },
     {
       "id": "61c813645049699d",
       "title": "Tesla gets 5-week extension in US probe of Full Self-Driving traffic violations",
@@ -2940,7 +2901,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.505824"
     },
     {
       "id": "4f9c3c1af3cc4236",
@@ -2953,20 +2914,20 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.505824"
     },
     {
-      "id": "f14df7069e411556",
-      "title": "Suffolk County Drunk Driving Defense Attorney Jason Bassett Offers Legal Insight on New York’s VTL § 1192(3) DWI Law",
-      "description": "Suffolk County Drunk Driving Defense Attorney Jason Bassett Offers Legal Insight on New York’s VTL § 1192(3) DWI Law  USA Today",
-      "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNYXIwbGFZb3J6TThEeWdycE9qRk05X1hBa1ZBc2RfTTQtZ181cHkzNFVhUlN0ZUJibmpPY01YUlV6SF9UQTdPdGNRUjk3VndTYzY4bGNfODBLdl8zNE54cTFORkJhMkxKVUNKZ3hEZlF1NEdQSkZfNkMwQlVEZUw0c1dCNHZqSXg3WTk1TWtHaWVURGlQamtPZG1taEV4akpnWk1TN1RsYm03bEdHOGhkdmpRT2dmb3doYVRaVzZTaHdiUF84aUZBOXk4SWJabVltVi04U00xNUwxTWhuVmJvQnV0TS1oako2eGVnaWg0VHhYbFE3Unc?oc=5",
-      "date": "2026-01-15",
-      "source": "USA Today",
+      "id": "666b3d12c34d8226",
+      "title": "New California traffic laws in 2026: $1,000 fines, new red-light cameras",
+      "description": "New California traffic laws in 2026: $1,000 fines, new red-light cameras  FOX 11 Los Angeles",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TeUQ0SGV1TlN4ZGZGaXBFcFdXYnV2cmVWZlNveXRWaE9EU3VyamJUTzV1ZHpXRW1meU1OVlFDZFhCUVBxX01UTDJ3S2MzUVNCbEFRaUQyTW54WDhMMjRmc2JOd3ZNNS0tbV9j0gFwQVVfeXFMUHViLXN0Ujdxd1ZLMUFIZFZ4bG9qbF9aWFRRVk1PWU9WbVhRMFNZYmM4cC1rNUZZQ3hqSTlfbWxuZ043R2tWd0xteUdEX05qRDVCWFZ0UUlxNWdjZHBpdWJnWVFQa09BNDMxX1RHMTNraQ?oc=5",
+      "date": "2026-01-01",
+      "source": "FOX 11 Los Angeles",
       "jurisdiction": "USA",
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:28.505824"
     },
     {
       "id": "35184f3a4fd717c4",
@@ -2979,20 +2940,20 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:27.815566"
     },
     {
-      "id": "29386c956c582e63",
-      "title": "These new laws will take effect in Washington state in 2026",
-      "description": "These new laws will take effect in Washington state in 2026  king5.com",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcVBvQTloX2pyYjFWSGZvU1p3TzRvUmxNSkN3eThTMnF0VlFCaDBUeUZfaVZ1OVhUMUpTZ3c1RmRITFFuQ1BfMEc1YkNwbnFkSFdsdENSVkVKYlVScWo5SUFpZDdVUTFTSWpGVmhrQVdaVGFRVXg1dEJWbWQ4Szd0Y1BwMFBvQ3FwMnNzd2FwNUNBMmxTS3ZXYl8xTDFoMTZIMVF3VnFObWdrUkZqWjhfRmV2SUctX0pLWGx4cFZCdFVjUGdxN3FkcmlB?oc=5",
-      "date": "2025-12-23",
-      "source": "king5.com",
+      "id": "1b7d77a12c11a685",
+      "title": "Woman faces murder charge in drunk-driving death of teen tennis star",
+      "description": "Woman faces murder charge in drunk-driving death of teen tennis star  USA Today",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWUtXWkhiT2NYenZUMHJsY2ZibDdSb1Vtc3BXa3JyVnkwWl8xQ0pXbm1qTkszVFEzUnh3V3J1QkhGMDBPTHMzelVJVTRYRHc2SlBKRXh2R3FfRHRuNUhYT24tZFdlajFBd3VXelBrMHVaYTJ1Q05fOUpneGFtbFNlVkgtTnpIUWhxNV8xUGlHRlRSeVl5VGt0WVBhZXN3dEVUd29JLWNOamZNU2FI?oc=5",
+      "date": "2025-12-30",
+      "source": "USA Today",
       "jurisdiction": "USA",
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:27.815566"
     },
     {
       "id": "186c0aa9de418351",
@@ -3005,7 +2966,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:27.815566"
     },
     {
       "id": "5ff65d5a34dd0c12",
@@ -3018,7 +2979,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.506826"
     },
     {
       "id": "d2622135b938c4d5",
@@ -3031,7 +2992,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.505824"
     },
     {
       "id": "377e642aa3ba0531",
@@ -3044,12 +3005,12 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.506826"
     },
     {
-      "id": "bfe3a232baac8a75",
-      "title": "Tesla faces investigation for FSD traffic violations",
-      "description": "Tesla faces investigation for FSD traffic violations  Mashable",
+      "id": "06e57054ae7915f3",
+      "title": "U.S. regulators investigate Tesla over 'Full Self-Driving' traffic violations",
+      "description": "U.S. regulators investigate Tesla over 'Full Self-Driving' traffic violations  Mashable",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTFJaMkRhOC1RTkw2M0pHUEJLZVl1MzJ0MUtmSklfT0VyNFRWdkNKakdEUUdmaFJpdC1NbmZXdlFnMUVCLWZ6Q2VYVi1mQWZvaUx5MWh5clFSMEN4dEEtdDNxZnoyMGREemJGN2dhVnFGUXVhbHNQNE9VQ09LNkZRZWl6NmRvNk9HQURhVWpPbWZoeWdOWVg0amJqVQ?oc=5",
       "date": "2025-10-09",
       "source": "Mashable",
@@ -3057,7 +3018,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.506826"
     },
     {
       "id": "c6c3f012dbd0522a",
@@ -3070,7 +3031,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
+      "fetched_at": "2026-01-17T18:35:28.506826"
     },
     {
       "id": "3732fc0fe8d2ca34",
@@ -3083,7 +3044,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:27.815566"
     },
     {
       "id": "b76da0baa2128c36",
@@ -3096,33 +3057,7 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
-    },
-    {
-      "id": "f8d79295a2ba2c62",
-      "title": "Eight new laws hitting drivers with up to $350 in fines starting today",
-      "description": "Eight new laws hitting drivers with up to $350 in fines starting today  The US Sun",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbHM2RWZXUzhkLThGZjIyUHhZS1JPb3RvanR2Y3pfLUNNU0pZLWsyVmE4UE5CUGxXMDhOOGxEY29jUThybE8yeWJhQ0RtSWhLNjFWcVAybE1QMlM3dDhrYlhfNm95Ql9hN0l2SURvNklmVERRRk5YUFAzYU50OG1qTHFhZG1uVWRjTmlBRnlhSUVOOEk5ejlqLXJn?oc=5",
-      "date": "2025-08-01",
-      "source": "The US Sun",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Traffic Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:31.993744"
-    },
-    {
-      "id": "ba1036c35a8d9eda",
-      "title": "Charlotte ranks among worst in US for drunk driving risks, new study reveals",
-      "description": "Charlotte ranks among worst in US for drunk driving risks, new study reveals  WCNC",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONGJieFVKVl9zY1gxMHRsa1cyVURUZ0ZIczBfVHJia1hVcnRNeTlWbVJkdkNTc3R4Sng0LXdMVW52QXNjNG1FZ2tMYnc1R3RCTVRJbDNhbW1GS0xVNnNua3YyTlJzaXRTMWdKaG5Md0p3UGd1UEozdVl5dHlfSXRSa0p5TGc3NHNySXVDWmF6TmlSRkoxYko0WVMtbFRCRVdFMy10V1ZfNXRpbENlV1ZpX3dLUUV4bEJKSkww?oc=5",
-      "date": "2025-06-03",
-      "source": "WCNC",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Traffic Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:27.815566"
     },
     {
       "id": "0bb9e873fd1ca609",
@@ -3135,10 +3070,36 @@
       "law_types": [
         "Traffic Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.208234"
+      "fetched_at": "2026-01-17T18:35:27.815566"
+    },
+    {
+      "id": "f879f37ea900f44f",
+      "title": "Pappas, Mann Introduce the Bipartisan End DWI Act",
+      "description": "Pappas, Mann Introduce the Bipartisan End DWI Act  Congressman Chris Pappas | (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSWdISVJRTjJTZV9RVHdESDlXOGxCZWttU1VOR3l2ZHdLcXV6ZWdrVDJ0VnRXZU5EZ2NnOUhUQk1heWNGYkM1azFzdVEyaWtEMUpfOEgxT0U3SWUwdlZVUjNFOUZGUXJqR05nYXRpM2RwZ0I2U0I5RENiVHdULXZKU0tFYUhlX1dHSWtoS211aE4wUm9UTGhTSw?oc=5",
+      "date": "2024-05-01",
+      "source": "Congressman Chris Pappas | (.gov)",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Traffic Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:27.815566"
     }
   ],
   "Immigration Law|USA": [
+    {
+      "id": "c4cdf9a3bfb54242",
+      "title": "Trump Administration Public-Charge Rule Would Amplify Harms to Immigrant Families",
+      "description": "Trump Administration Public-Charge Rule Would Amplify Harms to Immigrant Families  migrationpolicy.org",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBHTWY0cXFmNUFPVGVJYlZJVGozRGx5R1B2bFl6NXJPMFd3U0wzT25CYVNSc3NFYnl4d1huVzlKc2Q0VmVhSUJkNHZWVWpubUZwQ0xkTzB5QTU4ZE5waC1tSlpiLXhvY0p1amFMNUJqWEZBUnVhWGc?oc=5",
+      "date": "2026-01-17",
+      "source": "migrationpolicy.org",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Immigration Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:25.702039"
+    },
     {
       "id": "8d4a8ed4cc589845",
       "title": "This Week in Immigration: January 16, 2025",
@@ -3150,20 +3111,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
-    },
-    {
-      "id": "c4cdf9a3bfb54242",
-      "title": "Trump Administration Public-Charge Rule Would Amplify Harms to Immigrant Families",
-      "description": "Trump Administration Public-Charge Rule Would Amplify Harms to Immigrant Families  migrationpolicy.org",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBHTWY0cXFmNUFPVGVJYlZJVGozRGx5R1B2bFl6NXJPMFd3U0wzT25CYVNSc3NFYnl4d1huVzlKc2Q0VmVhSUJkNHZWVWpubUZwQ0xkTzB5QTU4ZE5waC1tSlpiLXhvY0p1amFMNUJqWEZBUnVhWGc?oc=5",
-      "date": "2026-01-16",
-      "source": "migrationpolicy.org",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Immigration Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.197354"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "18b8c785d3c0b2f5",
@@ -3176,7 +3124,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "72a4faa05ebe501c",
@@ -3189,7 +3137,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "80e7bc12f6efee21",
@@ -3202,7 +3150,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "312792b09801aac2",
@@ -3215,7 +3163,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.198353"
+      "fetched_at": "2026-01-17T18:35:25.703038"
     },
     {
       "id": "caab956edb78dce0",
@@ -3228,7 +3176,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "31608b21ccea54d1",
@@ -3241,7 +3189,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "3f24c6b8d1b6d45b",
@@ -3254,7 +3202,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.073048"
+      "fetched_at": "2026-01-17T18:35:25.464773"
     },
     {
       "id": "924eb134da3db9b7",
@@ -3267,7 +3215,7 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.197354"
+      "fetched_at": "2026-01-17T18:35:25.702039"
     },
     {
       "id": "92b7ae614dd174c4",
@@ -3280,23 +3228,23 @@
       "law_types": [
         "Immigration Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.198353"
-    },
-    {
-      "id": "3a8faaa99c891a10",
-      "title": "U.S. Pauses Immigrant Visa Processing For 75 Countries",
-      "description": "U.S. Pauses Immigrant Visa Processing For 75 Countries  Boundless Immigration",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYmJ0WXlQQko2VERCT0RyVFphZHdKbG5Fc29RbDdyQVlyUXRldEZadzYzb1p1NjJSMlM0X1hBMU92U3cxTUZUMlNtRlFhdW0wRUZWcFNPZHozcWpjZDRLbGYzdDNqamdEdDNlYTB6YWEwWDNTb29nMHloY2JNY3I3THpVbmg?oc=5",
-      "date": "2026-01-14",
-      "source": "Boundless Immigration",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Immigration Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.198353"
+      "fetched_at": "2026-01-17T18:35:25.702039"
     }
   ],
   "Family Law|USA": [
+    {
+      "id": "e7fae714f62f6bcd",
+      "title": "January 4, 2026 — Maduro awaits court appearance",
+      "description": "January 4, 2026 — Maduro awaits court appearance  CNN",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB2Y0ZqT1p6SXpsRGN5d1d0S2QzYWU3QW5CWENVQ00tV1lyUlpwTHZFZkdXc0owYkgzN0ZwclFsYXVhdG9hbnhJaTJRU0cyb3piWW1RRUNhVjZaTW10WjB4ZERfUlp0eFBaVXRjUjNqckVHYk83Znc?oc=5",
+      "date": "2026-01-05",
+      "source": "CNN",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Family Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:27.699822"
+    },
     {
       "id": "d7e475315962b6b2",
       "title": "Abrego Garcia can remain free while judge considers arguments for returning him to immigration custody",
@@ -3308,7 +3256,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.569527"
+      "fetched_at": "2026-01-17T18:35:27.699822"
     },
     {
       "id": "ec669bf130d691e8",
@@ -3321,7 +3269,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.569527"
+      "fetched_at": "2026-01-17T18:35:27.699822"
     },
     {
       "id": "39d5398cce00b52d",
@@ -3334,20 +3282,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
-    },
-    {
-      "id": "a5b9c467c1c6e6e9",
-      "title": "Sally Faulkner reunited with her children after winning temporary custody in US court",
-      "description": "Sally Faulkner reunited with her children after winning temporary custody in US court  Women's Agenda",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbmpaejVQVFlRN1ZONjJ2b09kVWtVSDd4cllmcWNMd2ZnLUR0Z2tZVlQxTDRlUlpNOUJxdTMxc2JUdDJmSGpCbUlKQTJmc0c0SURjMXpVSWJaa2RjWDR5MUN2cUZHa3ZMWTRTeHB4SFFVS1V3YkFGc2Z2NGxUcEZUeDN6RV92MU5DUDRoMjhzYUFkOXZLLTlReVh1LW4yX1lwM1NUUnBKMEZ4akZRcUI3TEppNGp1WDRDNTZSMTVn?oc=5",
-      "date": "2025-09-12",
-      "source": "Women's Agenda",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Family Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.570532"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "4befb84ce4b93eb2",
@@ -3360,7 +3295,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "61f23df83ba590e6",
@@ -3373,7 +3308,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "4d34a994d5c34e00",
@@ -3386,7 +3321,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "593a41c837ebc1f8",
@@ -3399,7 +3334,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.569527"
+      "fetched_at": "2026-01-17T18:35:27.699822"
     },
     {
       "id": "f047c7aecece5e16",
@@ -3412,7 +3347,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.569527"
+      "fetched_at": "2026-01-17T18:35:27.699822"
     },
     {
       "id": "838ecd7ec893adf3",
@@ -3425,7 +3360,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "25b3e6e53f9abcc5",
@@ -3438,7 +3373,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "da005c3b66760404",
@@ -3451,7 +3386,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.570532"
+      "fetched_at": "2026-01-17T18:35:27.700822"
     },
     {
       "id": "d981395e214b5e77",
@@ -3464,7 +3399,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "cecb4f19957b0e51",
@@ -3477,7 +3412,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.670198"
+      "fetched_at": "2026-01-17T18:35:26.711683"
     },
     {
       "id": "361544e02f35ef4e",
@@ -3490,7 +3425,7 @@
       "law_types": [
         "Family Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.570532"
+      "fetched_at": "2026-01-17T18:35:27.700822"
     }
   ],
   "Employment Law|USA": [
@@ -3505,7 +3440,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.047548"
     },
     {
       "id": "4f46b246a40fb4ef",
@@ -3518,7 +3453,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.047548"
     },
     {
       "id": "317161d9f25848ac",
@@ -3531,20 +3466,33 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.047548"
     },
     {
       "id": "b569e620f333052c",
       "title": "FBI worker says he was wrongfully terminated for having Pride flag at desk",
       "description": "FBI worker says he was wrongfully terminated for having Pride flag at desk  The Guardian",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcXNQQzBIcEluRUJyWkFOdEVHZlcwRWx5QVFLc0VpdjhhcDlrY0J1Uk94VGpaY1JDNTh3cHAyQ2UtRk45d3d5TkRYdEl4a0owVE9XS201Q2dFdjRCYkxlTEYydVprTWhxWHJ1dDVid0dydHpPVVFmMjRDMEZNV05PT1Z1Ym9yVkRCMFhj?oc=5",
-      "date": "2025-11-20",
+      "date": "2025-11-19",
       "source": "The Guardian",
       "jurisdiction": "USA",
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.047548"
+    },
+    {
+      "id": "07c6790d4de95530",
+      "title": "Former CEO within WPP Media sues WPP for alleged retaliation, violating whistleblower protection laws",
+      "description": "Former CEO within WPP Media sues WPP for alleged retaliation, violating whistleblower protection laws  Campaign US",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUjdNeUJ5RkRrc3R0bHZGdkYyM3Z2MHZGRFp2QlptNnNnSjNqU2F4RVdGODhqdHZWOWw5VUxBOGxIekhjQzc3NW1sTjdXdXpfSGtGaFREVGFIajdtWGxrekNYUGpmRVAzUHpOM3ZHR01xTmstY0trV05ieW55LUxnU2xHdEp5TW9SaU1wN3otbzdpNWM2Q0pVSWZLbUxEUThvZ2IzbDdXcm1KQjhJN050OTMwR0p3YmNqWVJTS2lnMVVSbXZzMGR2U3h6NUNFNHNqZV94OUNUU0o?oc=5",
+      "date": "2025-11-12",
+      "source": "Campaign US",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Employment Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:28.047548"
     },
     {
       "id": "0e903621a6b08758",
@@ -3557,7 +3505,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.047548"
     },
     {
       "id": "7283e93e51920d80",
@@ -3570,7 +3518,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.292649"
+      "fetched_at": "2026-01-17T18:35:24.840643"
     },
     {
       "id": "cd2e2fdb88ae73af",
@@ -3583,7 +3531,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.047548"
     },
     {
       "id": "c696894c895d8531",
@@ -3596,20 +3544,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.293648"
-    },
-    {
-      "id": "cc3e7f028580cf1d",
-      "title": "Supreme Court rules in favor of plaintiff suing over anti-straight workplace bias",
-      "description": "Supreme Court rules in favor of plaintiff suing over anti-straight workplace bias  Fortune",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSUZYdFJ2eGhLZm5JWldWYnh0cFVUNVBPWk9qbXJXYmNiS2U3d3hUQXlhX2ZWZFlfZFBNMHlWaVduWEEySXBESllxdjYzZzJxaHdJWmp0b3NkVkZ6MmkxNU1FY1ZoMTVDam5qaUtPckpyUFJiOFduUC1pTUlfWGRyRHRvWnp2NVhOcHE0YWxON2hleEdlVUROa0VZMnc?oc=5",
-      "date": "2025-06-05",
-      "source": "Fortune",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Employment Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.292649"
+      "fetched_at": "2026-01-17T18:35:24.840643"
     },
     {
       "id": "ce348604a334dcdf",
@@ -3622,7 +3557,20 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.292649"
+      "fetched_at": "2026-01-17T18:35:24.840643"
+    },
+    {
+      "id": "cc3e7f028580cf1d",
+      "title": "Supreme Court rules in favor of plaintiff suing over anti-straight workplace bias",
+      "description": "Supreme Court rules in favor of plaintiff suing over anti-straight workplace bias  Fortune",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSUZYdFJ2eGhLZm5JWldWYnh0cFVUNVBPWk9qbXJXYmNiS2U3d3hUQXlhX2ZWZFlfZFBNMHlWaVduWEEySXBESllxdjYzZzJxaHdJWmp0b3NkVkZ6MmkxNU1FY1ZoMTVDam5qaUtPckpyUFJiOFduUC1pTUlfWGRyRHRvWnp2NVhOcHE0YWxON2hleEdlVUROa0VZMnc?oc=5",
+      "date": "2025-06-05",
+      "source": "Fortune",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Employment Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:24.840643"
     },
     {
       "id": "d3ac46cc5d299e5d",
@@ -3635,7 +3583,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.292649"
+      "fetched_at": "2026-01-17T18:35:24.840643"
     },
     {
       "id": "3d685a743be87811",
@@ -3648,7 +3596,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.954799"
+      "fetched_at": "2026-01-17T18:35:28.046546"
     },
     {
       "id": "468697f958706ec3",
@@ -3661,7 +3609,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.293648"
+      "fetched_at": "2026-01-17T18:35:24.840643"
     },
     {
       "id": "fbbcd14897f8aefb",
@@ -3674,7 +3622,7 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.292649"
+      "fetched_at": "2026-01-17T18:35:24.840643"
     },
     {
       "id": "7ef220e70a1f5975",
@@ -3687,10 +3635,23 @@
       "law_types": [
         "Employment Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.292649"
+      "fetched_at": "2026-01-17T18:35:24.840643"
     }
   ],
   "Business Law|USA": [
+    {
+      "id": "20521699eab22896",
+      "title": "Shifting Enforcement Priorities at the CFTC and the SEC",
+      "description": "Shifting Enforcement Priorities at the CFTC and the SEC  Foley & Lardner LLP",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRm4xejdjUktTRHp1Nm5SM3ZNcTVfaHpZbk0tbTFPN29wZ3ZJQ0hDb1gwNDYxbmp5WGpEdHBmQ1k1cTU3QTQ3Ujh5ZEdqWG40VG9tRWdxOGlmRzFMM3lBNFVhMzdJSjNyYTBTX1JTci13QTBkVndnUHZSZTBGb3c1MUdTMmxYWTlRY1djcUM4TlE2VnhUMzc4UURBUHQxT01DV29ZREs0NEc3X2hu?oc=5",
+      "date": "2026-01-06",
+      "source": "Foley & Lardner LLP",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Business Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:24.548661"
+    },
     {
       "id": "e6a62f017fc81384",
       "title": "Securities Enforcement Roundup – November 2025 – Publications",
@@ -3702,7 +3663,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.548661"
     },
     {
       "id": "999ad5711958d6f3",
@@ -3715,7 +3676,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
       "id": "0ae0dc786809c5db",
@@ -3728,7 +3689,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
       "id": "9512059a92f4d48d",
@@ -3741,7 +3702,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.548661"
     },
     {
       "id": "bbbdd1ecc5e56d6b",
@@ -3754,7 +3715,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.548661"
     },
     {
       "id": "3e94f8df2f0967c3",
@@ -3767,7 +3728,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
       "id": "ce4926c5b2d36b29",
@@ -3780,7 +3741,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.548661"
     },
     {
       "id": "87a5bdf0e00dfd5f",
@@ -3793,20 +3754,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
-    },
-    {
-      "id": "26b7ef7ed3bb55b0",
-      "title": "Exclusive: US exchanges, SEC in talks to ease public company regulations",
-      "description": "Exclusive: US exchanges, SEC in talks to ease public company regulations  Reuters",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOHAtX3V6bFFCMUpINXZPeW1BVGN0MEt3aFVYdGpUNWlCck5IQlZxZGxfTEgtOXJISEZTRjZOdXo4VXlmWmdVSzBOSThjQ1BWSGwxeXZQVjV3bzZoWHZ0UmMtc3ZDNDM2Vl9taHdWeHJTTnlNTWxIRExYTTJPMGQ4NUF1TXdfZjAyYU9PRWZYUFRqQU5YdUIzNmZCM1hvSWoyZk0tajloSm1HQ1U?oc=5",
-      "date": "2025-06-25",
-      "source": "Reuters",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Business Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
       "id": "5baef09d38b7fd63",
@@ -3819,7 +3767,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
       "id": "f433df70bdaf4109",
@@ -3832,20 +3780,20 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
-      "id": "6b2ceb858f0ce5b5",
-      "title": "SEC Enforcement 2.0: Chairman Atkins Has Arrived",
-      "description": "SEC Enforcement 2.0: Chairman Atkins Has Arrived  White & Case LLP",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVjRFY2ZjOE84SVptTzhvSnVuMkhuNnZwUFVHMy1jc3JseEVOV0hmUFM5ZHd4SG9hNndiVDJQeWQ3YlR1WkczRC1zcU82eG94Ym94RWhVbzJxdTQ5V2pYdG91X2R5S2RNWlRNN0RDZVUwd3JiVFllVlMxNV8wdGwtOHM2dlg1Y2FNLVNUbXo0Zw?oc=5",
-      "date": "2025-04-22",
-      "source": "White & Case LLP",
+      "id": "f1c9f9417677bbb3",
+      "title": "Regulatory Shifts in ESG: What Comes Next for Companies?",
+      "description": "Regulatory Shifts in ESG: What Comes Next for Companies?  The Harvard Law School Forum on Corporate Governance",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMzlEZTY5ZTVWNVJTeXlvZVhTRjhBZmcwSHUxbFhwVE03aGhzOGtoVS1aWFJfMDVUMkFNSDM4RkhnLVdwMW05Mk1BQ3NDTFpjdGtING9MQ0RPQm4ydVctMkR4RE5UUDhNUkJZS0cxaGkwUjNSaWtmYXhRbDlFT0dnSklIVzhDODlQX1dSYk5UWFJ0ZVd3TVdjQ2VnV0FjN0k?oc=5",
+      "date": "2025-04-12",
+      "source": "The Harvard Law School Forum on Corporate Governance",
       "jurisdiction": "USA",
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.738922"
     },
     {
       "id": "fd5e5f3b5795d3ab",
@@ -3858,7 +3806,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.550255"
     },
     {
       "id": "4cafff6ce30ec5f8",
@@ -3871,7 +3819,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.550255"
     },
     {
       "id": "b772e3b93afe6582",
@@ -3884,7 +3832,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.466409"
+      "fetched_at": "2026-01-17T18:35:24.737920"
     },
     {
       "id": "c82c5054c239bc9b",
@@ -3897,7 +3845,7 @@
       "law_types": [
         "Business Law"
       ],
-      "fetched_at": "2026-01-16T17:49:31.900261"
+      "fetched_at": "2026-01-17T18:35:24.550255"
     }
   ],
   "Business Litigation|USA": [
@@ -3912,7 +3860,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.088429"
+      "fetched_at": "2026-01-17T18:35:25.969230"
     },
     {
       "id": "e371d30e5cf95a5f",
@@ -3925,7 +3873,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.088429"
+      "fetched_at": "2026-01-17T18:35:25.970229"
     },
     {
       "id": "58caca9a07772502",
@@ -3938,7 +3886,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
+      "fetched_at": "2026-01-17T18:35:27.609431"
     },
     {
       "id": "66d3574e5618220f",
@@ -3951,7 +3899,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
+      "fetched_at": "2026-01-17T18:35:27.609431"
     },
     {
       "id": "7e11b57a125f98e8",
@@ -3964,33 +3912,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
-    },
-    {
-      "id": "39cd8aa1c860f635",
-      "title": "Texas Business Courts Welcome Trade Secret Cases",
-      "description": "Texas Business Courts Welcome Trade Secret Cases  JD Supra",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTmpCV054OUUxVk01d1BSNzYxXzBHNks0X2tQSnRORXd3R1Q5OTU3TUVVcDUxMkFzQXl3NUJLM1VFbzdGZUlvd25YZjdQdEp6QkNoX1ItOGpYTmVyTF9wbDJfaUM0WjU0Q3FnZWlpdzdmSUNFYzJfQmhkT3FoZjBjRFZHMlc?oc=5",
-      "date": "2025-08-19",
-      "source": "JD Supra",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Business Litigation"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
-    },
-    {
-      "id": "3980e9597459416d",
-      "title": "Hallie Levin and Sonal Mehta Named to Benchmark Litigation’s Top 250 Women in Litigation",
-      "description": "Hallie Levin and Sonal Mehta Named to Benchmark Litigation’s Top 250 Women in Litigation  WilmerHale",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPV2VTTWQ2Q3h4N0VQQ0xQRHhGb3M5QWM2VVdsTDAzZUwxMjVJSjNiQ3Jydkl4REJQVUx4WURhUjAzX0pXcHJ0VkJXRnM5MlI4X1lBdGw4MmI2ZjdHZTZfQTdWNUI1Z1pJVWVmXy13aDlKLTZ1a2M2ekw4RnhxWUhGTzNzdDVyUXpRMXRHdmdESmRTRmUxeE5yQzg2M2NGZVFWWjllbTFreVBSbEd4b2JzYVB0MmRWZVFCeTdzWkM0eGk0T2M5cXdGRVZCajg5WEVIOFQwRGRJVQ?oc=5",
-      "date": "2025-08-18",
-      "source": "WilmerHale",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Business Litigation"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.088429"
+      "fetched_at": "2026-01-17T18:35:27.609431"
     },
     {
       "id": "a5fd811d98dff6fd",
@@ -4003,7 +3925,20 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
+      "fetched_at": "2026-01-17T18:35:27.609431"
+    },
+    {
+      "id": "519977bf72bf770e",
+      "title": "Hallie Levin Named to Benchmark Litigation’s Top 10 Women in Litigation for Second Year in a Row",
+      "description": "Hallie Levin Named to Benchmark Litigation’s Top 10 Women in Litigation for Second Year in a Row  WilmerHale",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNWFpVc0I1V1FMeXdGMWNNY240TFFWR1FDYmE5ZTdBRF9ISG95SnFCOXdDN2lVTmVfeFZONERkSkM2bjNzeVY5QmpkdW5QcVZtMFpSZ1lJRlg0TGpjVlhqN3ZKVGR2U3NJd2xBWHR2aThMMndnVWNENVFFbWFVd3NTRkx5bC1yZVhaY212c0g0UkZIOWZGS3dBczQxc29hSTNhQzZmTUpqR19EeGZkdnNWXzE4T25pZEJrV0NLUkVKRVlqalhGeXc2a3Y4R1o5ZGN0X0lzQ1hOOGNQRUg2SFJtR3dR?oc=5",
+      "date": "2025-08-14",
+      "source": "WilmerHale",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Business Litigation"
+      ],
+      "fetched_at": "2026-01-17T18:35:25.969230"
     },
     {
       "id": "263652e977f15380",
@@ -4016,7 +3951,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
+      "fetched_at": "2026-01-17T18:35:27.609431"
     },
     {
       "id": "15ecffc8cf4d081c",
@@ -4029,7 +3964,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
+      "fetched_at": "2026-01-17T18:35:27.609431"
     },
     {
       "id": "3fa8657889fefc5a",
@@ -4042,20 +3977,7 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.088429"
-    },
-    {
-      "id": "9570348985f2dff0",
-      "title": "OpenAI and the cross-border data dilemma: US litigation holds vs. GDPR erasure obligations (UK/EU)",
-      "description": "OpenAI and the cross-border data dilemma: US litigation holds vs. GDPR erasure obligations (UK/EU)  Kennedys Law LLP",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQMTVoQTZJV3BHSWVCSzQyeEFIYnlDbVdEZ1J1ZGs0SnVYTnRnY3NKb3BXTHo2RmdweVdHSEt6aHlrVElPQWhReFhPbEdxWU5ET09tazU0VUNSdzMtdnlGT2J2YVpBZVdYLUVPa1ZvTEF1Z3JmSnVDcUc4Sm5RR25KWFIwYVM4dDJvcWR1T3VWMkJhLWs2eGlua0tFT3p3RlJEQWpJVjZxVHFZZnhpaE1DMGJKNnk2M3N6OVR5VU1wN0d6SWNheE0wMXFDTzRRVzRfb2RUM3dsSEgwM1A2MHBQTlp2MG9DOFRWaHkwRHhB?oc=5",
-      "date": "2025-06-02",
-      "source": "Kennedys Law LLP",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Business Litigation"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.088429"
+      "fetched_at": "2026-01-17T18:35:25.969230"
     },
     {
       "id": "cb516aed7ab7b439",
@@ -4068,7 +3990,20 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.671580"
+      "fetched_at": "2026-01-17T18:35:27.609431"
+    },
+    {
+      "id": "70134b923edaa8e1",
+      "title": "The Ripple Effects: Understanding The Potential Commercial Litigation Impact Of New Tariffs",
+      "description": "The Ripple Effects: Understanding The Potential Commercial Litigation Impact Of New Tariffs  velaw.com",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOaHJRYTZIMHNiMjFnNkpWbjRxcnFlSHV2UnJLeG1tV05WNFY2TGdPb3RJZ0o5MkliMjJmc0ZHOVpnX3NOVDB4dUxNQVFycFd5WGdnOURzWGJ3eTZRcEZmM3lhekF1c3BsNFlRX2w3T1RUb1E4dlBJRjllZk1qQ1BDV2l6UDJhMEN4RGMyWHZwbEtKYWhNaTNOdHlPaE1Vb25WTWRKbUJFSEFVcU9EejRMNl9HYzY2LTF2UEE4bXJndw?oc=5",
+      "date": "2025-04-18",
+      "source": "velaw.com",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Business Litigation"
+      ],
+      "fetched_at": "2026-01-17T18:35:25.970229"
     },
     {
       "id": "c9f697abd7f9f048",
@@ -4081,22 +4016,35 @@
       "law_types": [
         "Business Litigation"
       ],
-      "fetched_at": "2026-01-16T17:49:32.088429"
+      "fetched_at": "2026-01-17T18:35:25.970229"
+    },
+    {
+      "id": "0ed574292869df0b",
+      "title": "NFIB Disappointed with U.S. Supreme Court Decision on BOI Reporting",
+      "description": "NFIB Disappointed with U.S. Supreme Court Decision on BOI Reporting  NFIB",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcTBoZzdNRDI1Y1VsVEp2RXpYdFRsTGc0NWpwNkV6Y2J5MWxiVElYSHl1UmViLU5VeEZMbkVHSEgzMzdUTDlYbkdKV1BXa3Q5ZDMwZ1MyVF9QMFM1NW1jREtzeUYwRGtKTWdBcThpOTJSQ1hQRi1hSmxRa0RHcTFkd0VVbGhrYXNPblhwTFAyM3RyanNBNkRqQWh2R2dVdVFyUERtZjF6emxxaDA?oc=5",
+      "date": "2025-03-28",
+      "source": "NFIB",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Business Litigation"
+      ],
+      "fetched_at": "2026-01-17T18:35:27.609431"
     }
   ],
   "Real Estate Law|USA": [
     {
       "id": "8a5a51fe368d5605",
       "title": "The Eviction Kings",
-      "description": "The Eviction Kings  The Nation",
+      "description": "The Eviction Kings  thenation.com",
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYmd1aGNFNFczeFZWTEItNnRsa3FiTUZzczJVdk8wd21GdzdRTVpkVlFnQzR0UlVPVllLWERqaC1xVjRqV1VvekVFR0J4NkoySjVXTkdVc0tFMTRCQldxMG94dHJ2eGRQU2dVOEYxSnJsWm55aTNYWlk1ak91MXBJUXVIcUZvMjhGblhfbEln0gGWAUFVX3lxTE9SUDFadVR2VzJ0cFE1Zm9MUFAtYlBPWUJ2U2thSnp3ZlNUMEF4SWphdjBOajFMX3c5NnhWQ3hkN19fTHdKUS1wVF9EcEZGYnhkX2N6N2VWN0JhMmxqNG9oNlFPRXJTQVVGdTNEblJTNks4bHhQM09WVUJDc2V3cnYxeGxWQ1F3d1pIdHV4aElER3h5TmFTUQ?oc=5",
       "date": "2025-11-11",
-      "source": "The Nation",
+      "source": "thenation.com",
       "jurisdiction": "USA",
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.771843"
+      "fetched_at": "2026-01-17T18:35:27.439524"
     },
     {
       "id": "a0e887e16a9b23b8",
@@ -4109,7 +4057,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
+      "fetched_at": "2026-01-17T18:35:26.070336"
     },
     {
       "id": "3529b166d67f051c",
@@ -4122,7 +4070,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
+      "fetched_at": "2026-01-17T18:35:26.069407"
     },
     {
       "id": "feab19cf2396ad84",
@@ -4135,7 +4083,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
+      "fetched_at": "2026-01-17T18:35:26.070336"
     },
     {
       "id": "279cc45a307e6790",
@@ -4148,7 +4096,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
+      "fetched_at": "2026-01-17T18:35:26.069407"
     },
     {
       "id": "5f779f5d4e814ce0",
@@ -4161,33 +4109,20 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
-    },
-    {
-      "id": "bec68d2687c7f721",
-      "title": "California lawmakers side with landlords to kill renter eviction relief",
-      "description": "California lawmakers side with landlords to kill renter eviction relief  ABC10",
-      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNelNUekpCWTJ4SDJwSGwxT3NtUGh2NnNQamd6Vm1oRHFRUTExd01fMjBhYUhuRlJOdldfdFNseHNBMlJieWxlalpuREdIVE1EQXFrcWlJRFlrMVJQSGw2akxTb0Jsa09pVFdWZDVJWE5DQnUwU29oTTRVRG14eHJ3XzFiSXM5TWlDSXNZLWMyM2dzVlRrRzluVU9LOUxNMkFteEFjQUFHTkktMGgya1JybHRnUHZVMmRGaWRLeEwxN2RvSDdsZGhXdTl2MlRPN0FwVk5EMk10T0JYRERhQURDdnlYY29sMWpnX1JlYmVLYjVfRk9VUzdwSWxfWQ?oc=5",
-      "date": "2025-07-03",
-      "source": "ABC10",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Real Estate Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.771843"
+      "fetched_at": "2026-01-17T18:35:26.069407"
     },
     {
       "id": "9455fd2f70feb1c0",
       "title": "Unpacking claim new federal law prevents children from inheriting parents' houses",
-      "description": "Unpacking claim new federal law prevents children from inheriting parents' houses  Snopes.com",
+      "description": "Unpacking claim new federal law prevents children from inheriting parents' houses  Snopes",
       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9JWWUtcU1wcGxIZlNsNFJNZklyMHNPR1hIbDFHa3FWeDBqOXd1XzhWNjNwejYzODExSzJlVFY5U0I4ZlBLejNCX2hpQ0xTdUxyNlpfUE5Zalo1OUdDZVo3djFnX203cjJuYXB5VlBuQ2FFZ2p1VkZF?oc=5",
       "date": "2025-06-24",
-      "source": "Snopes.com",
+      "source": "Snopes",
       "jurisdiction": "USA",
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
+      "fetched_at": "2026-01-17T18:35:26.070336"
     },
     {
       "id": "b79973624bd4367b",
@@ -4200,7 +4135,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.771843"
+      "fetched_at": "2026-01-17T18:35:27.439524"
     },
     {
       "id": "6e1e4cc4a5a36a29",
@@ -4213,7 +4148,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.503208"
+      "fetched_at": "2026-01-17T18:35:26.070336"
     },
     {
       "id": "6001719c313b9018",
@@ -4226,7 +4161,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.502208"
+      "fetched_at": "2026-01-17T18:35:26.070336"
     },
     {
       "id": "d18c212139f549fd",
@@ -4239,7 +4174,20 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.771843"
+      "fetched_at": "2026-01-17T18:35:27.439524"
+    },
+    {
+      "id": "36b628c503a24e07",
+      "title": "U.S renters fear higher rent, eviction over energy efficient homes",
+      "description": "U.S renters fear higher rent, eviction over energy efficient homes  Context News",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNVFvbHIxVlh6ZWNTMnFtLVV4a0s5WXdYTFNhdGEteUlXR09jVFFOY09WZzE2ejMwTkdaNjh0eWIzZjl2cE1IYS1JQjNLLXRyWVBuUHlXQm9QWU5WQWZ2Unkwc0hrdFBpWndXMTI2U01LWFNTZGRlR0w2UC1yc3NlRDl1T0RJMG5CWTRRVVptSlZabTdXemQtaEJRUWRPVkI5TEVlVzVIUE8?oc=5",
+      "date": "2025-04-10",
+      "source": "Context News",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Real Estate Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:27.439524"
     },
     {
       "id": "d411b9b487f1ccca",
@@ -4252,7 +4200,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.771843"
+      "fetched_at": "2026-01-17T18:35:27.441031"
     },
     {
       "id": "0aaf3449973f0d6f",
@@ -4265,7 +4213,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.772846"
+      "fetched_at": "2026-01-17T18:35:27.441031"
     },
     {
       "id": "6f4d1d05238c7ec7",
@@ -4278,7 +4226,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.772846"
+      "fetched_at": "2026-01-17T18:35:27.441031"
     },
     {
       "id": "d39868d42c2e0760",
@@ -4291,7 +4239,7 @@
       "law_types": [
         "Real Estate Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.772846"
+      "fetched_at": "2026-01-17T18:35:27.441031"
     }
   ],
   "Tax Law|USA": [
@@ -4306,7 +4254,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
+      "fetched_at": "2026-01-17T18:35:27.952394"
     },
     {
       "id": "0ef407e9fe05deda",
@@ -4319,33 +4267,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
-    },
-    {
-      "id": "02ec6d331103ddcc",
-      "title": "US sales tax foreign sellers – goods & digital services",
-      "description": "US sales tax foreign sellers – goods & digital services  vatcalc.com",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZkJLekNmT3ZVRTExVlFHc2ZEanNYOWFDeDNKbjllTDBaOUtGdnVDeUp4THFNZDVJOWRzWFduaF9VYk5WV1AxQmpNcWVHaGFIQlVVblR6ZklUY2I2enRja1NISmcxeE5laGota1ZHdmNvOWJwZDdTZjFXVVpjemhUXzRWMkVyQUc0cXVCOFlJdjhHQ2tXd3dTcVN6VXhYNl90OVNZOVY1dGQ0ZkdPTGNXcVFxT3Yxd0NWRF85Y2F5VlFFOTBJbDFCTjVn?oc=5",
-      "date": "2026-01-02",
-      "source": "vatcalc.com",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Tax Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
-    },
-    {
-      "id": "e879514159d5fb85",
-      "title": "IRS Delays Enforcement of PFML Tax Rules",
-      "description": "IRS Delays Enforcement of PFML Tax Rules  Ogletree",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNODctbzZaWEpfdm5Tb3lBX1YwbThsSjlXallkaHM5bW5rRWhrb09ZbzNSMEdsbnhpczZka3ZwYUFlS3hmcUhWeU1MVEt4UXZNblNELXRCMi1MV3N0cC1RR1J2N3VfcFlFNFRRdFFOdnd6NkhBejB3ai1sOGE0QlIyaTJ4VWJOdkVjanU0bTR3TG9PNzZOZ3VN?oc=5",
-      "date": "2025-12-23",
-      "source": "Ogletree",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Tax Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:24.644523"
     },
     {
       "id": "5cfff0935ac59db2",
@@ -4358,7 +4280,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
+      "fetched_at": "2026-01-17T18:35:27.952394"
     },
     {
       "id": "55336ec9c3b4d980",
@@ -4371,7 +4293,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:24.644523"
     },
     {
       "id": "041fbeee122510b8",
@@ -4384,7 +4306,46 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:24.645507"
+    },
+    {
+      "id": "c74563c49cbfeb57",
+      "title": "This week in tax: US court rejects Medtronic request to reconsider TP ruling",
+      "description": "This week in tax: US court rejects Medtronic request to reconsider TP ruling  International Tax Review",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQd0FJRUdYaGItMVY3WEdjamVId2Z1ODZqUDdPMERLcFhYbWxOOFNPSExET203M1ZMTDE0NkNkZndrNnQ3X2pwSE1fbURJczRBbEtocUZNNHRVVGRQWG9PeGtnWHRjMGZnaGduVWlfeWM3S3JjQ1VKd2lISFFPbzJSR1kzaVlpaG01djh4NkZySGQ5UV9XODFBVEdYRlQ3Vy1rcHl2YVBzRnJZYmp6SThQUldhczNGenhtN2lFaEpTWUZ6bldnb05sREY2dEZjbmxHZWVwM29SZ2dRVUxURmdjUDhDRlFmUmtpcGdF?oc=5",
+      "date": "2025-11-14",
+      "source": "International Tax Review",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Tax Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:27.953394"
+    },
+    {
+      "id": "106126631fed716e",
+      "title": "R&D Tax Credits and Deductions Explained",
+      "description": "R&D Tax Credits and Deductions Explained  Bloomberg Tax",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNWd0aGEycW1Td0oyMk9sblZyTTBzd0d0VU9wbVlRUm51LXAyRFUxdTRTTEF6aHVjRFE4VENyeEdMRTZCQm15QXk1ZF9YZGU5cG1tRGRudGU3RjRNMktBeTd2VUJ0M3dGUW9aR3RkX0luYlFWVnBxZ25ia3hVbnhERGl2NUNNNzNKSXB4VEEtcFluWFlCYnB5TXpn?oc=5",
+      "date": "2025-11-03",
+      "source": "Bloomberg Tax",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Tax Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:24.644523"
+    },
+    {
+      "id": "b97b1803eba91fdd",
+      "title": "IRS Amends Procedures for Requesting Corporate Letter Rulings",
+      "description": "IRS Amends Procedures for Requesting Corporate Letter Rulings  Tax Notes",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdnBhb2xGWkV3SDlEMWFYc3BpQ0gwbGQzSndvd0w1SFM3bkM3STVLNHNNZERheHlYYWV1T2VEaVRLOWZSWXgyNzdLYzBiTUVOb2VfekNRWlpicUZNVFQ4MFBXd0FSVXczb091N2FVQlBlNmozYmpDdERlRk45SW11YmNBM3NNd25OOXRKMlFSb0xmOU81TGxldXpOOXJVemlZNnpjVENMWGhCVkYyTDN4ZGo2alhjdFppRmVHMHhoSlZSZjdtRDFUNjRLZ3FYQm5lMkdJ?oc=5",
+      "date": "2025-09-29",
+      "source": "Tax Notes",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Tax Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:24.644523"
     },
     {
       "id": "b038588a64544b8f",
@@ -4397,20 +4358,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
-    },
-    {
-      "id": "24db220e69fc64a2",
-      "title": "Planning for IRS Audits in an Era of Uncertainty | Regulatory Roundup | Insights | Vinson & Elkins LLP",
-      "description": "Planning for IRS Audits in an Era of Uncertainty | Regulatory Roundup | Insights | Vinson & Elkins LLP  velaw.com",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOQlRaN2VTU1ZsVm1zYzg2VmFHZ3NWYlhsU0lVMk1oWmlHUFhueFUydGE3YnBjbGZkX0RjWGphUEpLZ1pXc1JRcDVNUFdUVTlVRW53aGtmR3NVNzNkZUFOQ0gwZUNTMDdINndiTWdkeUVUWXEyeHNyX3o3SmVXQVVtcjAtVDVaeTQ?oc=5",
-      "date": "2025-09-03",
-      "source": "velaw.com",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Tax Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:27.952394"
     },
     {
       "id": "634cd8e046748ffb",
@@ -4423,20 +4371,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
-    },
-    {
-      "id": "eeb94e33b638d49e",
-      "title": "Treasury Department, IRS remove controversial 'crypto broker' tax rule requiring non-custodial service providers to file customer transaction info",
-      "description": "Treasury Department, IRS remove controversial 'crypto broker' tax rule requiring non-custodial service providers to file customer transaction info  The Block",
-      "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNQ0ZIZTlvdjNaNmNlS1NOcFlxQ1c2Y1FKckZweXlKSUFtRlJ2XzNiNXFfYVB0WThYLVhlU3lDTHdvUnBRQlcyQWxERlFoXzVlQXpzQXZ4XzRCaE5PYkFyLWtweGphbEx2NHJsbkVNT2x5angzZEo2RnlELWVpemdjbmtvVk1BcVZsYjBJZ2tBdUtMNWhmWGpSWTdzZG93UTdEYjd1X093ZDk0U2hwSzE0UDJUZnh6aWJheGliZjBveS0wM19oU19EbkdlV1hUTVpNUnJMUnVtUVNWdUpESmlyT1pnN1JNZjZOSkFwaWNPeHhJVV9iOWpLNzJWUThtS0JjcjQ5WEpBRzdVRzQ?oc=5",
-      "date": "2025-07-10",
-      "source": "The Block",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Tax Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:27.953394"
     },
     {
       "id": "0b7e63c0a6c7462e",
@@ -4449,7 +4384,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:24.644523"
     },
     {
       "id": "531b9851bc819950",
@@ -4462,7 +4397,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.881128"
+      "fetched_at": "2026-01-17T18:35:24.645507"
     },
     {
       "id": "5a8901b41b05d2bf",
@@ -4475,7 +4410,7 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
+      "fetched_at": "2026-01-17T18:35:27.953394"
     },
     {
       "id": "df89a7dddf492df1",
@@ -4488,7 +4423,20 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
+      "fetched_at": "2026-01-17T18:35:27.953394"
+    },
+    {
+      "id": "62c31fc23ffbe601",
+      "title": "Congress nullifies IRS crypto reporting regulations for DeFi platforms",
+      "description": "Congress nullifies IRS crypto reporting regulations for DeFi platforms  RSM US",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaUNIb1VOMDRPOUVuYlFsYl8zNk9nbzJoc1hoMGYtajZnTFU4ZVhKc2Vla1oyMkV6Mk1GbmZFdFFISWhrTlFNMjdrZzhYcDhLRzJSbDdrUjh3a01MX3EwQWhpa1NrQU9rQWs3dzQtMTgyblpid25qdkg1SVdRaHZKQXd3QVZqRXRJZG5FTWRQS0lHUkJhdkN2azY4SHg1d01SS0taYTZta0FQQWRDUkdtOTlILTJmMjlJbHc?oc=5",
+      "date": "2025-04-23",
+      "source": "RSM US",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Tax Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:24.645507"
     },
     {
       "id": "22ce34d8734d6877",
@@ -4501,35 +4449,35 @@
       "law_types": [
         "Tax Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.804963"
+      "fetched_at": "2026-01-17T18:35:27.953394"
     }
   ],
   "Constitutional Law|USA": [
     {
-      "id": "456223a2cac46ab9",
-      "title": "Supreme Court will decide on use of warrants that collect the location history of cellphone users",
-      "description": "Supreme Court will decide on use of warrants that collect the location history of cellphone users  The Tribune-Democrat",
-      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPZG9JWjJmMHRKTm1vMGduZFV3YnBhQUpoXzB0QXpuSGF2dE9pYm1mdG1tVEpkOUxsWlZEUU1Ldko3YVZiMkRYRFU4MEk3YTY2dFNaSVNSaGkxZldrb181ZmZJeHhBYkxuVG11VjFDS3JSVzl3Wm9qVnVzNGlZX2ZaNjY0X25LS0RVNXFYRTFzU25zcTFGVllyeXNUOUpnRzhER3BFNUhqT0VURnh4ZndpdUlJRjlrVEx5ZDk1X1J3eVpuYk5zdDBNcmpndExIRjRVVEpLbzVMRVlreVJXMklUc0pYaGRtZHBMbF9ndklUeXlhS1RrZF9mM2dDeGJuMjg?oc=5",
-      "date": "2026-01-16",
-      "source": "The Tribune-Democrat",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.733793"
-    },
-    {
-      "id": "7c8945200b936360",
-      "title": "Supreme Court likely to reject limits on concealed carry but uphold bans on gun possession by drug users",
-      "description": "Supreme Court likely to reject limits on concealed carry but uphold bans on gun possession by drug users  The Conversation",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOZkV1Mm5zYk9OUzJKdWMtR3U3R2NFSW5vaFZHdEVOTU8zYWxrSFdpNmQ5ZTdsM0lNX1NSQzlkVjg1UWRwR0t0YkptTm5lWERvRG9lR0JGYUtKaFRlejFOYlYyTF9OemttQ1c0eGNUVGktN284WWxQWUJoaXNvcHZaRlVfNzhXSi1OUTFsSmRzSkxuWkZwbFpjZV9BeldZUHNPZnJTZHlBN0pBZEd2dmhoWUlqalA0Wmo0bmo2NTFXal8zVkpmNG54cFBLcV9kSkJ1NV9qVzJn?oc=5",
-      "date": "2026-01-15",
+      "id": "760210f6e0f4963b",
+      "title": "Supreme Court is set to rule on constitutionality of Trump tariffs – but not their wisdom",
+      "description": "Supreme Court is set to rule on constitutionality of Trump tariffs – but not their wisdom  The Conversation",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbFBqNXNCemFRZnVWd0hSTDQ5TU5ra3VCa1JVbzJmUVZJby1sZnI5UTZiQlpRNk4tcVNxVXVWR1pnSnFyY2d0QlBpR0szNjdldG82QnI1bmMyUjQ0OU1mRXRzQ0d5TGxvbEVkbGJLT2FsMlVLMWhoalhNOXVqUDEyVlc5dnpUUkxDd1RLQ2pjZER3R1VsYVpEcXl6RFJuX0hZYnJJV2Qxd1dtX0FCZndDU28xRGhGRkhyTllDelRsNA?oc=5",
+      "date": "2026-01-17",
       "source": "The Conversation",
       "jurisdiction": "USA",
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.732799"
+      "fetched_at": "2026-01-17T18:35:26.500150"
+    },
+    {
+      "id": "b6cace79177c8022",
+      "title": "How the Supreme Court made it hard to sue ICE agent in Renee Good case",
+      "description": "How the Supreme Court made it hard to sue ICE agent in Renee Good case  USA Today",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVV9rS1pxT2JNLW90SEhFaU55Y3A0NmlsejZPOW1vM1hqbVZ0dnViOU5UcUJHX0pnWVJXZ2lwRDZ4TW9yQXpMd0w1SWNHUkJtZ2xHeEpzWTdkM3BRaU5fWDNBajA1ZDRGVUFDZno2elRneTRUNDlkUTRGRklGTTFfS2hPUGlJdFZUdzE3WXFhN1RiVmJid05FSzJJa0xUNXE3WUpSY3pNTkhMVTg2eTlQMDRn?oc=5",
+      "date": "2026-01-17",
+      "source": "USA Today",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Constitutional Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:26.501155"
     },
     {
       "id": "b273472f2e4b8aaa",
@@ -4542,7 +4490,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.732799"
+      "fetched_at": "2026-01-17T18:35:26.501155"
     },
     {
       "id": "3332de44558dbc78",
@@ -4555,7 +4503,20 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.733793"
+      "fetched_at": "2026-01-17T18:35:26.501155"
+    },
+    {
+      "id": "9af7cc75cb5b877a",
+      "title": "US Supreme Court conservatives lean toward allowing transgender sports bans",
+      "description": "US Supreme Court conservatives lean toward allowing transgender sports bans  Reuters",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUE5vNG9VMjllZEExN181aTVmSDhBaDU4ZXJhUm42SDFxYXAyckZfd1B0YzJFX0hZSVNGWnJVbEItUTVQS1BoYzg0QjFOWTRlUTFBY29ZQS02LWdZUm1DMnM3RWp5cE9MUXk4SE51dmhYNkNTNXpxQmo4RV9WbkNVbkJKSWpzM1RmdnY5RWNXWkZZNUZLOFZSbHptZE10OEI2ekNYVzd0ZDBnN0llRXc?oc=5",
+      "date": "2026-01-14",
+      "source": "Reuters",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Constitutional Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:26.501155"
     },
     {
       "id": "613e5200e82159d6",
@@ -4568,33 +4529,20 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.732799"
+      "fetched_at": "2026-01-17T18:35:26.501155"
     },
     {
-      "id": "9af7cc75cb5b877a",
-      "title": "US Supreme Court conservatives lean toward allowing transgender sports bans",
-      "description": "US Supreme Court conservatives lean toward allowing transgender sports bans  Reuters",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUE5vNG9VMjllZEExN181aTVmSDhBaDU4ZXJhUm42SDFxYXAyckZfd1B0YzJFX0hZSVNGWnJVbEItUTVQS1BoYzg0QjFOWTRlUTFBY29ZQS02LWdZUm1DMnM3RWp5cE9MUXk4SE51dmhYNkNTNXpxQmo4RV9WbkNVbkJKSWpzM1RmdnY5RWNXWkZZNUZLOFZSbHptZE10OEI2ekNYVzd0ZDBnN0llRXc?oc=5",
-      "date": "2026-01-13",
-      "source": "Reuters",
+      "id": "2f252737fa258ca4",
+      "title": "Trump’s war on the Federal Reserve heads to the Supreme Court next week",
+      "description": "Trump’s war on the Federal Reserve heads to the Supreme Court next week  vox.com",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOcFVrVHJJSXR2V2xERG5MVjg4MU9YelBVenNPMno5NFJtRmd4YXBMWVpITjhhbVJjV0ZnSW5VWk9jX09rN05rN3NlRWRnZFBVb08zdWVVVzFLbEhLbU5JRl9tdmtXOHhOdXRPVWFoSnlBSHpTOHp0eUhWaDNUdUVnbWdkY29DRHYxbTlKVHhXeGVwRG8?oc=5",
+      "date": "2026-01-12",
+      "source": "vox.com",
       "jurisdiction": "USA",
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.733793"
-    },
-    {
-      "id": "b09e471ef67bb1c9",
-      "title": "Top cases on the US Supreme Court's docket",
-      "description": "Top cases on the US Supreme Court's docket  Reuters",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRC10SENObDJBRGh2bGM3MUNnSUg5aXBHT0VSN3FvTGMwb3RwZ1hQZURHOGdhMWt0ZW1OcFl2Zko3T0xON3h1S0QyaTlyc2tiQW85YWh4YndSaG1Sc3JtcGh1TkRlekpCaWxQSERCcnhyN2FrMHJhc2ZhZkNJY3ZLWGplOWdIdjctYjBiUmRLZUZYbjlBbVUxNXBXZXRFeXRFMUdtd204WGFzVnJYVEkyeQ?oc=5",
-      "date": "2026-01-13",
-      "source": "Reuters",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:26.501155"
     },
     {
       "id": "877aaae8e35bbc78",
@@ -4607,20 +4555,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.733793"
-    },
-    {
-      "id": "79a8a6add03b1d1f",
-      "title": "2025’s Most Significant State Constitutional Cases",
-      "description": "2025’s Most Significant State Constitutional Cases  State Court Report",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOVVubHpFRkVJMk1MR2FmNTVrOGlzRG5XVHY3RDcwQzNqenNrQnJXTjNCZzRHZGRrU0M3MThZYnZhMlFwcUNVNVo5eDlTUHE3OTRIUlY0NHpIM3NLV2ZCbVBCSFl1ZWRRTmUzUVlHdlhUTHNQYUxsblpUNHBaZmhuLS1aMlBOWWRuQVZaT1IwbC1OREhBVFZPNHFLekJORlhnQ3FrdktMYw?oc=5",
-      "date": "2025-12-18",
-      "source": "State Court Report",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Constitutional Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.733793"
+      "fetched_at": "2026-01-17T18:35:26.501155"
     },
     {
       "id": "2036599f5b387de0",
@@ -4633,7 +4568,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.272351"
     },
     {
       "id": "ac6c6e515439e840",
@@ -4646,20 +4581,20 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.272351"
     },
     {
-      "id": "737d3788245862a4",
-      "title": "In Landmark Ruling, Federal Court Says Trump Administration Violated First Amendment By Arresting, Attempting to Deport Foreign Citizens for Pro-Palestinian Advocacy",
-      "description": "In Landmark Ruling, Federal Court Says Trump Administration Violated First Amendment By Arresting, Attempting to Deport Foreign Citizens for Pro-Palestinian Advocacy  | Knight First Amendment Institute",
-      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNLUJSbWczQWltM01HUFNLVVFZdE5hdENsdThPN1pUU05aRjlKRWNCQ0xmUGFrYUlJcld1TlNfZDhYclIwd3FORnFUSFFNeS1RbUJRck9tVkdkNHN0T0g2eERJek9ZMkNvTUh2OHNmYWpNRFdTMUNQdUI1WUNKdVB1bVMtb1NLdVBCY0dBTElUSWlpUkRIQXFDNmQ5UkdCTkN3eU9lajdXLUl5VzJ2QUZRb2NOckhkU29KeGVsd284UnRTR2NKVmU1YmFXbkdocDhKdkQtSUlKcUpPdFhZU1ZxYjIyMUN2TUZzV1pZWmdYNjE2b1Y2dW1nOFVZLWtZUmZTYzdwVXdsLXI?oc=5",
+      "id": "06c2669bcc54fabc",
+      "title": "Judge rules Trump administration’s targeting of pro-Palestinian students for deportation efforts violated First Amendment",
+      "description": "Judge rules Trump administration’s targeting of pro-Palestinian students for deportation efforts violated First Amendment  Columbia Daily Spectator",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQRmFCX25KQkVwUi1pYVRfa2dDcUZieFYxVnNLX0ZqNlV4WDJyR21sZ0JSUm9NM2ZUVHRFd01GMVBqTVNPLTFrZlpsQ1FVVzdtVWMwbHNreVA4c2U5UlR1emcxT1RudEpuVTRpeURQdWwwOV8xQmZxbXFyYUc4Z2tVclVBUUxFSG96eDdyNzZtRldxRkJfaDVQazQ0cDBsUlFUOV9tMnZpTHhrV3pGN1VNUkNsQ2FFOFdOSW9WR2szd09HUlJ3d0FxTXZaenVXaHJ3MzhhOURWbzRQSllUVmJJYXI0N0VpSWhsT1BhS2ZCUUZpUEE0bkU2MlBUekFkU1JZ?oc=5",
       "date": "2025-09-30",
-      "source": "| Knight First Amendment Institute",
+      "source": "Columbia Daily Spectator",
       "jurisdiction": "USA",
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.273349"
     },
     {
       "id": "90a46dfe259f338d",
@@ -4672,7 +4607,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.273349"
     },
     {
       "id": "88b33959aaa6ff14",
@@ -4685,7 +4620,7 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.272351"
     },
     {
       "id": "3b5897f427eca6c8",
@@ -4698,7 +4633,20 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.273349"
+    },
+    {
+      "id": "812b377f007ba322",
+      "title": "Here are the Supreme Court precedents that targeting ‘hate speech’ would violate",
+      "description": "Here are the Supreme Court precedents that targeting ‘hate speech’ would violate  CNN",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPV1Q3V0ZNZlJjZXVSWHc5aGszbU1mdlZLYTR1VFU2QU1TZVU2c0pRM25fY3FfSEdOYVBUeXVHaDI0dkd1cWJVakdUcXZhcElqOTJOcF8xX0R0STJia1EzY2tQXzNVVktDWkVkYllXSHFyWC1KMEZoMDBpdTZzMzUzM05UNV9saVpXZkVKeFlRanY1OWgzb3ZSZEZJc0NRWlg2djVPS0xRQTM?oc=5",
+      "date": "2025-09-17",
+      "source": "CNN",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Constitutional Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:25.273349"
     },
     {
       "id": "7301f38f9c3332d9",
@@ -4711,10 +4659,23 @@
       "law_types": [
         "Constitutional Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.076385"
+      "fetched_at": "2026-01-17T18:35:25.271348"
     }
   ],
   "Civil Law|USA": [
+    {
+      "id": "b6cace79177c8022",
+      "title": "How the Supreme Court made it hard to sue ICE agent in Renee Good case",
+      "description": "How the Supreme Court made it hard to sue ICE agent in Renee Good case  USA Today",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVV9rS1pxT2JNLW90SEhFaU55Y3A0NmlsejZPOW1vM1hqbVZ0dnViOU5UcUJHX0pnWVJXZ2lwRDZ4TW9yQXpMd0w1SWNHUkJtZ2xHeEpzWTdkM3BRaU5fWDNBajA1ZDRGVUFDZno2elRneTRUNDlkUTRGRklGTTFfS2hPUGlJdFZUdzE3WXFhN1RiVmJid05FSzJJa0xUNXE3WUpSY3pNTkhMVTg2eTlQMDRn?oc=5",
+      "date": "2026-01-17",
+      "source": "USA Today",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Civil Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:28.174664"
+    },
     {
       "id": "b5d24c12e2c8964b",
       "title": "Hair Relaxer Lawsuit Settlement | January 2026 Update",
@@ -4726,20 +4687,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
-    },
-    {
-      "id": "0d6ddf6dacdddfbf",
-      "title": "Monsanto Roundup Lawsuit | January 2026 Update",
-      "description": "Monsanto Roundup Lawsuit | January 2026 Update  Lawsuit Information Center",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9QZThCcF93QVFSOTRyQ0lTSDluODhkTGQydDJ1cWluNFFjSy15MUZxWXZEZXhxTnRwcGU5NFAzdVNYa196eTFLSTgzWDlWdVdPVlpPSFU2NFh4YkZhd3JadTkzTGpOdk1Cb3VxWDQ5MTQ?oc=5",
-      "date": "2026-01-06",
-      "source": "Lawsuit Information Center",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Civil Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
+      "fetched_at": "2026-01-17T18:35:28.174664"
     },
     {
       "id": "c6535d2641d31d9b",
@@ -4752,7 +4700,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
+      "fetched_at": "2026-01-17T18:35:28.175681"
     },
     {
       "id": "b9a200ed2fb8f11a",
@@ -4765,7 +4713,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
+      "fetched_at": "2026-01-17T18:35:28.174664"
     },
     {
       "id": "958ca18fafdd05ef",
@@ -4778,7 +4726,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
+      "fetched_at": "2026-01-17T18:35:28.175681"
     },
     {
       "id": "a2e5351edd2d747d",
@@ -4791,7 +4739,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
+      "fetched_at": "2026-01-17T18:35:28.175681"
     },
     {
       "id": "a0528fa784f0f085",
@@ -4804,20 +4752,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.825477"
-    },
-    {
-      "id": "ed54ee655a1877e7",
-      "title": "The DOJ sued the federal district bench in Maryland. A judge just dismissed the case",
-      "description": "The DOJ sued the federal district bench in Maryland. A judge just dismissed the case  NPR",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMjcyTmlLeTJmZUs1MU1fb0ZJSVVnMERtRXAwdDBlQldlTE4ycnh6NExkRDBjUkRXSTZndFg2OTRBNHhYcGhtTi1UOVZuQWc0Y0gyN25FVV90dU81WlpmcTQtR3lmNW9rYVg5THc1RXZEM3d3b1p3Y0NvcFVFWW9CNnBMeXM?oc=5",
-      "date": "2025-08-26",
-      "source": "NPR",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Civil Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.304708"
+      "fetched_at": "2026-01-17T18:35:24.955843"
     },
     {
       "id": "bb5e03d40eba6096",
@@ -4830,20 +4765,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
-    },
-    {
-      "id": "224eebe114afaf60",
-      "title": "Federal Court Finds EEOC Premature Right-to-Sue Letter Invalid (US)",
-      "description": "Federal Court Finds EEOC Premature Right-to-Sue Letter Invalid (US)  Employment Law Worldview",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSlhTeThZMjBoQXVoT0FWUTJYdS1SSVZuN2ZTeXA2Y0pTWnlRcWVYN05oeEU0VmM0WUVEblBaMDBSOHIzRE5WN0lPRTZIczkyTHduTXFxNmkxMU5IcUFVbTRCX3dYX1JYWTc5MVNIT3ZxUEZ1dEktSkRHY19JRGw4QVB3YU5YejQ3NThicEZUODJtdXVuRmJqNDF0WTIyRWxPU1lPSWxEd3E?oc=5",
-      "date": "2025-08-20",
-      "source": "Employment Law Worldview",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Civil Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
+      "fetched_at": "2026-01-17T18:35:24.955843"
     },
     {
       "id": "3f793c5f3619e20c",
@@ -4856,7 +4778,20 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.303709"
+      "fetched_at": "2026-01-17T18:35:28.175681"
+    },
+    {
+      "id": "c2bace700f1e377b",
+      "title": "Civil Procedure at the Supreme Court: Selected Cases from the October 2024 Term",
+      "description": "Civil Procedure at the Supreme Court: Selected Cases from the October 2024 Term  Every CRS Report",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9CVmZ3MlNjQTVUbkpQZ2N0Vlk5MlNZbU4zTHFoUDVOSkVmUXJSOXhsRHNFMzFteHRQck16VkJXaDM3TTlEcGVHeElrMkZOR25DdG4xeWhlbXBxTGdNNEhRem1B?oc=5",
+      "date": "2025-06-17",
+      "source": "Every CRS Report",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Civil Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:28.174664"
     },
     {
       "id": "547b21025c8c9230",
@@ -4869,7 +4804,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
+      "fetched_at": "2026-01-17T18:35:24.955843"
     },
     {
       "id": "7c5c24f7d765f548",
@@ -4882,7 +4817,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
+      "fetched_at": "2026-01-17T18:35:24.955843"
     },
     {
       "id": "aab933d370f1c4c9",
@@ -4895,7 +4830,20 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
+      "fetched_at": "2026-01-17T18:35:24.955843"
+    },
+    {
+      "id": "18a81838e81bb848",
+      "title": "First Trial in 2019 Crash of Boeing 737 MAX8 Begins Monday",
+      "description": "First Trial in 2019 Crash of Boeing 737 MAX8 Begins Monday  Clifford Law Offices",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPeUFQb0J3MWVOam0wdnJtX0hUT3YtNFQ2VTN6TXlBNXpiNEtsSWdwNUJlMl84Um1IdXg1STVYWl90X29uaXBHaGRCYVV3clk3LUJ6SWRxTTdvWW1pS282ck9GaWJFLU5Ic2gtOTZRQkp2ZnI4QmxXbkRiQjJhRl9UaGJ2U29QNlVubzk3aFNvSThhOHg4ZnRqcFRscTFQSmtXS2FhanZlcnBYaDcyS0ZxRUk0blQ2cGFHclFzaHdsQ09Ed1Nkd3FsRU1DNUhpT3VwYmQwajk2UDhsUkN5b2YySDJ6RlUyNFlON2ItSU9qZkR5Q19KNmRLZXl2T3R5bVV3ZzF5QUxOR2VxbzZxdEVBZzYxZ3owSVFoOFNpeXBsSQ?oc=5",
+      "date": "2025-04-04",
+      "source": "Clifford Law Offices",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Civil Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:24.955843"
     },
     {
       "id": "c07f5f658ca22e6d",
@@ -4908,7 +4856,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
+      "fetched_at": "2026-01-17T18:35:24.955843"
     },
     {
       "id": "5511562436977330",
@@ -4921,7 +4869,7 @@
       "law_types": [
         "Civil Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.824474"
+      "fetched_at": "2026-01-17T18:35:24.955843"
     }
   ],
   "Administrative Law|USA": [
@@ -4936,7 +4884,20 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
+    },
+    {
+      "id": "7da3153ac7c35108",
+      "title": "Perchlorate in Drinking Water",
+      "description": "Perchlorate in Drinking Water  U.S. Environmental Protection Agency (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE41N0hLZXNDQ2oxNVphZnVFeVBJVmg3b2JRWDFkREk3Q0xWRGZDQTJ2QXYzU1lJVUo3WVFfNy1BZjluX2g2MFkxZXVnWS1XakxqM0FsTkRPeXp5Rk83clNQeQ?oc=5",
+      "date": "2026-01-06",
+      "source": "U.S. Environmental Protection Agency (.gov)",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Administrative Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:25.841400"
     },
     {
       "id": "d3d81ef6239d8914",
@@ -4949,20 +4910,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.495391"
-    },
-    {
-      "id": "f78de813f9eca6e0",
-      "title": "Not So Bright--Federal Circuit Sheds Light on Application of Loper-Bright and Appealing Agency Decisions",
-      "description": "Not So Bright--Federal Circuit Sheds Light on Application of Loper-Bright and Appealing Agency Decisions  JD Supra",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPLUtwM0VwYmMwdkJfb2hUY082YVpzWlJBRlcxY1l2bEdQZ0Rvbkh1bTFwdFZQUkhVb2VKQks1R0xJSzUyZzExTHVWcURGY0xsbnF6RXg0QVZJUzVOT1doa1FNOExESFJYRUZVZlRTNFhZa29ISDNCS09OenFaVWJVSUhPWlY?oc=5",
-      "date": "2025-12-19",
-      "source": "JD Supra",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Administrative Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:34.495391"
+      "fetched_at": "2026-01-17T18:35:26.217948"
     },
     {
       "id": "0c45dc1f1fb96533",
@@ -4975,20 +4923,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
-    },
-    {
-      "id": "417587d08601f986",
-      "title": "Drinking Water Regulations",
-      "description": "Drinking Water Regulations  U.S. Environmental Protection Agency (.gov)",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9PX20zZHhXXzFmZVM4S2xGQ0dlVHBRTmFHaEo5WDFuRUhyaVRVYnNKR3BmcGZXTHRIRTVJN3JhSnVDUlM1VHZzdmRTUnZ2RkFaMnpTeUJ6OXh1bkZlLTA2ejlEcFVSSFU?oc=5",
-      "date": "2025-11-25",
-      "source": "U.S. Environmental Protection Agency (.gov)",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Administrative Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
     },
     {
       "id": "7747987b84eeade2",
@@ -5001,7 +4936,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.495391"
+      "fetched_at": "2026-01-17T18:35:26.217948"
     },
     {
       "id": "022d9e8352e730c3",
@@ -5014,7 +4949,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
     },
     {
       "id": "35ba3e9dd9f01287",
@@ -5027,7 +4962,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
     },
     {
       "id": "5096099a3ca57754",
@@ -5040,7 +4975,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.495391"
+      "fetched_at": "2026-01-17T18:35:26.217948"
     },
     {
       "id": "52d1396607d17650",
@@ -5053,7 +4988,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.495391"
+      "fetched_at": "2026-01-17T18:35:26.217948"
     },
     {
       "id": "b19f1200f1774a3b",
@@ -5066,7 +5001,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
     },
     {
       "id": "340e66f27b2a3363",
@@ -5079,7 +5014,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.496391"
+      "fetched_at": "2026-01-17T18:35:26.218945"
     },
     {
       "id": "2310c3760ba49415",
@@ -5092,7 +5027,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
     },
     {
       "id": "2ca14980a774a0dd",
@@ -5105,7 +5040,7 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.496391"
+      "fetched_at": "2026-01-17T18:35:26.218945"
     },
     {
       "id": "4e0a18c3efc43706",
@@ -5118,7 +5053,20 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.940702"
+      "fetched_at": "2026-01-17T18:35:25.842400"
+    },
+    {
+      "id": "6d922d60f4da1632",
+      "title": "Administrative Law Report - March 2025, Vol. 5 | News & Events",
+      "description": "Administrative Law Report - March 2025, Vol. 5 | News & Events  Clark Hill",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSzk5bVZfU3I3VngtdEtsbnJ6bVVodHU0UHV4dDMxWnJIOTdtZTg4NVczWWxneHhESXR4TmN6TlY1XzBUYThlOFBDZkZTUHBlOXprTDNqQjhtY3RWN0hPbzR6dWpUYldXSVg0VmlEUkNFSlluT2c2NmJIdThHOHJHWVFTYVlUclFPTHR0azk4NA?oc=5",
+      "date": "2025-03-17",
+      "source": "Clark Hill",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Administrative Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:26.218945"
     },
     {
       "id": "8071dba89ae9aee4",
@@ -5131,48 +5079,48 @@
       "law_types": [
         "Administrative Law"
       ],
-      "fetched_at": "2026-01-16T17:49:34.496391"
+      "fetched_at": "2026-01-17T18:35:26.218945"
     }
   ],
   "Wills, Estates, and Trusts|USA": [
     {
       "id": "fdeb3abab9817bc4",
       "title": "A Guide to the Federal Estate Tax for 2026",
-      "description": "A Guide to the Federal Estate Tax for 2026  SmartAsset.com",
+      "description": "A Guide to the Federal Estate Tax for 2026  SmartAsset",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE11MFZZdkZEUy1jODl1Y3B0SGF5XzBQdjlXSmlsN3duZndBSWs4bU9xVDRqYlliUmhfRFoyOHp6ZWRaUzZ1LU04WGozWjgyQVhRcEtVbFN5Q1VnVHU1MzcwSlhVNA?oc=5",
       "date": "2026-01-09",
-      "source": "SmartAsset.com",
+      "source": "SmartAsset",
       "jurisdiction": "USA",
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
-      "id": "7c6dc85cd60b8977",
+      "id": "1aa1a27dea340647",
       "title": "Trust Properties USA Enters New Markets, Completes Strategic Merger, and Delivers $7.7M in Added Seller Value in 2025",
-      "description": "Trust Properties USA Enters New Markets, Completes Strategic Merger, and Delivers $7.7M in Added Seller Value in 2025  The Topeka Capital-Journal",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQQ2VsNDg0SC1yOXhycGJHVkRVNEdzdlRZVHVhV2VXam1aVGtNZ3hwTnRzeng0NURIOUk0ZXhudnZFVF9ZUHBYcW5KbTg2NXhwZFh4UW5HWmVLNjVBcFN1cEhFeHhKUmVKMVJuVWVKUWc1UVE4LVlNNjhITHVmRDRVTEl1RWRHUk5uTVhnYnRzWkxSY3FwMjQtT3pSS1JDOXFCcmpQWFhjSnJuQ2dsdnBJSGkzQ2dYUl9fOTZndENKTk04RnUweTN3dm1CUTNsUndLYkRHazU3T3djMktXYW4taC1oaVJxd2NsRS11YTczNVM0X0dkN1lSTkJn?oc=5",
+      "description": "Trust Properties USA Enters New Markets, Completes Strategic Merger, and Delivers $7.7M in Added Seller Value in 2025  Record Searchlight",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPMDI5bE1CNlhsWE42ZHhLQUd4M3JBeW5PRjVTTUZRNjA2V045SVhHbU1LNG1iWGZlT2QzSFNTanFVYlhFQkU3VWVtVk9mTjBCclpaWFNjbVZ0YVYyYk95TDhHUG1RT1lGZEdRZy1wZzlWblhReWZSdWZEdVllUHB4anByc2h4a2lWTVlHdFYwLTVfbXFIS25KRWs5b0l4d1VpMGNtWFVhMUNORGhDYm9ZZjNId1ZLcDF0d01xNDJZaEFlQWdXaVpJcU9BZTlqUnZrVnd2d3FaUUFfV3NtWGc5RHlUdld3cGQ3SFRqLWNGV3dVNS1aZHFMUg?oc=5",
       "date": "2026-01-07",
-      "source": "The Topeka Capital-Journal",
+      "source": "Record Searchlight",
       "jurisdiction": "USA",
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
-      "id": "2510d217570d7025",
+      "id": "acc250f72c765122",
       "title": "Trust Properties USA Enters New Markets, Completes Strategic Merger, and Delivers $7.7M in Added Seller Value in 2025",
-      "description": "Trust Properties USA Enters New Markets, Completes Strategic Merger, and Delivers $7.7M in Added Seller Value in 2025  Panama City News Herald",
-      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOdzZ3UG1TVkJ1aFdpMG9mV1hXODRjNzdlMWU4VnV6dXUzVTdNNjFaTXZ1VjhWQklRZUkxQ2N5UGdjSVUtYWtURDdkRzdkR3BsNTNMTk1qaXRvQ0dDOW84cnAwV1J2cEhDM3YzRTFsLXNvaC0wWDN6NjRueEhxSElVNjk5OS1RZjJOSUNPV2RSUTNlakRDdU1GZGh1WG1yN0JfVE1BWXd5bFFRZ19NcXNITHZWcmw5UDNxWmdSUktkZGY1cHdJSlNFMGVzRl96V1lSRk9URlhYU3JzTGowTzloby1ybTB1YWFraFRKZ1RiNWwwY0hZRmhyU0NRS3Q?oc=5",
+      "description": "Trust Properties USA Enters New Markets, Completes Strategic Merger, and Delivers $7.7M in Added Seller Value in 2025  Zanesville Times Recorder",
+      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNZ0tFX0RyVzMtOFVGaHNEcjNqbC13VGlGTjNVRC1vZjZQUzR0bFNadFNORjg1UlpSd2RVZy1LSHpPLUpaUm9IS3pzSWlFXzVrYTVBQUg1b0xDVUE1aGpGamNQaklpSEhUTHhHSnR4Uk45OW1tRm4xc2o3N0ZRT1BkSERQUUNHM0t5RlNaN2E5QzBuaDJySFFzT2QzNVh6cXMzaVEyWHRQcmZITDRLLXFtNllQRjFTY1BSS3VXSnEycUJfNkRqSl91RzFNaGdibTZERUFuTjF3clFvOTI0UnI2YU9ob2RwWHNvdkNZTjdsVGwyQldXMzBMWEQwN1hFN0tmNUJkTlVSeDJvX0tH?oc=5",
       "date": "2026-01-07",
-      "source": "Panama City News Herald",
+      "source": "Zanesville Times Recorder",
       "jurisdiction": "USA",
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
       "id": "00ecae6ed33a5486",
@@ -5185,20 +5133,20 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     },
     {
-      "id": "bcfe4565a468ba80",
-      "title": "Soto Law Group Releases In-Depth Article on Probate Timelines and Costs in Newport Beach",
-      "description": "Soto Law Group Releases In-Depth Article on Probate Timelines and Costs in Newport Beach  St. Cloud Times",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQll1U1ZVMXJfNDlqNWxONzctUXRLMzRNb1VHdHFHTG5fRFpXQU1tZUxLTGYtaWN4dTFfNjYtRWNRd2ZJTDEtVGVrTUlKaGVSZWJqWGsyd3RDemozdUVyYW0wOFd4aWJpamFuVzJmYnFyQzM4cnp5ZlFjLVFYN3lCZUF4MFl5SDRRa2tyWHBKUkduaU9rRGNzUkd1dDVuOS1uQWpMcEY5eGw2YkJXdHYzck1ZV3FKOTczeGRPS3hTZUwzZ2RFZVlsNVZmeWY3SXN2eXBVUzFB?oc=5",
-      "date": "2025-12-17",
-      "source": "St. Cloud Times",
+      "id": "edbbd12a79fc8958",
+      "title": "Opelon LLP’s Owen Rassman Named to Super Lawyers for Third Consecutive Year",
+      "description": "Opelon LLP’s Owen Rassman Named to Super Lawyers for Third Consecutive Year  USA Today",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQTWxJNWNDNzJtTjJ1MXRrUF9QamZLLVU2aVdrZ2xvam9TdkIybm0tcmx2M0xwazhmVHQ0bFZtY0lBT3djaXdCUHFfeHJ6SWp6M3M1cUdObDF2NFhPczF5M01SYjZNc0RBLWFUWHlLSHhiQWZpWVp3TVBqNzNZTExtaWllQWJJRzFPN2hxTDJhQ0g5SncwazRqOU1OYnR5N29KSEhieHBSUDNvdkxjdlBuSmxJNVg1Q1BNTXBzM1JtZG85VDlr?oc=5",
+      "date": "2025-12-07",
+      "source": "USA Today",
       "jurisdiction": "USA",
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
       "id": "3dec76cc9a3deb73",
@@ -5211,7 +5159,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
       "id": "d806ff2a3b8e7bfd",
@@ -5224,7 +5172,20 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
+    },
+    {
+      "id": "e226a46057663092",
+      "title": "Opelon LLP",
+      "description": "Opelon LLP  Best Lawyers",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1OaE04ZzQyNzZOeEgwZ0dXSGlPYVRiV2R4Y3NpZE9HTFlWLUo4TERwS2s2dG5fUlhXVzBnSWpjY292dVkxNWRlRTV0amRfQl91eDc0OTR2MGxHczNBSXFLdjdsQQ?oc=5",
+      "date": "2025-08-19",
+      "source": "Best Lawyers",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Wills, Estates, and Trusts"
+      ],
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
       "id": "e0ac98320ed35494",
@@ -5237,7 +5198,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
       "id": "d3ed376ae33dabf8",
@@ -5250,7 +5211,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     },
     {
       "id": "d2c4c119c112a832",
@@ -5263,7 +5224,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:25.060731"
     },
     {
       "id": "f3ba14106c48e493",
@@ -5276,20 +5237,20 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     },
     {
-      "id": "d61ddade69e57499",
-      "title": "Cross-Border Legacies: Managing International Estate Planning and Probate",
-      "description": "Cross-Border Legacies: Managing International Estate Planning and Probate  Global Atlanta",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNblRTSjNHY0JxUnB4V3dQZlUwXzc0blBBQjhoQlh2Z2pMcGpWbkVaT0dZNlVLTkV3WmVodUpSbUR3bGRFSEF2dWtqTURzU3JHcjd6YjRqWFhhQ0kyZlBsV0JOdHJWbXVjRWJjUFNZbGs4OXd6c1lHYUtaTzdaUVdkZHlfSHg4RTRMbXpYb3Uwa2VXLWQ2QWtCQ004Y2t6aGRoeXVPWjJR?oc=5",
-      "date": "2025-04-28",
-      "source": "Global Atlanta",
+      "id": "0527fd947df0f8c2",
+      "title": "What Happens When Courts Can’t Trust the Executive Branch?",
+      "description": "What Happens When Courts Can’t Trust the Executive Branch?  Lawfare",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOFA1V3hFaUtyQU1sODJkNzM5SllrSkZMVjFlX2FIUm0xdG93NXBxVE94OGw2Q095OWR6TWRRWUVkZUFNUEU1M19zeDBXZ0ROdmJrZzdOcENBRVNhdnVMMVNyYlRFeTRwLWpqcFI0Q05FMmEtOXpsc3p2TURSRTFYSkw0dUVmQWR1ZmpzUGw2cVJvY01qRVlzQU5n?oc=5",
+      "date": "2025-04-10",
+      "source": "Lawfare",
       "jurisdiction": "USA",
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.296759"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     },
     {
       "id": "2abf933b79d5b876",
@@ -5302,20 +5263,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
-    },
-    {
-      "id": "9e86f46a6bee619c",
-      "title": "Switzerland's supreme court pronounces on including a trust in deceased's estate",
-      "description": "Switzerland's supreme court pronounces on including a trust in deceased's estate  Step.org",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMC1XMlZrUURtcWxWYUw5U1FlX0YybTFoYU9xYUhTa2d3bjE2WTJ2YkdRTDJBT0hpMF9uUGxrcTNkS3dkZElod2xma3ZiTURkN0FsUWJFdXZrQ2lQQmM4aVhxYWFlUEJNRnEtM0NKN2p3NmlhdTF4bGN4ZTc1MnBOcDh2N2VEMm5hQjQtSjJXRzY1NlEyeGhZSFd5X2JqUXNIbjJNdFZ2Vy0?oc=5",
-      "date": "2025-01-30",
-      "source": "Step.org",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Wills, Estates, and Trusts"
-      ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     },
     {
       "id": "b86df7aa82074291",
@@ -5328,7 +5276,7 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     },
     {
       "id": "ced57780448ab70a",
@@ -5341,22 +5289,22 @@
       "law_types": [
         "Wills, Estates, and Trusts"
       ],
-      "fetched_at": "2026-01-16T17:49:32.373602"
+      "fetched_at": "2026-01-17T18:35:26.591934"
     }
   ],
   "Health Law|USA": [
     {
-      "id": "c9242e918b658747",
-      "title": "Why medical malpractice awards are on the rise",
-      "description": "Why medical malpractice awards are on the rise  American Medical Association",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNc25tTDQ3NlNwVUdNc0NoS3BtMmRQNGdmamtFVVpRLUc2em9zbkRCc1Bnd3ZIaGRCMHZCMGtoMGl0QUN6RGxNS3E4a1M3SnRqNHlyS2NRRVFEQUJuMlloU09tUTlmZk0weFBRLUt6bVNWMjhHM1hRNEt3RUN4WFNUZkIwMWNxYWxzMTJqYjE0VkdlTFBwUHVPSk5nc3lYc2xS?oc=5",
-      "date": "2026-01-02",
-      "source": "American Medical Association",
+      "id": "8cef48934daf9bf7",
+      "title": "Nebraska AG’s Lawsuit Against Change Healthcare Survives Motion to Dismiss",
+      "description": "Nebraska AG’s Lawsuit Against Change Healthcare Survives Motion to Dismiss  The HIPAA Journal",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ROXh3YU1zWGctajFLVU5VRUtHVGNPN1VvNmNYMWpEaGRGUjVKWnJPTjBZVXdJbXlZZjI1TUpnNGF2djlzSUx6dEVBcFNyanR5ei1QMl91bG1MajctWjYwd0t5dndIMnY5WE8xQVQyLXp4UEZna2pKWG1iZWxydw?oc=5",
+      "date": "2025-11-17",
+      "source": "The HIPAA Journal",
       "jurisdiction": "USA",
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "8165941f61ad79d3",
@@ -5369,7 +5317,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
     },
     {
       "id": "f5aa2f2eb5930699",
@@ -5382,7 +5330,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "76603b100cf8c9c3",
@@ -5395,7 +5343,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "7b45e83c0432d062",
@@ -5408,7 +5356,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "39735d7e4d211ef8",
@@ -5421,20 +5369,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
-    },
-    {
-      "id": "c1bfeb5b55d9c752",
-      "title": "Healthcare Fraud Defense Attorneys",
-      "description": "Healthcare Fraud Defense Attorneys  Oberheiden P.C.",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sWE5SeVpLYnRuMVhiSkN0dkNVd0xqLW54U1UxMmk2OEIycWw2TUZxb0luZkpTV3BPd29BLTM0NWF4WEJCbGVXTUtPTmhybjU4MDFfUDBUckVjQQ?oc=5",
-      "date": "2025-05-02",
-      "source": "Oberheiden P.C.",
-      "jurisdiction": "USA",
-      "law_types": [
-        "Health Law"
-      ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "a88191581b28d122",
@@ -5447,7 +5382,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "7c5c24f7d765f548",
@@ -5460,7 +5395,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
     },
     {
       "id": "18a81838e81bb848",
@@ -5473,7 +5408,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
     },
     {
       "id": "6dd2f3d66ebdf3f9",
@@ -5486,7 +5421,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "1eb6b6a5b77d0a29",
@@ -5499,7 +5434,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:33.376438"
+      "fetched_at": "2026-01-17T18:35:27.517744"
     },
     {
       "id": "424774051db49389",
@@ -5512,7 +5447,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.554599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
     },
     {
       "id": "c90b727378312b48",
@@ -5525,7 +5460,20 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
+    },
+    {
+      "id": "bb2bbf1580d2f700",
+      "title": "Medical malpractice payouts are ballooning—and insurers are warning it will cost patients",
+      "description": "Medical malpractice payouts are ballooning—and insurers are warning it will cost patients  Fortune",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTUlLeHlvblpicml5MmJsazdrMVpQaDE4c05UMW9xTFFVcEtkbk9MN2NmWjZ6Q2haMVN4cnBnNHhzVFkwVEFRTzlHMjduT0FJTEd5T19kT3JTUlpqU1RNZ0NBLWwzUFBHQWF1RlY3LUNNTXh4c0pNWWxsSlhrQmRGMVFHX0szVmgyclNWY3I0cEduaXQwNjA1ZW9ISWJpN3E5ZmlnYmRIMFU0c0FwcWp5b2dFRFBLYjZoQVk0M1ZlTmp3ZFE?oc=5",
+      "date": "2024-07-02",
+      "source": "Fortune",
+      "jurisdiction": "USA",
+      "law_types": [
+        "Health Law"
+      ],
+      "fetched_at": "2026-01-17T18:35:26.793016"
     },
     {
       "id": "876aed3285ececfb",
@@ -5538,7 +5486,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
     },
     {
       "id": "0993e4124b32ffbe",
@@ -5551,7 +5499,7 @@
       "law_types": [
         "Health Law"
       ],
-      "fetched_at": "2026-01-16T17:49:32.553599"
+      "fetched_at": "2026-01-17T18:35:26.793016"
     }
   ]
 }

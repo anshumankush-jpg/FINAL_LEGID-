@@ -15,6 +15,14 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent)
   },
   {
+    path: 'signup',
+    loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent)
+  },
+  {
+    path: 'reset-password',
+    loadComponent: () => import('./pages/reset-password/reset-password.component').then(m => m.ResetPasswordComponent)
+  },
+  {
     path: 'not-provisioned',
     loadComponent: () => import('./pages/not-provisioned/not-provisioned.component').then(m => m.NotProvisionedComponent)
   },

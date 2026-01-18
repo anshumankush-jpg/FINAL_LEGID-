@@ -54,7 +54,7 @@ export class AuthService {
   }
 
   login(email: string, password: string): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.apiUrl}/api/auth/login`, {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/api/auth/v2/login`, {
       email,
       password
     }).pipe(
@@ -95,7 +95,7 @@ export class AuthService {
   }
 
   signup(email: string, password: string, name?: string): Observable<AuthResponse> {
-    return this.http.post<AuthResponse>(`${this.apiUrl}/api/auth/signup`, {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/api/auth/v2/register`, {
       email,
       password,
       name
@@ -104,16 +104,40 @@ export class AuthService {
     );
   }
 
+  requestPasswordReset(email: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/api/auth/v2/forgot-password`, {
+      email
+    });
+  }
+
+  resetPassword(token: string, newPassword: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/api/auth/v2/reset-password`, {
+      token,
+      new_password: newPassword
+    });
+  }
+
   private handleAuthSuccess(response: AuthResponse): void {
+    // Handle different response formats from different auth endpoints
+    const user = response.user || response as any;
+    const normalizedUser: User = {
+      user_id: user.id || user.user_id || '',
+      email: user.email || '',
+      display_name: user.name || user.display_name || user.email || 'User',
+      role: user.role || 'client',
+      created_at: user.created_at || new Date(),
+      last_login_at: user.last_login_at || new Date()
+    };
+
     localStorage.setItem('legid_token', response.access_token);
-    localStorage.setItem('legid_user', JSON.stringify(response.user));
+    localStorage.setItem('legid_user', JSON.stringify(normalizedUser));
     
     if (response.refresh_token) {
       localStorage.setItem('legid_refresh_token', response.refresh_token);
     }
 
     this.tokenSubject.next(response.access_token);
-    this.currentUserSubject.next(response.user);
+    this.currentUserSubject.next(normalizedUser);
     this.isAuthenticated$.next(true);
   }
 
