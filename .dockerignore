@@ -1,0 +1,54 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Documentation
+*.md
+*.txt
+!requirements.txt
+LICENSE
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+.Python
+*.egg-info
+.eggs
+*.egg
+.pytest_cache
+.coverage
+htmlcov
+
+# Node.js
+frontend/node_modules
+**/node_modules
+
+# Build artifacts (we'll build fresh)
+frontend/dist
+backend/data
+
+# Tests
+**/tests
+**/*.test.*
+**/*.spec.*
+
+# Environment files (secrets should be in Cloud Run)
+.env
+.env.*
+!.env.example
+
+# Other projects
+legal-bot
+artillty
+
+# Large files
+*.pdf
+*.zip
+*.tar.gz

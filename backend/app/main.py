@@ -16,7 +16,8 @@ from pathlib import Path
 from datetime import datetime
 from fastapi import FastAPI, UploadFile, File, HTTPException, Query, Form
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 import openai
@@ -1950,6 +1951,39 @@ async def text_to_speech_legacy(request: VoiceChatRequest):
     except Exception as e:
         logger.error(f"Legacy TTS error: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"TTS failed: {str(e)}")
+
+
+# ============================================================
+# Static Files Serving for Combined Deployment (Cloud Run)
+# ============================================================
+STATIC_DIR = Path("./static")
+SERVE_STATIC = os.getenv("SERVE_STATIC", "false").lower() == "true"
+
+if SERVE_STATIC and STATIC_DIR.exists():
+    # Mount static files (Angular build output)
+    app.mount("/assets", StaticFiles(directory=STATIC_DIR / "assets"), name="assets")
+    
+    # Catch-all route for Angular routing - must be LAST
+    @app.get("/{full_path:path}")
+    async def serve_angular(full_path: str):
+        """Serve Angular app for client-side routing."""
+        # If path starts with /api, let it 404 (API routes should be handled above)
+        if full_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="API endpoint not found")
+        
+        # Try to serve static file first
+        static_file = STATIC_DIR / full_path
+        if static_file.exists() and static_file.is_file():
+            return FileResponse(static_file)
+        
+        # Otherwise serve index.html for Angular routing
+        index_file = STATIC_DIR / "index.html"
+        if index_file.exists():
+            return FileResponse(index_file)
+        
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    logger.info("[OK] Static file serving enabled for combined deployment")
 
 
 if __name__ == "__main__":
