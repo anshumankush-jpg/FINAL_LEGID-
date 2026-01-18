@@ -17,8 +17,8 @@ RUN npm ci --legacy-peer-deps
 # Copy source code
 COPY frontend/ .
 
-# Build the Angular application for production
-RUN npm run build -- --configuration=production
+# Build the Vite application for production
+RUN npm run build
 
 # ============================================
 # Stage 2: Python Backend with Frontend static files
