@@ -82,9 +82,9 @@ const ProfileMenu = ({ user, onLogout, onViewChange }) => {
   if (!user) {
     // Default user for demo purposes
     const defaultUser = {
-      name: 'anshumankush',
-      email: 'anshumankush@example.com',
-      role: 'plus'
+      name: 'Guest User',
+      email: 'guest@legid.app',
+      role: 'client'
     };
     user = defaultUser;
   }

@@ -150,7 +150,7 @@ export function AuthProvider({ children }) {
   const loginAsGuest = () => {
     const guestId = `guest_${Date.now()}`;
     const guestUser = {
-      email: `${guestId}@guest.local`,
+      email: 'guest@legid.app',  // Better default email
       name: 'Guest User',
       picture: null,
       user_id: guestId,
