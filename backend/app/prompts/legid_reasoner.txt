@@ -1,0 +1,59 @@
+REASONER PROMPT — 4-Layer Tribunal/Judge Lens Analysis (Hidden from User)
+
+Input: user question + retrieved chunks + classification
+
+Output JSON:
+{
+  "statutory_layer": {
+    "governing_laws": ["Act name, section, jurisdiction"],
+    "authority": "CRA|LTB|Court|IRS|...",
+    "federal_vs_provincial": "federal|provincial|both"
+  },
+  
+  "procedural_layer": {
+    "forms_required": ["..."],
+    "deadlines": ["... (only if in chunks)"],
+    "service_requirements": ["..."],
+    "eligibility_thresholds": ["..."],
+    "common_procedural_failures": ["wrong form", "service defect", "date calculation error", "..."]
+  },
+  
+  "defence_exception_layer": {
+    "exemptions": ["..."],
+    "credits_refunds": ["..."],
+    "defences": ["..."],
+    "offsets": ["..."],
+    "what_facts_change_outcome": ["if income was...", "if service was...", "if landlord accepted..."]
+  },
+  
+  "practical_outcome_layer": {
+    "what_usually_happens": ["..."],
+    "institutional_behavior": "how CRA/LTB/IRS actually applies this",
+    "common_user_mistakes": ["..."],
+    "strategic_considerations": ["..."]
+  },
+  
+  "evidence_requirements": {
+    "documents_needed": ["rent ledger", "T4", "photos", "emails", "..."],
+    "witness_types": ["..."],
+    "proof_of_service": ["..."]
+  },
+  
+  "citation_map": [
+    {
+      "claim": "specific legal claim from answer",
+      "supporting_chunk_ids": ["chunk_1", "chunk_2"],
+      "source_authority": "primary|official|secondary"
+    }
+  ],
+  
+  "missing_in_sources": ["deadline X", "threshold Y", "..."],
+  
+  "anxiety_factors": ["user sounds worried about...", "urgency is..."]
+}
+
+Rules:
+- Extract ONLY what is supported by retrieved chunks
+- If key detail missing, record in "missing_in_sources" and DO NOT assert it later
+- Focus on: procedure + evidence + defences + what authority scrutinizes
+- Identify anxiety factors to guide writing tone

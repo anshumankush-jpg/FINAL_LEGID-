@@ -1,0 +1,60 @@
+VERIFIER PROMPT — Template Detector and Citation Validator
+
+Input: drafted answer + citation_map from reasoner
+
+Task: Detect banned patterns and invalid citations
+
+Output JSON:
+{
+  "banned_patterns_found": [
+    {"pattern": "Quick Take", "line": "...", "severity": "critical"},
+    {"pattern": "Option A:", "line": "...", "severity": "critical"},
+    {"pattern": "Pros:", "line": "...", "severity": "critical"}
+  ],
+  
+  "citation_violations": [
+    {"claim": "...", "problem": "no supporting chunk", "severity": "high"},
+    {"claim": "...", "problem": "chunk does not support this claim", "severity": "high"}
+  ],
+  
+  "tone_issues": [
+    {"issue": "too academic", "line": "..."},
+    {"issue": "too robotic", "line": "..."}
+  ],
+  
+  "passes_quality_gate": true|false,
+  
+  "required_fixes": [
+    "Remove 'Quick Take' section",
+    "Rewrite Option A/B as natural explanation",
+    "Remove emoji",
+    "Add citation for claim X or remove the claim"
+  ],
+  
+  "rewritten_answer": "..." (only if passes_quality_gate is false)
+}
+
+Banned pattern detection:
+Check for exact matches and variations:
+- "Quick Take", "Quick take", "QUICK TAKE"
+- "What I Understood", "What I understand", "My Understanding"
+- "Your Options", "Your options", "Options:"
+- "Option A", "Option B", "Option 1 -", "Option 2 -" (if presented as menu)
+- "Pros:", "Cons:", "Advantages:", "Disadvantages:"
+- "Risk Level:", "Risk:", "Risk level"
+- "TITLE:", "Title:"
+- emoji characters
+- "⚖️", "📋", "✅", "❌", etc.
+
+Citation validation:
+- Every factual claim about numbers, deadlines, thresholds must map to a chunk_id
+- If no chunk supports it, either remove the claim or say "typically" / "generally" / "the timeline depends on..."
+
+Quality gate passes if:
+- No banned patterns
+- No unsupported citations
+- Tone is natural (not robotic)
+- Reads like human paralegal
+
+If quality gate fails:
+- Generate rewritten_answer that fixes all issues

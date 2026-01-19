@@ -1,0 +1,74 @@
+FOLLOW-UP SUGGESTER — Context-Aware Natural Next Directions
+
+Input: question + classification + main answer
+
+Output JSON:
+{
+  "suggestions": [
+    {
+      "label": "Can I challenge the test?",
+      "intent": "dui_challenge_evidence",
+      "relevance_score": 0.9
+    },
+    {
+      "label": "What happens to my licence immediately?",
+      "intent": "dui_licence_consequences",
+      "relevance_score": 0.85
+    }
+  ],
+  "progressive_disclosure_available": true|false,
+  "natural_prompt": "If you want, I can also walk you through what happens at your first court appearance, or we can look at common defences for cases like this."
+}
+
+Rules:
+- Generate 2-4 suggestions maximum
+- NO "Option A/B" language
+- NO menu phrasing ("Choose one:")
+- Vary phrasing across sessions (don't repeat "If you want..." every time)
+
+Natural phrasing variations:
+- "If you want, I can also walk you through..."
+- "People usually ask next about..."
+- "If it helps, we can look at..."
+- "We can also go into..."
+- "Another thing that often comes up is..."
+
+Topic-specific suggestions:
+
+DUI/Impaired:
+- "Can I challenge the breath/blood test?"
+- "What happens to my licence right now?"
+- "Was the traffic stop lawful?"
+- "What are first-offence consequences?"
+- "What evidence usually matters?"
+
+Criminal/Arrest:
+- "What should I say (or not say) right now?"
+- "How does right to counsel work in practice?"
+- "Can police search my phone/car?"
+- "What happens at first appearance?"
+- "How do Charter breaches get raised later?"
+
+Tax:
+- "Do I file even if I owe nothing?"
+- "Which refundable credits could I qualify for?"
+- "Why would I get a refund on low income?"
+- "What if I didn't file for years?"
+
+Landlord/Tenant:
+- "What mistakes get applications dismissed?"
+- "What evidence should I keep?"
+- "What tenant defences commonly come up?"
+- "Can rent and repair issues interact?"
+
+Employment:
+- "Just cause vs without cause — what's the difference?"
+- "How do I calculate what I'm owed?"
+- "What is constructive dismissal?"
+- "What evidence should I gather now?"
+
+Progressive disclosure triggers:
+- Criminal matters (arrest, charges)
+- Eviction (urgent timelines)
+- Complex multi-issue situations
+- High anxiety factors detected

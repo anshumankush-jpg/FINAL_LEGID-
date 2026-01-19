@@ -1,0 +1,64 @@
+# ═══════════════════════════════════════════════════════════════
+# LEGID MASTER PROMPT - ENV CONFIGURATION
+# ═══════════════════════════════════════════════════════════════
+
+Add these lines to your backend/.env file:
+
+# ───────────────────────────────────────────────────────────────
+# LEGID Master Prompt Configuration
+# ───────────────────────────────────────────────────────────────
+
+# Enable LEGID Master Prompt globally
+# Set to 'true' to use production-grade legal intelligence
+LEGID_MASTER_PROMPT_ENABLED=true
+
+# Default LEGID mode (optional)
+# Options: master, paralegal, lawyer, research
+LEGID_DEFAULT_MODE=paralegal
+
+# Enable self-grading quality checks (optional)
+LEGID_ENABLE_SELF_GRADING=true
+
+# ───────────────────────────────────────────────────────────────
+
+THAT'S IT!
+
+After adding these to backend/.env:
+1. Restart your backend
+2. Test the new endpoints
+
+═══════════════════════════════════════════════════════════════
+NEW ENDPOINTS AVAILABLE:
+═══════════════════════════════════════════════════════════════
+
+1. /api/chat/legid
+   → Simple LEGID endpoint (master mode)
+   → Best for: Quick testing
+
+2. /api/chat/legid/advanced
+   → LEGID with mode selection
+   → Send mode in request: {"message": "...", "mode": "paralegal"}
+   → Modes: master, paralegal, lawyer, research
+
+3. /api/artillery/simple-chat
+   → Updated to support LEGID via feature flag
+   → Uses LEGID if LEGID_MASTER_PROMPT_ENABLED=true
+   → Otherwise uses simple prompt
+
+═══════════════════════════════════════════════════════════════
+QUICK TEST:
+═══════════════════════════════════════════════════════════════
+
+Test the LEGID endpoint:
+
+curl -X POST http://localhost:8000/api/chat/legid \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Can a landlord in Ontario evict a tenant without notice if the tenant damages property?"}'
+
+Expected response:
+- Mandatory 5-part structure
+- Specific statute citations (S.O. 2006, c. 17)
+- Professional formal tone
+- 400-600 words (much more detailed than before)
+
+═══════════════════════════════════════════════════════════════

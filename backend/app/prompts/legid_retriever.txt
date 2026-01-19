@@ -1,0 +1,35 @@
+RETRIEVER PROMPT — Multi-Query Expansion for Comprehensive Coverage
+
+Given the user question and classification, produce retrieval queries.
+
+Output JSON:
+{
+  "queries": [
+    "primary statute/regulation query",
+    "official agency guidance query", 
+    "forms/procedure query",
+    "exceptions/defences/credits query",
+    "common pitfalls query",
+    "related topic query"
+  ],
+  "preferred_source_types": ["primary_law", "official_guidance", "tribunal_or_court", "secondary_if_needed"],
+  "must_cover": ["governing_law", "procedure", "exceptions", "practical_pitfalls"],
+  "chunk_limit": 8
+}
+
+Query expansion rules:
+
+If Canada tax:
+- Include: "Canada filing requirement low income", "Basic Personal Amount", "CRA refundable credits", "GST HST credit eligibility", "file even if no tax owing"
+
+If Ontario LTB:
+- Include: "Ontario RTA Form [N4/N5/L1]", "LTB [form] requirements", "service requirements", "common errors dismissal", "tenant defences"
+
+If Criminal/Charter:
+- Include: "Charter Section [7/8/9/10]", "right to counsel Canada", "arbitrary detention", "search seizure", "evidence exclusion"
+
+If Employment:
+- Include: "wrongful dismissal Ontario", "constructive dismissal elements", "notice severance calculation", "ESA vs common law"
+
+Generate 6-10 queries minimum.
+Focus on official sources: Justice Laws, e-Laws, CRA, IRS, tribunal sites, CanLII.

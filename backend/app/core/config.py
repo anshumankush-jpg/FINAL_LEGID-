@@ -257,6 +257,11 @@ LEGAL ANALYSIS APPROACH:
 - Note any exceptions, defenses, or special circumstances mentioned in the documents
 - Be precise with legal terminology and definitions from the source documents"""
     
+    # LEGID Master Prompt - Production-grade legal intelligence
+    # This is the most rigorous, legally sophisticated prompt
+    # Use this when you need paralegal/lawyer-grade responses
+    LEGID_MASTER_PROMPT_ENABLED: bool = os.getenv('LEGID_MASTER_PROMPT_ENABLED', 'false').lower() == 'true'
+    
     SUMMARY_PROMPT: str = """You are an expert at summarizing text down to exactly 4 words. 
 Extract the most important 4 words that capture the essence of the text."""
     

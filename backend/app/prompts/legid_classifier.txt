@@ -1,0 +1,24 @@
+CLASSIFIER PROMPT — Jurisdiction and Practice Area Detection
+
+Analyze the user question and extract:
+
+Output JSON:
+{
+  "jurisdiction": {
+    "country": "Canada|USA|Unknown",
+    "province_state": "Ontario|BC|California|...|Unknown",
+    "confidence": 0.0-1.0
+  },
+  "practice_area": "Tax Law|Employment Law|Landlord & Tenant|Criminal Law|Family Law|Immigration|Business Law|...",
+  "urgency_level": "critical|high|medium|low",
+  "urgency_indicators": ["eviction deadline", "court date", "arrest", "limitation period expiring", etc.],
+  "key_facts_present": ["..."],
+  "missing_facts_that_matter": ["..."],
+  "topic_keywords": ["form n4", "charter rights", "cra", "irs", etc.]
+}
+
+Urgency rules:
+- critical: arrest, detention, court date within 7 days, eviction notice
+- high: limitation period approaching, filing deadline
+- medium: planning ahead, general procedure question
+- low: academic/research question

@@ -1,0 +1,128 @@
+================================================================================
+COPY-PASTE THIS ENTIRE BLOCK INTO GOOGLE CLOUD SHELL
+================================================================================
+
+# Step 1: Set your project ID (REPLACE with your actual project ID)
+export PROJECT_ID="YOUR-PROJECT-ID-HERE"
+gcloud config set project $PROJECT_ID
+
+# Step 2: Enable all required APIs
+echo "Enabling APIs..."
+gcloud services enable cloudbuild.googleapis.com run.googleapis.com secretmanager.googleapis.com containerregistry.googleapis.com artifactregistry.googleapis.com --quiet
+
+# Step 3: Create OpenAI secret (REPLACE with your actual OpenAI key)
+echo "Creating OPENAI_API_KEY secret..."
+echo "sk-PASTE-YOUR-OPENAI-KEY-HERE" | gcloud secrets create OPENAI_API_KEY --data-file=- --replication-policy="automatic"
+
+# Step 4: Create JWT secret (auto-generated)
+echo "Creating JWT_SECRET_KEY..."
+openssl rand -base64 64 | gcloud secrets create JWT_SECRET_KEY --data-file=- --replication-policy="automatic"
+
+# Step 5: Grant Cloud Build permissions
+echo "Granting permissions..."
+PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format="value(projectNumber)")
+SERVICE_ACCOUNT="${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com"
+
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:$SERVICE_ACCOUNT" --role="roles/secretmanager.secretAccessor" --quiet
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:$SERVICE_ACCOUNT" --role="roles/run.admin" --quiet
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:$SERVICE_ACCOUNT" --role="roles/iam.serviceAccountUser" --quiet
+gcloud projects add-iam-policy-binding $PROJECT_ID --member="serviceAccount:$SERVICE_ACCOUNT" --role="roles/storage.admin" --quiet
+
+# Step 6: Build and Deploy Backend
+echo "Building backend... (this takes 5-10 minutes)"
+gcloud builds submit --tag gcr.io/$PROJECT_ID/legal-bot-backend:latest backend/ --timeout=20m
+
+echo "Deploying backend to Cloud Run..."
+gcloud run deploy legal-bot-backend \
+  --image=gcr.io/$PROJECT_ID/legal-bot-backend:latest \
+  --region=us-central1 \
+  --platform=managed \
+  --allow-unauthenticated \
+  --memory=4Gi \
+  --cpu=2 \
+  --timeout=300 \
+  --min-instances=0 \
+  --max-instances=10 \
+  --port=8000 \
+  --set-env-vars="GOOGLE_CLOUD_PROJECT=$PROJECT_ID" \
+  --set-secrets="OPENAI_API_KEY=OPENAI_API_KEY:latest,JWT_SECRET_KEY=JWT_SECRET_KEY:latest" \
+  --quiet
+
+# Step 7: Get Backend URL
+BACKEND_URL=$(gcloud run services describe legal-bot-backend --region=us-central1 --format='value(status.url)')
+echo "Backend deployed at: $BACKEND_URL"
+
+# Step 8: Build Frontend with Backend URL
+echo "Building frontend... (this takes 3-5 minutes)"
+cd frontend
+gcloud builds submit --tag gcr.io/$PROJECT_ID/legal-bot-frontend:latest --build-arg VITE_API_URL=$BACKEND_URL --timeout=15m .
+cd ..
+
+# Step 9: Deploy Frontend
+echo "Deploying frontend to Cloud Run..."
+gcloud run deploy legal-bot-frontend \
+  --image=gcr.io/$PROJECT_ID/legal-bot-frontend:latest \
+  --region=us-central1 \
+  --platform=managed \
+  --allow-unauthenticated \
+  --memory=512Mi \
+  --cpu=1 \
+  --timeout=60 \
+  --min-instances=0 \
+  --max-instances=10 \
+  --port=80 \
+  --set-env-vars="API_URL=$BACKEND_URL" \
+  --quiet
+
+# Step 10: Get Frontend URL
+FRONTEND_URL=$(gcloud run services describe legal-bot-frontend --region=us-central1 --format='value(status.url)')
+
+# Step 11: Display Results
+echo ""
+echo "================================================================================"
+echo "🎉 DEPLOYMENT COMPLETE! 🎉"
+echo "================================================================================"
+echo ""
+echo "✅ Backend API:  $BACKEND_URL"
+echo "✅ Frontend App: $FRONTEND_URL"
+echo ""
+echo "📚 API Docs:     $BACKEND_URL/docs"
+echo "💚 Health Check: $BACKEND_URL/health"
+echo ""
+echo "🌐 Open your frontend URL in a browser to use the app!"
+echo "================================================================================"
+
+================================================================================
+END OF DEPLOYMENT SCRIPT
+================================================================================
+
+
+ALTERNATIVE: ONE-LINE AUTOMATED SCRIPT
+================================================================================
+
+If you uploaded the cloud-shell-deploy.sh file, just run:
+
+chmod +x cloud-shell-deploy.sh && ./cloud-shell-deploy.sh
+
+================================================================================
+
+
+QUICK COMMANDS AFTER FIRST DEPLOYMENT
+================================================================================
+
+# Get URLs
+gcloud run services describe legal-bot-backend --region=us-central1 --format='value(status.url)'
+gcloud run services describe legal-bot-frontend --region=us-central1 --format='value(status.url)'
+
+# View logs
+gcloud run logs tail legal-bot-backend --region=us-central1
+gcloud run logs tail legal-bot-frontend --region=us-central1
+
+# Redeploy after code changes
+gcloud builds submit --config=cloudbuild.yaml
+
+# Delete services
+gcloud run services delete legal-bot-backend --region=us-central1
+gcloud run services delete legal-bot-frontend --region=us-central1
+
+================================================================================
